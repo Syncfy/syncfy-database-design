@@ -32,7 +32,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>14</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -104,7 +104,7 @@
 <colUsage columnID="D2290C89-6EEA-F054-1D4B-7ACF6B1110CE"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="A45A3B5E-D7DA-1A66-0AC3-D49A42B5A299" name="Company_User_Address_Shipping_Cost_FK">
+<ind_PK_UK id="A45A3B5E-D7DA-1A66-0AC3-D49A42B5A299" name="cmp_usr_addr_ship_cost_fk">
 <createdBy>user</createdBy>
 <createdTime>2023-10-20 14:20:11 UTC</createdTime>
 <generatorID>89128F6E-3C8A-6251-0988-7A6646751198</generatorID>

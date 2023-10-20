@@ -172,7 +172,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>14</dataTypeSize>
-<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="E91883E4-0B7E-BAE3-2CFB-6611AA04A5A8" referredColumn="48A59D12-FC47-27DD-8978-BD32ACE1FA2F"/>
@@ -208,7 +208,7 @@
 <colAssociation fkAssociation="9DE19AC8-7650-EDE8-517E-E938E27C4569" referredColumn="4FB27733-D1BD-D3D6-96BD-944D2E776DCD"/>
 </associations>
 </Column>
-<Column name="Company_User_Address_Company_User_Id" id="53AC0A1C-47B3-0945-51A3-B8A07633A74D">
+<Column name="cmp_usr_addr_cmp_usr_id" id="53AC0A1C-47B3-0945-51A3-B8A07633A74D">
 <createdBy>user</createdBy>
 <createdTime>2023-10-20 14:20:11 UTC</createdTime>
 <generatorID>22B740EF-9A27-625C-D4EF-53EF110AE8DE</generatorID>
@@ -223,7 +223,7 @@
 <colAssociation fkAssociation="686FBB5E-8B7C-DAC5-D067-4ECD111C3A6D" referredColumn="1B45F4F9-4434-759B-716F-395967FCD76E"/>
 </associations>
 </Column>
-<Column name="Company_User_Address_Company_User_Cnpj" id="3F2FF6EB-D0CE-66D1-EC33-08627D084767">
+<Column name="cmp_usr_addr_cmp_usr_cnpj" id="3F2FF6EB-D0CE-66D1-EC33-08627D084767">
 <createdBy>user</createdBy>
 <createdTime>2023-10-20 14:20:11 UTC</createdTime>
 <generatorID>5A67526D-5DCD-79EA-F424-F898327CD6E0</generatorID>
@@ -232,7 +232,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>14</dataTypeSize>
-<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -310,6 +310,9 @@
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1F4A2FE-D29B-D4E1-05E0-74950D446893"/>
+</indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="28509AB9-B38D-A6E3-8EE2-5C1F1DD75800" name="Address__IDX">
 <createdBy>user</createdBy>
@@ -361,7 +364,7 @@
 <colUsage columnID="4D1BD759-9274-5654-95D7-F7D5D4A04F13"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="4447F110-5CC8-3874-BF3E-2E608FB90BA4" name="Address_Company_User_Address_FK">
+<ind_PK_UK id="4447F110-5CC8-3874-BF3E-2E608FB90BA4" name="addr_cmpny_usr_addr_fk">
 <createdBy>user</createdBy>
 <createdTime>2023-10-20 14:20:11 UTC</createdTime>
 <generatorID>22775EE5-67BD-E965-0220-A84B8652ADBF</generatorID>
