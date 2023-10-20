@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="765F7EC8-6D20-9120-1EEA-76D59F328B7B" name="City">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<generatorID>77660684-C9DC-4C83-91E9-9E9B0E66BE06</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="D1C53310-B793-ADA6-7413-421DECD782AC">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<generatorID>5C452E27-6566-8DA2-55E3-3FD7E19E9BD8</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="City" id="3EE61327-E527-8A19-583D-655D0CA2A910">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<generatorID>844B54A6-1A0B-E945-CE80-2893DB9777F7</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Address_Id" id="50B0DD16-E571-BCF7-379B-E1658399FA89">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<generatorID>536E8B55-C20B-CC3F-3AE7-72E187D0AADD</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0BFA5713-1FAB-ACE4-6209-465428C4BF88" referredColumn="1B347787-AD85-E9D3-BDAE-A7739CC14107"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3091841F-D461-FB5A-811A-535C1BBA2329" name="City_PK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<generatorID>03DFD3AE-5DAD-B82F-8A8D-BED4F07D0BD3</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D1C53310-B793-ADA6-7413-421DECD782AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D17770D8-DD6E-8DDD-EEF7-A9E5065F5B10" name="City__IDX">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>34FB19E0-FDFE-9DF6-F15E-F6C49BDEF197</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="50B0DD16-E571-BCF7-379B-E1658399FA89"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2331E8B9-9BDD-F1D9-196C-93B7CAA655F9" name="City_Address_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<generatorID>34FB19E0-FDFE-9DF6-F15E-F6C49BDEF197</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="50B0DD16-E571-BCF7-379B-E1658399FA89"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

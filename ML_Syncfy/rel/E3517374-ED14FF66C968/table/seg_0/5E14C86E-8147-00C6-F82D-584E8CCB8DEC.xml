@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5E14C86E-8147-00C6-F82D-584E8CCB8DEC" name="Category">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>998F234A-9E05-19CD-E08C-60C2B956D453</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="4978A95C-810C-2B32-C425-53923E5BA5DF">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>0F934F54-1320-4A72-1EAE-1F2894AEF4AF</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Category" id="144DFA5D-C99F-AE33-8BCF-1A522879224B">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>55BBF24C-8130-81E8-87B5-849D98375574</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Material_Id" id="4F464435-6C37-A3E7-8CEF-70E08C047786">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>A75FC320-E6EE-DF1D-F802-1A252B659A58</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E99C5F73-3630-BC74-8F9A-7FD2C9AB4CEB" referredColumn="63282EC2-2953-0EA0-8770-228F23E9A1DB"/>
+</associations>
+</Column>
+<Column name="Material_Product_Code" id="3037C3D8-BD5A-2E95-20DD-F06929984EEA">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>2A5D9782-DEC0-D281-4C89-6AEEC44FF1D3</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E99C5F73-3630-BC74-8F9A-7FD2C9AB4CEB" referredColumn="CBE1CE0E-42D5-DB12-4038-0A976A1A6A5E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="91B7C879-A869-D737-0A04-33310DFEE0B3" name="Category_PK">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>4E7ADA5B-01B3-0CD1-48A1-9BF5A749CA26</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4978A95C-810C-2B32-C425-53923E5BA5DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4CD59B42-C92C-8017-EE81-3FB4653BA5ED" name="Category__IDX">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>3BFF4E17-C2CB-0905-E141-CF1177A29FB8</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="4F464435-6C37-A3E7-8CEF-70E08C047786"/>
+<colUsage columnID="3037C3D8-BD5A-2E95-20DD-F06929984EEA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="36368AF5-0349-78E1-FA7F-CF054A175E8C" name="Category_Material_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>3BFF4E17-C2CB-0905-E141-CF1177A29FB8</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F464435-6C37-A3E7-8CEF-70E08C047786"/>
+<colUsage columnID="3037C3D8-BD5A-2E95-20DD-F06929984EEA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

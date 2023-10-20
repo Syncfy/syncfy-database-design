@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6325E5D6-C222-92CF-4F8F-068509A64DFE" name="Phone">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:42 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>FA6753F1-8005-5A56-F929-D2C114C4262B</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="4779BC7E-F7F6-0319-A605-F4FE1844D152">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>0F53EFF8-D97D-7E48-AAB2-0D8F0269D920</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Number" id="88AD380A-450D-7630-C1D7-A301DF96EF29">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>F4D5333B-9FAB-16F9-AA86-4D51590C297C</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id1" id="B1406E52-F11B-8DC2-F2FA-730A13C5C11F">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<generatorID>3F30ABCB-40AD-9914-79A8-D5A398AAE960</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>773E144D-8B1E-546C-2E29-FB9BF0CB63AF</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<referedAttribute>EE38ADF2-CDEC-B5A7-CCDE-E09FF0018BE6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cnpj" id="1E5FFADD-99FF-838A-399B-C67DE9B25BA7">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<generatorID>3F30ABCB-40AD-9914-79A8-D5A398AAE960</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>65D811FA-84FE-3FB8-C3B8-6CC08DB3EF88</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<referedAttribute>923BD0FC-07CA-D2B1-A1AB-82E275C3C4FB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id2" id="7AE624EF-F923-92DF-4BFD-3712E431E313">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<generatorID>67A5AF7B-8A0E-4EDB-1C14-C696491DEED6</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>242EBF2D-DCAD-5951-9936-C9B3DA093B93</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<referedAttribute>D8428407-06B1-3F58-35D5-DCBA058DE69C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cnpj1" id="9D17EA16-9586-692B-F6F1-A546900A6ABB">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<generatorID>67A5AF7B-8A0E-4EDB-1C14-C696491DEED6</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>A2F374BB-2A3F-CFD8-B079-528A2052EAEB</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<referedAttribute>62E2B7B0-125A-7EA1-C5D8-FB5665BE5465</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id3" id="C9EF6CF4-7638-2C6E-7DF6-830503F79CC7">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 18:39:50 UTC</createdTime>
+<generatorID>2B36008C-9192-8D21-D1AB-718AABF273D1</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<referedAttribute>E06C1D7A-DE10-FDCE-EC7C-27F0F76CF100</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="94B0980E-977F-DC7D-7BC6-BC4A6C620646" name="Phone PK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<importedID>7C562508-EBCC-E0EB-E77F-CB2F644F567A</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="false"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4779BC7E-F7F6-0319-A605-F4FE1844D152</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

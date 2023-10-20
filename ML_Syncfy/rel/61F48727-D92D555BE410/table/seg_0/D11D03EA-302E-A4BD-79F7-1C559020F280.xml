@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D11D03EA-302E-A4BD-79F7-1C559020F280" name="IBGE_Code">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<generatorID>EF84B1BD-0654-8351-08B8-EE8AF3FF1183</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Address_Id" id="F89E7715-EE66-FE63-F070-1FEE0BE7C833">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<generatorID>0FB1FB63-1396-9CED-9BE5-FA4F1E07DE68</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0FAE6D66-8D2F-E023-C720-55E869100DEF" referredColumn="1B347787-AD85-E9D3-BDAE-A7739CC14107"/>
+</associations>
+</Column>
+<Column name="Id" id="9A599A40-56AE-8ABE-007D-F4A2FF11551E">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<generatorID>0AD3E528-D3DC-4C2F-D1C7-2C84A1798C46</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IBGE_Code" id="B6179165-F493-B9BB-7B6D-42B1EE520C75">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<generatorID>EBA6DCE4-5329-7092-9274-894B54EA06B8</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="16BC5665-E832-1FCE-FF15-9E12BD31FAD1" name="IBGE_Code_PK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<generatorID>2DA72F59-2A73-A82C-C60A-69F81B6C5EE3</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9A599A40-56AE-8ABE-007D-F4A2FF11551E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DFAA8FE5-5740-1055-0D67-9B0D85700ECA" name="IBGE_Code__IDX">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>E97BC3EA-1F15-66E6-A19A-CE4320538C44</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="F89E7715-EE66-FE63-F070-1FEE0BE7C833"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="27AAF488-52C6-19B5-372C-481E0EEE32B1" name="IBGE_Code_Address_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<generatorID>E97BC3EA-1F15-66E6-A19A-CE4320538C44</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F89E7715-EE66-FE63-F070-1FEE0BE7C833"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

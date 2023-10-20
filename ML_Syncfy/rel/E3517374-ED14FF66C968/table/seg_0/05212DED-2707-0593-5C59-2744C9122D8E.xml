@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="05212DED-2707-0593-5C59-2744C9122D8E" name="Ddd">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>51AFC5C4-6D8F-BDAD-B677-1D94A150FA9F</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Phone_Id" id="E29584A4-F5DB-828F-3A70-0E499441A7FA">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>78F2E9BC-286F-8408-6764-E0E067DE6D91</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F9B9208A-8775-F35C-259F-153C2F9D6C62" referredColumn="AEC239E7-CED9-4725-3D3A-4F40AA40A327"/>
+</associations>
+</Column>
+<Column name="Id" id="77DF0FF6-3B20-E884-32B1-4FFFC9F12B77">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>E06C1D7A-DE10-FDCE-EC7C-27F0F76CF100</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ddd" id="E85619E1-8D8D-5C39-2066-FB566D74F380">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>0E3ABCDD-FF47-28BA-FF05-1B163750071E</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B7CB1450-374D-CB10-C3D0-0F79D0406FC3" name="Ddd_PK">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>5E5DF053-5578-AC3B-C9DC-9B6405E66315</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77DF0FF6-3B20-E884-32B1-4FFFC9F12B77"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BF3936AD-31ED-A425-B593-E2B1BEE76C12" name="Ddd__IDX">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>683CE89D-CF7B-DECD-AED1-145FC2B4DE8F</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="E29584A4-F5DB-828F-3A70-0E499441A7FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F6291706-582F-4C2B-AAE1-9746E3B96F35" name="Ddd_Phone_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>683CE89D-CF7B-DECD-AED1-145FC2B4DE8F</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E29584A4-F5DB-828F-3A70-0E499441A7FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Possuiv19" directorySegmentName="seg_0" id="89128F6E-3C8A-6251-0988-7A6646751198">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:40:36 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<sourcePk>D8B95DF2-13C7-BAD2-A093-E3CBF44C2757</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>99697FC0-8E87-8914-B68C-AE62640C8755</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>21953616-6C15-2699-113B-9E2FD0BEAABD</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

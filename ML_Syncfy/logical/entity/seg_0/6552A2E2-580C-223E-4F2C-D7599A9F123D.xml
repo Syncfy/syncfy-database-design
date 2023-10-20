@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6552A2E2-580C-223E-4F2C-D7599A9F123D" name="Segment">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:42 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>A7FEF545-F5BC-5F38-E1F5-875AD4DF5978</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="2F526B21-45A2-422B-8E02-73FBA0729690">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>835E20E5-FA90-68F3-A7BA-F987BB658818</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Segment" id="4C7F8591-B108-FA81-108C-F055ED514EDA">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>E1402C3E-BC10-4FF7-3515-3B2B637975C9</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id2" id="2D5FBDCE-F282-6224-7B1E-5B1E5A36914A">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<generatorID>08459320-8AE6-D057-CED1-3B2F41AFAD8F</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>079726A3-9651-9378-78F6-B58BF0532CFF</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<referedAttribute>D8428407-06B1-3F58-35D5-DCBA058DE69C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cnpj" id="1DBD0D08-E3BF-DFE0-AAA0-1154E3C397F3">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<generatorID>08459320-8AE6-D057-CED1-3B2F41AFAD8F</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>F19F1150-68C4-A3FC-0CD0-9A3C8DE45E78</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<referedAttribute>62E2B7B0-125A-7EA1-C5D8-FB5665BE5465</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="21DC2928-0C76-B96A-4EF7-57EFBF999725" name="Segment PK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>AF544815-A316-87CB-416A-E9362DAB697D</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2F526B21-45A2-422B-8E02-73FBA0729690</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

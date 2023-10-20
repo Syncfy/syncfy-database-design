@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ML_Syncfy" id="14BF6786-5127-1A93-4E62-B1C1DD4FAC43" version="3.5">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:19:39 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>14BF6786-5127-1A93-4E62-B1C1DD4FAC43</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="7863885B-931B-4F7B-7F55-2D7C80197F28">
+<designStoragePath>C:\Users\matpi\Downloads\ML_Syncfy</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

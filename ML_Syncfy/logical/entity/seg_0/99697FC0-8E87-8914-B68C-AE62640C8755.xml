@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="99697FC0-8E87-8914-B68C-AE62640C8755" name="Shipping_Cost">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:42 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>7D5B67BB-56E4-882A-E907-BF49FFE97BA2</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="B7C75C71-14CE-EDB0-A6B2-C7FFA0F7C9E4">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:42 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>3D8469DC-674E-B7B9-8F9A-497DE4739272</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cost" id="9B496F06-7459-8A92-496C-FEB23CEB510C">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:42 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>6E612F8A-1C14-1695-878B-1CEDB556FB69</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id1" id="5EE11B83-6FEF-CB42-1DC8-A6AA157894D3">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:42 UTC</createdTime>
+<generatorID>42D8E01C-491A-796A-6E7A-8C797FCB0146</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>D3F7CB7B-0368-C97F-5260-8AFF35008083</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<referedAttribute>35EA8A44-B3B7-2088-5716-C6F8E15470EE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D8B95DF2-13C7-BAD2-A093-E3CBF44C2757" name="Shipping_Cost PK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:42 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>24899C73-39A7-0003-33D5-BDA1D9B371A4</importedID>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B7C75C71-14CE-EDB0-A6B2-C7FFA0F7C9E4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

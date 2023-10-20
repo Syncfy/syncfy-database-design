@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8D6563A8-F553-2ED4-BD67-8B089F1DDE52" containerWithKeyObject="8E1C89AE-7383-19E0-837F-FAA5C2F7E160" localFKIndex="447813DC-20CD-C64B-395E-831D592EDE05" name="Address_Vendor_Address_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:44:15 UTC</createdTime>
+<generatorID>4A4F052B-ECDC-8134-6134-79CE8282C3CA</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referredTableLongName>Vendor_Address</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>7E73F09D-4E55-1883-503E-10EA194A5400</referredTableID>
+<keyObject>7272491D-524D-D417-DC3F-E3D05C937A9A</keyObject>
+<referredKeyID>7272491D-524D-D417-DC3F-E3D05C937A9A</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Vendor_Id,Vendor_Cnpj,Id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

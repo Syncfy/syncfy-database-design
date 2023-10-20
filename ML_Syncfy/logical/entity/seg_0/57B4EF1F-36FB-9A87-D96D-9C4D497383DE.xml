@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="57B4EF1F-36FB-9A87-D96D-9C4D497383DE" name="Vendor_Address">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:43:28 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id1" id="0611EAD7-DB17-021B-389C-A43FCEEFB157">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:29:51 UTC</createdTime>
+<generatorID>80D98E22-832B-A467-167A-A5E5CF65A3F6</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<referedAttribute>D8428407-06B1-3F58-35D5-DCBA058DE69C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cnpj" id="91254FB0-BFFC-B796-38F1-044BD1984DB3">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:29:51 UTC</createdTime>
+<generatorID>80D98E22-832B-A467-167A-A5E5CF65A3F6</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<referedAttribute>62E2B7B0-125A-7EA1-C5D8-FB5665BE5465</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id" id="72A86280-98AF-06D5-91AD-352837A8EF6D">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:35:53 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id2" id="D5C0103E-75CE-B5B6-E234-8BB39BA41896">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:40:50 UTC</createdTime>
+<generatorID>0EF0B6AF-2725-51A7-E7D9-573317F34AA5</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<referedAttribute>B7C75C71-14CE-EDB0-A6B2-C7FFA0F7C9E4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C070A064-6450-8DA5-F739-8836E28D1099" name="Vendor_Address PK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 01:29:51 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
+<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0611EAD7-DB17-021B-389C-A43FCEEFB157</attributeRef>
+<attributeRef>91254FB0-BFFC-B796-38F1-044BD1984DB3</attributeRef>
+<attributeRef>72A86280-98AF-06D5-91AD-352837A8EF6D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

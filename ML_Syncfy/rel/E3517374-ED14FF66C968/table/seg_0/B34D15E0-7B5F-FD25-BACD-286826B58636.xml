@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B34D15E0-7B5F-FD25-BACD-286826B58636" name="IBGE_Code">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>EF84B1BD-0654-8351-08B8-EE8AF3FF1183</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Address_Id" id="5609ABC7-324C-6190-D23E-01E47B5E1A2A">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>0FB1FB63-1396-9CED-9BE5-FA4F1E07DE68</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3534D39F-85C1-9AB2-649A-AA5DCDF1424A" referredColumn="C1F4A2FE-D29B-D4E1-05E0-74950D446893"/>
+</associations>
+</Column>
+<Column name="Id" id="C513274F-7570-0800-D7B1-607B73FFED3A">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>0AD3E528-D3DC-4C2F-D1C7-2C84A1798C46</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IBGE_Code" id="E19EC5FA-DB90-BCED-5805-BDC0B2B26504">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>EBA6DCE4-5329-7092-9274-894B54EA06B8</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BB2B8AD1-E2C6-21FE-5252-E5122A7D2013" name="IBGE_Code_PK">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>2DA72F59-2A73-A82C-C60A-69F81B6C5EE3</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C513274F-7570-0800-D7B1-607B73FFED3A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BA453279-19B9-938D-1C93-E52CDAEA8FFA" name="IBGE_Code__IDX">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>E97BC3EA-1F15-66E6-A19A-CE4320538C44</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="5609ABC7-324C-6190-D23E-01E47B5E1A2A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D2721F05-7B75-6A6D-D8CD-BF751D5EAB66" name="IBGE_Code_Address_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-10-20 14:20:11 UTC</createdTime>
+<generatorID>E97BC3EA-1F15-66E6-A19A-CE4320538C44</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5609ABC7-324C-6190-D23E-01E47B5E1A2A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

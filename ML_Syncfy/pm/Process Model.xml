@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="432B9D81-1948-83B4-6E81-F9E4AA589B1F">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:19:40 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

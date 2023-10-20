@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="895B1A28-3374-5795-42F7-CF291AFBB3EB" mainViewID="22F3E7CB-C79F-6FA8-8184-C2C8837E7634">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:19:39 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

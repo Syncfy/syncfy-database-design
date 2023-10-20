@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9C94BD5F-4B2C-EA64-A7EC-79B7AC2BA56E" name="Company_User">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<generatorID>CE96BADD-4E52-3810-B33D-F54E0D1F0AE2</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>C4272C01-A6FA-47FE-5AE9-57EB2A48132D</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="F8F5BCA4-1477-C609-F23C-FECDCEAD8E14">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<generatorID>EE38ADF2-CDEC-B5A7-CCDE-E09FF0018BE6</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>EEB69E25-6618-3C7B-E5C4-8FFF4BCE96AB</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cnpj" id="48A59D12-FC47-27DD-8978-BD32ACE1FA2F">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<generatorID>923BD0FC-07CA-D2B1-A1AB-82E275C3C4FB</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>6B3B9F86-5430-DD04-5C6B-A5ECD1C9B065</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="25ACCEE8-1831-B124-0F33-01FDBC0750B9">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<generatorID>DB06CAEA-AC30-7A73-9722-8B32908CC6DC</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>85B48656-F8A7-68F6-4C76-5891526C8073</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Soft_Delete" id="F93414FE-33BF-2C7C-D632-9D279957F736">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<generatorID>4E7B0190-1A87-E2DB-757A-552FCC033F0F</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>9F1B89DE-CB01-A120-2E09-9721694C5E6C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Email" id="7BBE680E-3CA0-1E38-8112-561A063F5E27">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<generatorID>80A56F32-B251-E9EE-BC6D-154ECB89DD0C</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>D5BF29B7-F1FD-5B15-2112-F36415A95E96</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Password" id="A4180236-EB3E-B5B2-5812-715C6D533F09">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<generatorID>74063D16-62A8-029F-C4E0-5BD9A2FC4DBC</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>28C77699-D843-FFBC-75AB-48C303EF2079</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B1D08365-099A-0BDD-41A6-0B83BFCEF332" name="Company_User_PK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<generatorID>8EF7F2A6-9866-3414-2968-C4D65CB68442</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<importedID>E32877C7-9DCB-70EC-0392-A0337485A2DF</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F8F5BCA4-1477-C609-F23C-FECDCEAD8E14"/>
+<colUsage columnID="48A59D12-FC47-27DD-8978-BD32ACE1FA2F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
