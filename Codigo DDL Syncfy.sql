@@ -512,7 +512,8 @@ INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(addr
 INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (4, 'Endereço P','Endereço Q', 75.0, 3 ,3, '55556666777889');
 INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (5, 'Endereço K', 'Endereço L', 55.0, 4, 4, '99990000111223');
 INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (6, 'Endereço M','Endereço N', 70.0, 5, 5, '88889999111234');
-delete from shipping_cost;
+
+
 -- Inserir na tabela VENDOR_ADDRESS
 INSERT INTO VENDOR_ADDRESS (VENDOR_ID, VENDOR_CNPJ, ID, SHIPPING_COST_ID)
 VALUES (1, '98765432100123', 1, 1);
@@ -581,12 +582,12 @@ INSERT INTO COMPANY_USER_ADDRESS (COMPANY_USER_ID, COMPANY_USER_CNPJ, ID, SHIPPI
 --INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (3, 'MG', 103);
 --INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (4, 'PR', 104);
 --INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (5, 'RS', 105);
-delete from address;
+
 INSERT INTO ADDRESS (ID, STREET, NEIGHBORHOOD, "Number", COMPLEMENT, ZIP_CODE, CITY, IBGE_CODE, UF, COUNTRY, COMPANY_USER_ID, COMPANY_USER_CNPJ, VENDOR_ID, VENDOR_CNPJ, CMP_USR_ADDR_CMP_USR_ID, CMP_USR_ADDR_CMP_USR_CNPJ, VENDOR_ADDRESS_VENDOR_ID, VENDOR_ADDRESS_VENDOR_CNPJ, COMPANY_USER_ADDRESS_ID, VENDOR_ADDRESS_ID)
 VALUES (1, 'Nome da Rua', 'Nome do Bairro', '12345', 'Complemento', '12345678', 'Nome da Cidade', '1234567', 'UF', 'Nome do País', 1, '12345678901234', 1, '98765432100123', 1, '12345678901234', 1, '98765432100123', 1, 1);
 
-INSERT INTO ADDRESS (ID, STREET, NEIGHBORHOOD, "Number", COMPLEMENT, ZIP_CODE, CITY, IBGE_CODE, UF, COUNTRY, COMPANY_USER_ID, COMPANY_USER_CNPJ, VENDOR_ID, VENDOR_CNPJ, CMP_USR_ADDR_CMP_USR_ID, CMP_USR_ADDR_CMP_USR_CNPJ, VENDOR_ADDRESS_VENDOR_ID, VENDOR_ADDRESS_VENDOR_CNPJ, COMPANY_USER_ADDRESS_ID, VENDOR_ADDRESS_ID)
-VALUES (2, 'Nome da Rua2', 'Nome do Bairro2', '12346', 'Complemento2', '1234567', 'Nome  Cidade', '1234568', 'SP', 'Nome País', 2, '12345678901233', 3, '11112222333445', 1, '98765432109876', 4, '11112222333445', 2, 1);
+--INSERT INTO ADDRESS (ID, STREET, NEIGHBORHOOD, "Number", COMPLEMENT, ZIP_CODE, CITY, IBGE_CODE, UF, COUNTRY, COMPANY_USER_ID, COMPANY_USER_CNPJ, VENDOR_ID, VENDOR_CNPJ, CMP_USR_ADDR_CMP_USR_ID, CMP_USR_ADDR_CMP_USR_CNPJ, VENDOR_ADDRESS_VENDOR_ID, VENDOR_ADDRESS_VENDOR_CNPJ, COMPANY_USER_ADDRESS_ID, VENDOR_ADDRESS_ID)
+--VALUES (2, 'Nome da Rua2', 'Nome do Bairro2', '12346', 'Complemento2', '1234567', 'Nome  Cidade', '1234568', 'SP', 'Nome País', 2, '12345678901233', 3, '11112222333445', 1, '98765432109876', 4, '11112222333445', 2, 1);
 
 -- JOIN 1  selecionando o nome do usuário da empresa, o nome do fornecedor, a descrição do pedido e o custo de envio. 
 SELECT
