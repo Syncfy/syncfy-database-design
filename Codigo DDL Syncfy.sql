@@ -1,3 +1,25 @@
+drop table ADDRESS cascade constraints;
+drop table category cascade constraints;
+drop table city cascade constraints;
+drop table COMPANY_USER cascade constraints;
+drop table COMPANY_USER_ADDRESS cascade constraints;
+drop table COUNTRY cascade constraints;
+drop table DDD cascade constraints;
+drop table IBGE_CODE cascade constraints;
+drop table MATERIAL cascade constraints;
+drop table shipping_cost cascade constraints;
+drop table UF cascade constraints;
+drop table MATERIALORDER cascade constraints;
+drop table NEIGHBORHOOD cascade constraints;
+drop table "Order" cascade constraints;
+drop table PHONE cascade constraints;
+drop table VENDOR cascade constraints;
+drop table VENDOR_ADDRESS cascade constraints;
+drop table ZIP_CODE cascade constraints;
+drop table SEGMENT cascade constraints;
+DROP SEQUENCE materialorder_materialorder_id;
+
+
 CREATE TABLE address (
     id NUMBER NOT NULL,
     street VARCHAR2(50),
@@ -477,6 +499,20 @@ INSERT INTO vendor (id, cnpj, name, email) VALUES (3, '55556666777889', 'Fornece
 INSERT INTO vendor (id, cnpj, name, email) VALUES (4, '99990000111223', 'Fornecedor W', 'fornecedorW@email.com');
 INSERT INTO vendor (id, cnpj, name, email) VALUES (5, '88889999111234', 'Fornecedor V', 'fornecedorV@email.com');
 
+-- Inserir na tabela "Order" 
+INSERT INTO "Order" (id, created_at, updated_at, total_amount, delivery_date, order_number, description_order, vendor_id, vendor_cnpj, company_user_id, company_user_cnpj) VALUES (1, '2023-10-21', '2023-10-21', 170.0, '2023-10-28', 1, 'Pedido de Material B', 1, '98765432100123', 1, '12345678901234');
+INSERT INTO "Order" (id, created_at, updated_at, total_amount, delivery_date, order_number, description_order, vendor_id, vendor_cnpj, company_user_id, company_user_cnpj) VALUES (2, '2023-10-21', '2023-10-21', 150.0, '2023-10-28', 2, 'Pedido de Material B', 2, '11112222333445', 1, '12345678901234');
+INSERT INTO "Order" (id, created_at, updated_at, total_amount, delivery_date, order_number, description_order, vendor_id, vendor_cnpj, company_user_id, company_user_cnpj) VALUES (3, '2023-10-22', '2023-10-22', 75.0, '2023-10-29', 3, 'Pedido de Material C', 3, '55556666777889', 1, '12345678901234');
+INSERT INTO "Order" (id, created_at, updated_at, total_amount, delivery_date, order_number, description_order, vendor_id, vendor_cnpj, company_user_id, company_user_cnpj) VALUES (4, '2023-10-23', '2023-10-23', 200.0, '2023-10-30', 4, 'Pedido de Material D', 4, '99990000111223', 1, '12345678901234');
+INSERT INTO "Order" (id, created_at, updated_at, total_amount, delivery_date, order_number, description_order, vendor_id, vendor_cnpj, company_user_id, company_user_cnpj) VALUES (5, '2023-10-24', '2023-10-24', 90.0, '2023-10-31', 5, 'Pedido de Material E', 5, '88889999111234', 1, '12345678901234');
+
+-- Inserir na tabela shipping_cost
+INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (1, 'Endereço Origem', 'Endereço Destino', 50.0, 1, 1, '98765432100123');
+INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (3, 'Endereço X','Endereço Y', 45.0, 2,2,'11112222333445');
+INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (4, 'Endereço P','Endereço Q', 75.0, 3 ,3, '55556666777889');
+INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (5, 'Endereço K', 'Endereço L', 55.0, 4, 4, '99990000111223');
+INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (6, 'Endereço M','Endereço N', 70.0, 5, 5, '88889999111234');
+delete from shipping_cost;
 -- Inserir na tabela VENDOR_ADDRESS
 INSERT INTO VENDOR_ADDRESS (VENDOR_ID, VENDOR_CNPJ, ID, SHIPPING_COST_ID)
 VALUES (1, '98765432100123', 1, 1);
@@ -489,18 +525,12 @@ VALUES (4, '99990000111223', 4, 4);
 INSERT INTO VENDOR_ADDRESS (VENDOR_ID, VENDOR_CNPJ, ID, SHIPPING_COST_ID)
 VALUES (5, '88889999111234', 5, 5);
 
--- Inserir na tabela "Order" 
-INSERT INTO "Order" (id, created_at, updated_at, total_amount, delivery_date, order_number, description_order, vendor_id, vendor_cnpj, company_user_id, company_user_cnpj) VALUES (2, '2023-10-21', '2023-10-21', 150.0, '2023-10-28', 2, 'Pedido de Material B', 2, '11112222333445', 1, '12345678901234');
-INSERT INTO "Order" (id, created_at, updated_at, total_amount, delivery_date, order_number, description_order, vendor_id, vendor_cnpj, company_user_id, company_user_cnpj) VALUES (3, '2023-10-22', '2023-10-22', 75.0, '2023-10-29', 3, 'Pedido de Material C', 3, '55556666777889', 1, '12345678901234');
-INSERT INTO "Order" (id, created_at, updated_at, total_amount, delivery_date, order_number, description_order, vendor_id, vendor_cnpj, company_user_id, company_user_cnpj) VALUES (4, '2023-10-23', '2023-10-23', 200.0, '2023-10-30', 4, 'Pedido de Material D', 4, '99990000111223', 1, '12345678901234');
-INSERT INTO "Order" (id, created_at, updated_at, total_amount, delivery_date, order_number, description_order, vendor_id, vendor_cnpj, company_user_id, company_user_cnpj) VALUES (5, '2023-10-24', '2023-10-24', 90.0, '2023-10-31', 5, 'Pedido de Material E', 5, '88889999111234', 1, '12345678901234');
-
--- Inserir na tabela shipping_cost
-INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (1, 'Endereço Origem', 'Endereço Destino', 50.0, 1, 1, '98765432100123');
-INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (3, 'Endereço X','Endereço Y', 45.0, 2,2,'11112222333445');
-INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (4, 'Endereço P','Endereço Q', 75.0, 3 ,3, '55556666777889');
-INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (5, 'Endereço K', 'Endereço L', 55.0, 4, 4, '99990000111223');
-INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (6, 'Endereço M','Endereço N', 70.0, 5, 5, '88889999111234');
+-- Inserir na tabela MATERIALORDER
+INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (10, 1, 1);
+INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (20, 2, 2);
+INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (15, 3, 3);
+INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (30, 4, 4);
+INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (25, 5, 5);
 
 -- Inserir na tabela material
 INSERT INTO material (id, unit_amount, name, description, product_code, vendor_id, vendor_cnpj, materialorder_materialorder_id)
@@ -513,13 +543,6 @@ INSERT INTO material (id, unit_amount, name, description, product_code, vendor_i
 VALUES (4, 8, 'Material D', 'Descrição Material D', 'MATERIAL04', 4, '99990000111223', 4);
 INSERT INTO material (id, unit_amount, name, description, product_code, vendor_id, vendor_cnpj, materialorder_materialorder_id)
 VALUES (5, 20, 'Material E', 'Descrição Material E', 'MATERIAL05', 5, '88889999111234', 5);
-
--- Inserir na tabela MATERIALORDER
-INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (10, 1, 1);
-INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (20, 2, 2);
-INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (15, 3, 3);
-INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (30, 4, 4);
-INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (25, 5, 5);
 
 -- Inserir na tabela SEGMENT
 INSERT INTO SEGMENT (ID, SEGMENT, MATERIAL_ID, MATERIAL_PRODUCT_CODE, VENDOR_ID, VENDOR_CNPJ)
@@ -553,11 +576,17 @@ INSERT INTO COMPANY_USER_ADDRESS (COMPANY_USER_ID, COMPANY_USER_CNPJ, ID, SHIPPI
 INSERT INTO COMPANY_USER_ADDRESS (COMPANY_USER_ID, COMPANY_USER_CNPJ, ID, SHIPPING_COST_ID) VALUES (5, '99990000111122', 5, 6);
 
 --Insert uf   NAO DEU CERTO
-INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (1, 'SP', 101);
-INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (2, 'RJ', 102);
-INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (3, 'MG', 103);
-INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (4, 'PR', 104);
-INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (5, 'RS', 105);
+--INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (1, 'SP', 101);
+--INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (2, 'RJ', 102);
+--INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (3, 'MG', 103);
+--INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (4, 'PR', 104);
+--INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (5, 'RS', 105);
+delete from address;
+INSERT INTO ADDRESS (ID, STREET, NEIGHBORHOOD, "Number", COMPLEMENT, ZIP_CODE, CITY, IBGE_CODE, UF, COUNTRY, COMPANY_USER_ID, COMPANY_USER_CNPJ, VENDOR_ID, VENDOR_CNPJ, CMP_USR_ADDR_CMP_USR_ID, CMP_USR_ADDR_CMP_USR_CNPJ, VENDOR_ADDRESS_VENDOR_ID, VENDOR_ADDRESS_VENDOR_CNPJ, COMPANY_USER_ADDRESS_ID, VENDOR_ADDRESS_ID)
+VALUES (1, 'Nome da Rua', 'Nome do Bairro', '12345', 'Complemento', '12345678', 'Nome da Cidade', '1234567', 'UF', 'Nome do País', 1, '12345678901234', 1, '98765432100123', 1, '12345678901234', 1, '98765432100123', 1, 1);
+
+INSERT INTO ADDRESS (ID, STREET, NEIGHBORHOOD, "Number", COMPLEMENT, ZIP_CODE, CITY, IBGE_CODE, UF, COUNTRY, COMPANY_USER_ID, COMPANY_USER_CNPJ, VENDOR_ID, VENDOR_CNPJ, CMP_USR_ADDR_CMP_USR_ID, CMP_USR_ADDR_CMP_USR_CNPJ, VENDOR_ADDRESS_VENDOR_ID, VENDOR_ADDRESS_VENDOR_CNPJ, COMPANY_USER_ADDRESS_ID, VENDOR_ADDRESS_ID)
+VALUES (2, 'Nome da Rua2', 'Nome do Bairro2', '12346', 'Complemento2', '1234567', 'Nome  Cidade', '1234568', 'SP', 'Nome País', 2, '12345678901233', 3, '11112222333445', 1, '98765432109876', 4, '11112222333445', 2, 1);
 
 -- JOIN 1  selecionando o nome do usuário da empresa, o nome do fornecedor, a descrição do pedido e o custo de envio. 
 SELECT
