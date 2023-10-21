@@ -559,6 +559,22 @@ INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (3, 'MG', 103);
 INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (4, 'PR', 104);
 INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (5, 'RS', 105);
 
+-- JOIN 1  selecionando o nome do usuário da empresa, o nome do fornecedor, a descrição do pedido e o custo de envio. 
+SELECT
+    cu.name AS company_user_name,
+    v.name AS vendor_name,
+    o.description_order AS order_description,
+    sc.cost AS shipping_cost
+FROM "Order" o
+JOIN company_user cu ON o.company_user_id = cu.id
+JOIN vendor v ON o.vendor_id = v.id
+JOIN shipping_cost sc ON o.id = sc.order_id;
 
-
-
+--Join entre as tabelas "material", "category" e "vendor". Estamos selecionando o nome do material, a categoria do material e o nome do fornecedor. 
+SELECT
+    m.name AS material_name,
+    c.category AS material_category,
+    v.name AS vendor_name
+FROM material m
+JOIN category c ON m.id = c.material_id
+JOIN vendor v ON m.vendor_id = v.id;
