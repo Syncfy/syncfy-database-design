@@ -45,7 +45,7 @@ CREATE TABLE category (
     id                    NUMBER NOT NULL,
     category              VARCHAR2(20),
     material_id           NUMBER NOT NULL,
-    material_product_code CHAR(11) 
+    material_product_code CHAR(10) 
      NOT NULL
 );
 
@@ -144,7 +144,7 @@ CREATE TABLE material (
     unit_amount                    NUMBER,
     name                           VARCHAR2(20),
     description                    VARCHAR2(250),
-    product_code                   CHAR(11) NOT NULL,
+    product_code                   CHAR(10) NOT NULL,
     vendor_id                      NUMBER NOT NULL,
     vendor_cnpj                    NUMBER NOT NULL,
     materialorder_materialorder_id NUMBER NOT NULL
@@ -461,6 +461,103 @@ BEGIN
     :new.materialorder_id := materialorder_materialorder_id.nextval;
 END;
 /
+
+
+-- Inserir na tabela company_user
+INSERT INTO company_user (id, cnpj, name, soft_delete, email, password) VALUES (1, '12345678901234', 'Empresa A', 'N', 'empresaA@email.com', 'senhaA');
+INSERT INTO company_user (id, cnpj, name, soft_delete, email, password) VALUES (2, '98765432109876', 'Empresa B', 'N', 'empresaB@email.com', 'senhaB');
+INSERT INTO company_user (id, cnpj, name, soft_delete, email, password) VALUES (3, '11112222333344', 'Empresa C', 'N', 'empresaC@email.com', 'senhaC');
+INSERT INTO company_user (id, cnpj, name, soft_delete, email, password) VALUES (4, '55556666777788', 'Empresa D', 'N', 'empresaD@email.com', 'senhaD');
+INSERT INTO company_user (id, cnpj, name, soft_delete, email, password) VALUES (5, '99990000111122', 'Empresa E', 'N', 'empresaE@email.com', 'senhaE');
+
+-- Inserir na tabela vendor
+INSERT INTO vendor (id, cnpj, name, email) VALUES (1, '98765432100123', 'Fornecedor X', 'fornecedorX@email.com');
+INSERT INTO vendor (id, cnpj, name, email) VALUES (2, '11112222333445', 'Fornecedor Y', 'fornecedorY@email.com');
+INSERT INTO vendor (id, cnpj, name, email) VALUES (3, '55556666777889', 'Fornecedor Z', 'fornecedorZ@email.com');
+INSERT INTO vendor (id, cnpj, name, email) VALUES (4, '99990000111223', 'Fornecedor W', 'fornecedorW@email.com');
+INSERT INTO vendor (id, cnpj, name, email) VALUES (5, '88889999111234', 'Fornecedor V', 'fornecedorV@email.com');
+
+-- Inserir na tabela VENDOR_ADDRESS
+INSERT INTO VENDOR_ADDRESS (VENDOR_ID, VENDOR_CNPJ, ID, SHIPPING_COST_ID)
+VALUES (1, '98765432100123', 1, 1);
+INSERT INTO VENDOR_ADDRESS (VENDOR_ID, VENDOR_CNPJ, ID, SHIPPING_COST_ID)
+VALUES (2, '11112222333445', 2, 6);
+INSERT INTO VENDOR_ADDRESS (VENDOR_ID, VENDOR_CNPJ, ID, SHIPPING_COST_ID)
+VALUES (3, '55556666777889', 3, 3);
+INSERT INTO VENDOR_ADDRESS (VENDOR_ID, VENDOR_CNPJ, ID, SHIPPING_COST_ID)
+VALUES (4, '99990000111223', 4, 4);
+INSERT INTO VENDOR_ADDRESS (VENDOR_ID, VENDOR_CNPJ, ID, SHIPPING_COST_ID)
+VALUES (5, '88889999111234', 5, 5);
+
+-- Inserir na tabela "Order" 
+INSERT INTO "Order" (id, created_at, updated_at, total_amount, delivery_date, order_number, description_order, vendor_id, vendor_cnpj, company_user_id, company_user_cnpj) VALUES (2, '2023-10-21', '2023-10-21', 150.0, '2023-10-28', 2, 'Pedido de Material B', 2, '11112222333445', 1, '12345678901234');
+INSERT INTO "Order" (id, created_at, updated_at, total_amount, delivery_date, order_number, description_order, vendor_id, vendor_cnpj, company_user_id, company_user_cnpj) VALUES (3, '2023-10-22', '2023-10-22', 75.0, '2023-10-29', 3, 'Pedido de Material C', 3, '55556666777889', 1, '12345678901234');
+INSERT INTO "Order" (id, created_at, updated_at, total_amount, delivery_date, order_number, description_order, vendor_id, vendor_cnpj, company_user_id, company_user_cnpj) VALUES (4, '2023-10-23', '2023-10-23', 200.0, '2023-10-30', 4, 'Pedido de Material D', 4, '99990000111223', 1, '12345678901234');
+INSERT INTO "Order" (id, created_at, updated_at, total_amount, delivery_date, order_number, description_order, vendor_id, vendor_cnpj, company_user_id, company_user_cnpj) VALUES (5, '2023-10-24', '2023-10-24', 90.0, '2023-10-31', 5, 'Pedido de Material E', 5, '88889999111234', 1, '12345678901234');
+
+-- Inserir na tabela shipping_cost
+INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (1, 'Endereço Origem', 'Endereço Destino', 50.0, 1, 1, '98765432100123');
+INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (3, 'Endereço X','Endereço Y', 45.0, 2,2,'11112222333445');
+INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (4, 'Endereço P','Endereço Q', 75.0, 3 ,3, '55556666777889');
+INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (5, 'Endereço K', 'Endereço L', 55.0, 4, 4, '99990000111223');
+INSERT INTO shipping_cost (id, "Source_Address(address)", "Delivery_Address(address)", cost, order_id, vendor_id, vendor_cnpj) VALUES (6, 'Endereço M','Endereço N', 70.0, 5, 5, '88889999111234');
+
+-- Inserir na tabela material
+INSERT INTO material (id, unit_amount, name, description, product_code, vendor_id, vendor_cnpj, materialorder_materialorder_id)
+VALUES (1, 10, 'Material A', 'Descrição Material A', 'MATERIAL01', 1, '98765432100123', 1);
+INSERT INTO material (id, unit_amount, name, description, product_code, vendor_id, vendor_cnpj, materialorder_materialorder_id)
+VALUES (2, 15, 'Material B', 'Descrição Material B', 'MATERIAL02', 2, '11112222333445', 2);
+INSERT INTO material (id, unit_amount, name, description, product_code, vendor_id, vendor_cnpj, materialorder_materialorder_id)
+VALUES (3, 12, 'Material C', 'Descrição Material C', 'MATERIAL03', 3, '55556666777889', 3);
+INSERT INTO material (id, unit_amount, name, description, product_code, vendor_id, vendor_cnpj, materialorder_materialorder_id)
+VALUES (4, 8, 'Material D', 'Descrição Material D', 'MATERIAL04', 4, '99990000111223', 4);
+INSERT INTO material (id, unit_amount, name, description, product_code, vendor_id, vendor_cnpj, materialorder_materialorder_id)
+VALUES (5, 20, 'Material E', 'Descrição Material E', 'MATERIAL05', 5, '88889999111234', 5);
+
+-- Inserir na tabela MATERIALORDER
+INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (10, 1, 1);
+INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (20, 2, 2);
+INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (15, 3, 3);
+INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (30, 4, 4);
+INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID) VALUES (25, 5, 5);
+
+-- Inserir na tabela SEGMENT
+INSERT INTO SEGMENT (ID, SEGMENT, MATERIAL_ID, MATERIAL_PRODUCT_CODE, VENDOR_ID, VENDOR_CNPJ)
+VALUES (1, 'Segmento A', 1, 'MATERIAL01', 1, '98765432100123');
+INSERT INTO SEGMENT (ID, SEGMENT, MATERIAL_ID, MATERIAL_PRODUCT_CODE, VENDOR_ID, VENDOR_CNPJ)
+VALUES (2, 'Segmento B', 2, 'MATERIAL02', 2, '11112222333445');
+INSERT INTO SEGMENT (ID, SEGMENT, MATERIAL_ID, MATERIAL_PRODUCT_CODE, VENDOR_ID, VENDOR_CNPJ)
+VALUES (3, 'Segmento C', 3, 'MATERIAL03', 3, '55556666777889');
+INSERT INTO SEGMENT (ID, SEGMENT, MATERIAL_ID, MATERIAL_PRODUCT_CODE, VENDOR_ID, VENDOR_CNPJ)
+VALUES (4, 'Segmento D', 4, 'MATERIAL04', 4, '99990000111223');
+INSERT INTO SEGMENT (ID, SEGMENT, MATERIAL_ID, MATERIAL_PRODUCT_CODE, VENDOR_ID, VENDOR_CNPJ)
+VALUES (5, 'Segmento E', 5, 'MATERIAL05', 5, '88889999111234');
+
+-- Inserir na tabela CATEGORY
+INSERT INTO CATEGORY (ID, CATEGORY, MATERIAL_ID, MATERIAL_PRODUCT_CODE)
+VALUES (1, 'Categoria A', 1, 'MATERIAL01');
+INSERT INTO CATEGORY (ID, CATEGORY, MATERIAL_ID, MATERIAL_PRODUCT_CODE)
+VALUES (2, 'Categoria B', 2, 'MATERIAL02');
+INSERT INTO CATEGORY (ID, CATEGORY, MATERIAL_ID, MATERIAL_PRODUCT_CODE)
+VALUES (3, 'Categoria C', 3, 'MATERIAL03');
+INSERT INTO CATEGORY (ID, CATEGORY, MATERIAL_ID, MATERIAL_PRODUCT_CODE)
+VALUES (4, 'Categoria D', 4, 'MATERIAL04');
+INSERT INTO CATEGORY (ID, CATEGORY, MATERIAL_ID, MATERIAL_PRODUCT_CODE)
+VALUES (5, 'Categoria E', 5, 'MATERIAL05');
+
+-- Inserir na tabela COMPANY_USER_ADDRESS
+INSERT INTO COMPANY_USER_ADDRESS (COMPANY_USER_ID, COMPANY_USER_CNPJ, ID, SHIPPING_COST_ID) VALUES (1, '12345678901234', 1, 1);
+INSERT INTO COMPANY_USER_ADDRESS (COMPANY_USER_ID, COMPANY_USER_CNPJ, ID, SHIPPING_COST_ID) VALUES (2, '98765432109876', 2, 3);
+INSERT INTO COMPANY_USER_ADDRESS (COMPANY_USER_ID, COMPANY_USER_CNPJ, ID, SHIPPING_COST_ID) VALUES (3, '11112222333344', 3, 4);
+INSERT INTO COMPANY_USER_ADDRESS (COMPANY_USER_ID, COMPANY_USER_CNPJ, ID, SHIPPING_COST_ID) VALUES (4, '55556666777788', 4, 5);
+INSERT INTO COMPANY_USER_ADDRESS (COMPANY_USER_ID, COMPANY_USER_CNPJ, ID, SHIPPING_COST_ID) VALUES (5, '99990000111122', 5, 6);
+
+--Insert uf   NAO DEU CERTO
+INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (1, 'SP', 101);
+INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (2, 'RJ', 102);
+INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (3, 'MG', 103);
+INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (4, 'PR', 104);
+INSERT INTO uf (ID, UF, ADDRESS_ID) VALUES (5, 'RS', 105);
 
 
 
