@@ -19,6 +19,7 @@ drop table ZIP_CODE cascade constraints;
 drop table SEGMENT cascade constraints;
 DROP SEQUENCE materialorder_materialorder_id;
 
+desc uf;
 
 CREATE TABLE address (
     id                                     NUMBER NOT NULL,
@@ -505,5 +506,53 @@ END;
 /
 
 
+-- Procedure UF 
+CREATE OR REPLACE PROCEDURE manipulate_uf (
+   p_id NUMBER,
+   p_uf CHAR,
+   p_operation CHAR
+)
+AS
+BEGIN
+   IF p_operation = 'INSERT' THEN
+      INSERT INTO uf (ID, UF)
+      VALUES (p_id, p_uf);
+      
+   ELSIF p_operation = 'UPDATE' THEN
+      UPDATE uf
+      SET UF = p_uf
+      WHERE ID = p_id;
+      
+   ELSIF p_operation = 'DELETE' THEN
+      DELETE FROM uf
+      WHERE ID = p_id;
+   ELSE
+      RAISE_APPLICATION_ERROR(-20001, 'Invalid operation. Use INSERT, UPDATE, or DELETE.');
+   END IF;
+END manipulate_uf;
 
+
+-- Procedure DDD
+CREATE OR REPLACE PROCEDURE GerenciarRegistro (
+    p_Action IN VARCHAR2,
+    p_ID IN NUMBER,
+    p_DDD IN NUMBER
+) AS
+BEGIN
+    IF p_Action = 'INSERT' THEN
+        INSERT INTO ddd (ID, DDD)
+        VALUES (p_ID, p_DDD);
+    ELSIF p_Action = 'UPDATE' THEN
+        UPDATE ddd
+        SET DDD = p_DDD
+        WHERE ID = p_ID;
+    ELSIF p_Action = 'DELETE' THEN
+        DELETE FROM ddd
+        WHERE ID = p_ID;
+    ELSE
+        RAISE_APPLICATION_ERROR(-20001, 'Ação inválida. Use "INSERT", "UPDATE" ou "DELETE".');
+    END IF;
+
+    COMMIT;
+END GerenciarRegistro;
 
