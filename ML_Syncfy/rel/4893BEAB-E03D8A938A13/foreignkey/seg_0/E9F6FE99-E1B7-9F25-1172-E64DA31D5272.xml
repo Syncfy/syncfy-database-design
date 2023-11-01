@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E9F6FE99-E1B7-9F25-1172-E64DA31D5272" containerWithKeyObject="BCC52FEE-B62C-4D37-B69B-4CD79834DEB6" localFKIndex="FBCD048B-7836-2167-1B37-6935FCDA1A64" name="Shipping_Cost_Order_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>42D8E01C-491A-796A-6E7A-8C797FCB0146</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referredTableLongName>Order</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>3F22CD00-DE92-3A6F-C274-4A681EB1897A</referredTableID>
+<keyObject>70670802-BA97-089B-FC8B-26221586E34E</keyObject>
+<referredKeyID>70670802-BA97-089B-FC8B-26221586E34E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

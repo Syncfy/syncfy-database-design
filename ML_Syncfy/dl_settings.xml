@@ -391,15 +391,7 @@
 	<model_compare_storage_props_filter>
 	</model_compare_storage_props_filter>
 	<naming_options>
-		<model_options objectid="E3517374-A0BE-41DE-CD55-ED14FF66C968">
-			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Table" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
-			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Column" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
-			<naming_option class_name="oracle.dbtools.crest.model.design.relational.TableView" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
-			<naming_option class_name="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
-			<naming_option class_name="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
-			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Index" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
-		</model_options>
-		<model_options objectid="61F48727-3E8B-9EEE-308A-D92D555BE410">
+		<model_options objectid="4893BEAB-C935-BC41-986E-E03D8A938A13">
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Table" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Column" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.TableView" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
@@ -431,15 +423,6 @@
 		</data_types_model_estimates>
 		<relational_model_estimates>
 			<relational_model_0_estimates>
-				<relational_model_name value="Relational"/>
-				<tables value="70"/>
-				<views value="70"/>
-				<foreign_keys value="70"/>
-				<schemas value="70"/>
-				<subviews value="70"/>
-				<arcs value="70"/>
-			</relational_model_0_estimates>
-			<relational_model_1_estimates>
 				<relational_model_name value="Relational_1"/>
 				<tables value="70"/>
 				<views value="70"/>
@@ -447,7 +430,7 @@
 				<schemas value="70"/>
 				<subviews value="70"/>
 				<arcs value="70"/>
-			</relational_model_1_estimates>
+			</relational_model_0_estimates>
 		</relational_model_estimates>
 	</design_estimates>
 </settings>

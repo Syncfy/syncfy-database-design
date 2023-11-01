@@ -1,0 +1,219 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E582A1BE-D944-A695-F737-5450D1956B75" name="Address">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>532FA0AE-970E-02A6-44F6-9CDF0BB7E135</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="D0D14237-E9BA-D1E7-4523-82D02F415FDB">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>DE9BEF1E-225B-11FA-1794-2C5B47293545</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Street" id="EC4DB2A0-E383-2EBA-7BA5-C640D9F4DE03">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>3FF70125-4DDA-902D-8A2E-BF807022E096</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Number" id="4BED45FA-4616-309D-0DA6-0380054464D3">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>A1E3FA15-32F4-41DD-37AF-4D6C77FE9B4D</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Complement" id="C41FBC56-2332-1A2C-B2F9-4655EB6B98C6">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>AEEE47EE-954A-3C8D-08AB-53819848010E</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Company_User_Address_Company_User_Id" id="0E48CD90-3F1A-71E9-2EEA-25295AB5888F">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>22B740EF-9A27-625C-D4EF-53EF110AE8DE</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="83FADAEC-2530-964A-CAA5-6F3B0B5DCB52" referredColumn="13B1902B-FCD9-6BB9-9D1A-BB23DA96FF17"/>
+</associations>
+</Column>
+<Column name="Company_User_Address_Company_User_Cnpj" id="DEEAF8F3-4134-1DBE-129F-3AED6804FC85">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>5A67526D-5DCD-79EA-F424-F898327CD6E0</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="83FADAEC-2530-964A-CAA5-6F3B0B5DCB52" referredColumn="5C53C774-3C4F-215B-D8F9-E814E2F92CCF"/>
+</associations>
+</Column>
+<Column name="Vendor_Address_Vendor_Id" id="892D0021-45FA-3E6F-73FE-4CA346590B73">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>9CEAE756-C9B9-5911-4862-1AB54BAA170B</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C486E187-1E79-FFC9-A239-CB337B5A0873" referredColumn="60A84171-6767-9072-E80E-99ADE2353682"/>
+</associations>
+</Column>
+<Column name="Vendor_Address_Vendor_Cnpj" id="A7CD4E9D-84CA-272B-30CC-5EE8C0265686">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>963229EE-EDE1-291A-EAD8-10766021888E</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C486E187-1E79-FFC9-A239-CB337B5A0873" referredColumn="26619D09-0F6E-AEB5-E399-ED39BB12E533"/>
+</associations>
+</Column>
+<Column name="Company_User_Address_Id" id="85D06B21-B5B0-BAF5-60BB-552FC1A84AD2">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>A311DAAF-ACC0-7121-22B7-44798B4A91B8</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="83FADAEC-2530-964A-CAA5-6F3B0B5DCB52" referredColumn="8BA91A49-A98E-6472-1230-6096A1E9AB8D"/>
+</associations>
+</Column>
+<Column name="Vendor_Address_Id" id="D802907F-16E9-E21E-0AA3-7081A999EAD3">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>F42D87C9-27F1-8ADA-7AAA-DA958F173C3E</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C486E187-1E79-FFC9-A239-CB337B5A0873" referredColumn="72FC6D24-49C3-2508-6E95-0D3721FF5277"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3347F207-F334-5EA1-20FD-CAAF35D8459A" name="Address_PK">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>915B855F-24D9-7F03-B799-631747227721</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D0D14237-E9BA-D1E7-4523-82D02F415FDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C932803E-AFD8-FA57-64F9-2631707918FC" name="Address__IDX">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>22775EE5-67BD-E965-0220-A84B8652ADBF</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="0E48CD90-3F1A-71E9-2EEA-25295AB5888F"/>
+<colUsage columnID="DEEAF8F3-4134-1DBE-129F-3AED6804FC85"/>
+<colUsage columnID="85D06B21-B5B0-BAF5-60BB-552FC1A84AD2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="17D97574-9142-E769-FE61-ED1F484FE182" name="Address__IDXv1">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:30 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>4A4F052B-ECDC-8134-6134-79CE8282C3CA</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="892D0021-45FA-3E6F-73FE-4CA346590B73"/>
+<colUsage columnID="A7CD4E9D-84CA-272B-30CC-5EE8C0265686"/>
+<colUsage columnID="D802907F-16E9-E21E-0AA3-7081A999EAD3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F236568F-22BD-1501-ACBC-130FDFB4AB4E" name="Address_Company_User_Address_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>22775EE5-67BD-E965-0220-A84B8652ADBF</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E48CD90-3F1A-71E9-2EEA-25295AB5888F"/>
+<colUsage columnID="DEEAF8F3-4134-1DBE-129F-3AED6804FC85"/>
+<colUsage columnID="85D06B21-B5B0-BAF5-60BB-552FC1A84AD2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9EAC85CF-E2E5-083F-F99D-D3533BEDA230" name="Address_Vendor_Address_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:30 UTC</createdTime>
+<generatorID>4A4F052B-ECDC-8134-6134-79CE8282C3CA</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="892D0021-45FA-3E6F-73FE-4CA346590B73"/>
+<colUsage columnID="A7CD4E9D-84CA-272B-30CC-5EE8C0265686"/>
+<colUsage columnID="D802907F-16E9-E21E-0AA3-7081A999EAD3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

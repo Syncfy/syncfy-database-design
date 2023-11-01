@@ -1,0 +1,195 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3F22CD00-DE92-3A6F-C274-4A681EB1897A" name="Order">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>856B125B-8B8A-07FE-DC86-05A7E0F3CE89</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="E6C900C5-0588-5059-B4C6-D5D873F852DC">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>35EA8A44-B3B7-2088-5716-C6F8E15470EE</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Created_at" id="D81C8F77-A61B-B451-F9E1-ED2834A45397">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>DDE8BF29-E251-D20B-8E41-644B779B1B16</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Updated_at" id="81961096-CB72-F4E1-5897-9190C831ED00">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>CAA50F5E-1BF0-9D74-EA4E-CF8FC80422DE</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Total_Amount" id="D96A990C-6689-8F11-EA0D-225A98F7C508">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>480C7330-8994-D526-53A3-AE589092BFFA</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Delivery_Date" id="BAEAF1FA-3C38-C63B-4303-37F0622FE06B">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>0A4B40AC-BC03-2425-D7FC-7A035A42E777</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Order_Number" id="B92DB170-7943-E3C3-DD10-107937F947A9">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>E37AD668-6372-CEDC-588B-66F3608B432C</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Description" id="41836EFC-1956-60A5-AC8A-91DF687035C8">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>D05B8161-B2DB-9CFE-E8B0-76DC04FE8371</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Vendor_Id" id="BBE93A25-CC8C-AA8F-09B0-5C8F92CC86F0">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>5AA03CD0-3863-5F6D-C2DB-6970FD4745F9</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C7258B9A-2A73-3840-92CA-969A40DA1865" referredColumn="94BB98CD-52E1-E08F-A139-16474FC393C2"/>
+</associations>
+</Column>
+<Column name="Vendor_Cnpj" id="8BC192B9-B8EA-EC45-D5FD-0FE6AF75F8D9">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>303FFC15-6CDA-4509-D027-28C3A4860B56</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C7258B9A-2A73-3840-92CA-969A40DA1865" referredColumn="24A95F54-2805-6A4C-35A4-97FEE6AA29CF"/>
+</associations>
+</Column>
+<Column name="Company_User_Id" id="80CFA0D6-7602-3502-8F39-823E4A0C092C">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>FEE9E49B-7D43-AF74-F505-0F0F77B61CE3</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FAFAC67B-59B3-CD64-FE53-AB364225874A" referredColumn="FC3CC9FF-9030-931E-96D8-BBD5AF57D0F8"/>
+</associations>
+</Column>
+<Column name="Company_User_Cnpj" id="D2977DB2-B507-555B-BA39-24CA1B229D99">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>80FC1994-5D10-638C-DC32-D8D429D077F1</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FAFAC67B-59B3-CD64-FE53-AB364225874A" referredColumn="A3C774D5-2F04-8DB6-3086-409B2DD7E9C6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="70670802-BA97-089B-FC8B-26221586E34E" name="Order_PK">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>1F66DF28-D12F-3204-0739-AD2061DA4E07</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E6C900C5-0588-5059-B4C6-D5D873F852DC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="69251076-C8DE-CF0A-D43D-3B3BEAA37235" name="Order_Company_User_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>0190CEB4-CFD9-3A1E-278B-2CD01AC11A87</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="80CFA0D6-7602-3502-8F39-823E4A0C092C"/>
+<colUsage columnID="D2977DB2-B507-555B-BA39-24CA1B229D99"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CB1CEDEC-10AA-D574-FFBE-E375EAE667A1" name="Order_Vendor_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:30 UTC</createdTime>
+<generatorID>A56D2F68-3E3D-9B23-8026-519A391AEEA5</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BBE93A25-CC8C-AA8F-09B0-5C8F92CC86F0"/>
+<colUsage columnID="8BC192B9-B8EA-EC45-D5FD-0FE6AF75F8D9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

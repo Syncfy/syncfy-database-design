@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D1AF04F4-1C5D-569B-0155-C06B209997D9" name="Company_User_Address">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>21953616-6C15-2699-113B-9E2FD0BEAABD</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Company_User_Id" id="13B1902B-FCD9-6BB9-9D1A-BB23DA96FF17">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>77DBB6E3-0147-349C-823D-0C51DDC4801D</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8A9B16C1-5B22-2AD3-5E14-BAB8CEDE5C44" referredColumn="FC3CC9FF-9030-931E-96D8-BBD5AF57D0F8"/>
+</associations>
+</Column>
+<Column name="Company_User_Cnpj" id="5C53C774-3C4F-215B-D8F9-E814E2F92CCF">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>B541A6D3-D3C1-BAAE-C37E-2B045D900CB9</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8A9B16C1-5B22-2AD3-5E14-BAB8CEDE5C44" referredColumn="A3C774D5-2F04-8DB6-3086-409B2DD7E9C6"/>
+</associations>
+</Column>
+<Column name="Id" id="8BA91A49-A98E-6472-1230-6096A1E9AB8D">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>17D523E3-FDED-0D3F-8ABA-D98AD71510D0</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Shipping_Cost_Id" id="964B3E07-1A27-F174-9593-FD3C220ED17D">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>2E5C8EEA-C4A8-405D-F30B-F98798AF057D</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="89F7650B-9F67-9681-2110-1A9712AD3DF7" referredColumn="6B614183-A5C3-A381-07D7-D410410D1EB0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CF1087F1-F339-D153-44B8-A5FFEC74508E" name="Company_User_Address_PK">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>F99690B0-E40E-B126-F6E5-9DB8B0C1E36D</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13B1902B-FCD9-6BB9-9D1A-BB23DA96FF17"/>
+<colUsage columnID="5C53C774-3C4F-215B-D8F9-E814E2F92CCF"/>
+<colUsage columnID="8BA91A49-A98E-6472-1230-6096A1E9AB8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="25F34898-C407-915C-6B2F-5E611E21B207" name="Company_User_Address__IDX">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>89128F6E-3C8A-6251-0988-7A6646751198</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="964B3E07-1A27-F174-9593-FD3C220ED17D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8268944E-2058-863B-3928-F3F6C437BCD4" name="Company_User_Address_Company_User_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>6F819864-F12A-5F45-63F9-29BB553BA41E</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13B1902B-FCD9-6BB9-9D1A-BB23DA96FF17"/>
+<colUsage columnID="5C53C774-3C4F-215B-D8F9-E814E2F92CCF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="539C78D1-82F6-7DDA-FA2E-A4C6E8378545" name="Company_User_Address_Shipping_Cost_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>89128F6E-3C8A-6251-0988-7A6646751198</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="964B3E07-1A27-F174-9593-FD3C220ED17D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4755125B-B540-1A35-FF4E-BC230AD2D3C9" name="Country">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>E856A6AF-446D-9CFB-028B-155D1F44CE73</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="B5E0AE2C-809B-2AE9-60B8-9E2D7CC5B638">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>6A0BF8D7-FF61-BC1F-6CA1-8B7980115F05</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Country" id="5B4DC7F8-7447-AC2E-65CE-EEFF0F70D782">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>1540E634-590A-113B-81E4-CE2BD3E7C1CB</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Address_Id" id="26FA6BA4-9DAB-CF95-57A2-BE70CC2838E9">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>EFDF520D-8E89-7973-09AF-98F3648B4DBC</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D3E20BD2-FE3D-108B-392C-C5CEC6A94A7D" referredColumn="D0D14237-E9BA-D1E7-4523-82D02F415FDB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C04121DB-6AA4-B188-24EF-6395C436E916" name="Country_PK">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>2B05A1F5-9BD0-453D-1913-96685DCB0FA3</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5E0AE2C-809B-2AE9-60B8-9E2D7CC5B638"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="038E531D-0672-4BF5-EF3F-03F963F789A9" name="Country__IDX">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>ACFDC49D-71FA-F802-E6DF-9B09672A748F</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="26FA6BA4-9DAB-CF95-57A2-BE70CC2838E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4B220149-0810-810E-1F94-BB70C0BC1C5F" name="Country_Address_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>ACFDC49D-71FA-F802-E6DF-9B09672A748F</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26FA6BA4-9DAB-CF95-57A2-BE70CC2838E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

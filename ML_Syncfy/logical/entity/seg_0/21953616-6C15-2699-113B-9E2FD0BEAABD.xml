@@ -4,8 +4,7 @@
 <createdTime>2023-10-20 00:43:02 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -22,8 +21,7 @@
 <generatorID>6F819864-F12A-5F45-63F9-29BB553BA41E</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <referedAttribute>EE38ADF2-CDEC-B5A7-CCDE-E09FF0018BE6</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -37,23 +35,21 @@
 <generatorID>6F819864-F12A-5F45-63F9-29BB553BA41E</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <referedAttribute>923BD0FC-07CA-D2B1-A1AB-82E275C3C4FB</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>14</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Id" id="17D523E3-FDED-0D3F-8ABA-D98AD71510D0">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:35:09 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -66,8 +62,7 @@
 <generatorID>89128F6E-3C8A-6251-0988-7A6646751198</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <referedAttribute>B7C75C71-14CE-EDB0-A6B2-C7FFA0F7C9E4</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -82,8 +77,7 @@
 <createdTime>2023-10-20 01:14:49 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

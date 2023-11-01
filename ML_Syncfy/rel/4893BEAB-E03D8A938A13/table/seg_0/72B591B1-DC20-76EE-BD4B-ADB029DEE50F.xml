@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="72B591B1-DC20-76EE-BD4B-ADB029DEE50F" name="MaterialOrder">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>FDCA0ED2-A849-053D-1F0D-4E790A287C12</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Quantity" id="3E40649D-1062-7AE2-120E-6A84CB9E1233">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>FABFC37D-7545-3580-4AB0-7AA7AFEB17ED</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Order_Id" id="F9FDE888-8960-E8A9-4F1D-55480BCF2582">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>AA632B61-F257-A61E-1C29-DF9C497D85D5</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="64C12615-4E69-20E9-52C0-BCAEE8D4379B" referredColumn="E6C900C5-0588-5059-B4C6-D5D873F852DC"/>
+</associations>
+</Column>
+<Column name="MaterialOrder_ID" id="2CA1CA91-F578-A7B5-DDAA-0995C14F1D71">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B74C5F45-5643-0071-DDA4-0991AEA0CB0D" name="MaterialOrder_PK">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="2CA1CA91-F578-A7B5-DDAA-0995C14F1D71"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F6D2BFF7-3F1E-AB39-BFE6-1B521679460D" name="MaterialOrder__IDX">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>A9CD9CB4-0D5E-27ED-CF7B-21FAB11CE267</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="F9FDE888-8960-E8A9-4F1D-55480BCF2582"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="96573846-0F42-7511-5DDE-4631E1EB4E2E" name="MaterialOrder_Order_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-11-01 17:32:29 UTC</createdTime>
+<generatorID>A9CD9CB4-0D5E-27ED-CF7B-21FAB11CE267</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9FDE888-8960-E8A9-4F1D-55480BCF2582"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
