@@ -19,8 +19,6 @@ drop table ZIP_CODE cascade constraints;
 drop table SEGMENT cascade constraints;
 DROP SEQUENCE materialorder_materialorder_id;
 
-desc uf;
-
 CREATE TABLE address (
     id                                     NUMBER NOT NULL,
     street                                 VARCHAR2(50),
@@ -555,4 +553,242 @@ BEGIN
 
     COMMIT;
 END GerenciarRegistro;
+
+
+-- Procedure Phone
+CREATE OR REPLACE PROCEDURE manage_phone (
+    p_id IN NUMBER,
+    p_number IN VARCHAR2,
+    p_company_user_id IN NUMBER,
+    p_company_user_cnpj IN VARCHAR2,
+    p_vendor_id IN NUMBER,
+    p_vendor_cnpj IN VARCHAR2,
+    p_ddd_id IN NUMBER
+)
+IS
+BEGIN
+    INSERT INTO phone (
+        id,
+        "Number",
+        company_user_id,
+        company_user_cnpj,
+        vendor_id,
+        vendor_cnpj,
+        ddd_id
+    ) VALUES (
+        p_id,
+        p_number,
+        p_company_user_id,
+        p_company_user_cnpj,
+        p_vendor_id,
+        p_vendor_cnpj,
+        p_ddd_id
+    );
+
+    UPDATE phone
+    SET "Number" = p_number
+    WHERE id = p_id;
+    
+    DELETE FROM phone
+    WHERE id = p_id;
+
+    COMMIT;
+END;
+
+
+-- Procedure zip_code
+CREATE OR REPLACE PROCEDURE manipulate_zip_code (
+    p_id IN NUMBER,
+    p_zip_code IN VARCHAR2,
+    p_address_id IN NUMBER,
+    p_operation IN VARCHAR2
+)
+IS
+BEGIN
+    IF p_operation = 'INSERT' THEN
+        INSERT INTO zip_code (
+            id,
+            zip_code,
+            address_id
+        ) VALUES (
+            p_id,
+            p_zip_code,
+            p_address_id
+        );
+    ELSIF p_operation = 'UPDATE' THEN
+        UPDATE zip_code
+        SET zip_code = p_zip_code
+        WHERE id = p_id;
+    ELSIF p_operation = 'DELETE' THEN
+        DELETE FROM zip_code
+        WHERE id = p_id;
+    ELSE
+        RAISE_APPLICATION_ERROR(-20001, 'Operação inválida. Use INSERT, UPDATE ou DELETE.');
+    END IF;
+
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        RAISE;
+END;
+/
+
+-- Procedure zip_code
+CREATE OR REPLACE PROCEDURE manipulate_material (
+    p_id IN NUMBER,
+    p_unit_amount IN NUMBER,
+    p_name IN VARCHAR2,
+    p_description IN VARCHAR2,
+    p_product_code IN VARCHAR2,
+    p_vendor_id IN NUMBER,
+    p_vendor_cnpj IN VARCHAR2,
+    p_materialorder_materialorder_id IN NUMBER,
+    p_operation IN VARCHAR2
+)
+IS
+BEGIN
+    IF p_operation = 'INSERT' THEN
+        INSERT INTO material (
+            id,
+            unit_amount,
+            name,
+            description,
+            product_code,
+            vendor_id,
+            vendor_cnpj,
+            materialorder_materialorder_id
+        ) VALUES (
+            p_id,
+            p_unit_amount,
+            p_name,
+            p_description,
+            p_product_code,
+            p_vendor_id,
+            p_vendor_cnpj,
+            p_materialorder_materialorder_id
+        );
+        
+    ELSIF p_operation = 'UPDATE' THEN
+        UPDATE material
+        SET
+            unit_amount = p_unit_amount,
+            name = p_name,
+            description = p_description,
+            product_code = p_product_code,
+            vendor_id = p_vendor_id,
+            vendor_cnpj = p_vendor_cnpj,
+            materialorder_materialorder_id = p_materialorder_materialorder_id
+        WHERE id = p_id;
+        
+    ELSIF p_operation = 'DELETE' THEN
+        DELETE FROM material
+        WHERE id = p_id;
+    ELSE
+        RAISE_APPLICATION_ERROR(-20001, 'Operação inválida. Use INSERT, UPDATE ou DELETE.');
+    END IF;
+
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        RAISE;
+END;
+/
+
+--Procedure Shipping cost
+CREATE OR REPLACE PROCEDURE manipulate_shipping_cost (
+    p_id IN NUMBER,
+    p_cost IN NUMBER,
+    p_order_id IN NUMBER,
+    p_operation IN VARCHAR2
+)
+IS
+BEGIN
+    IF p_operation = 'INSERT' THEN
+        INSERT INTO shipping_cost (
+            id,
+            cost,
+            order_id
+        ) VALUES (
+            p_id,
+            p_cost,
+            p_order_id
+        );
+    ELSIF p_operation = 'UPDATE' THEN
+        UPDATE shipping_cost
+        SET cost = p_cost
+        WHERE id = p_id;
+    ELSIF p_operation = 'DELETE' THEN
+        DELETE FROM shipping_cost
+        WHERE id = p_id;
+    ELSE
+        RAISE_APPLICATION_ERROR(-20001, 'Operação inválida. Use INSERT, UPDATE ou DELETE.');
+    END IF;
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        RAISE;
+END;
+/
+
+
+--procedure Vendor Address
+CREATE OR REPLACE PROCEDURE manage_vendor_address (
+    p_vendor_id IN NUMBER,
+    p_vendor_cnpj IN VARCHAR2,
+    p_id IN NUMBER,
+    p_shipping_cost_id IN NUMBER,
+    p_operation IN VARCHAR2
+)
+IS
+BEGIN
+    IF p_operation = 'INSERT' THEN
+        INSERT INTO vendor_address (
+            vendor_id,
+            vendor_cnpj,
+            id,
+            shipping_cost_id
+        ) VALUES (
+            p_vendor_id,
+            p_vendor_cnpj,
+            p_id,
+            p_shipping_cost_id
+        );
+    ELSIF p_operation = 'UPDATE' THEN
+        UPDATE vendor_address
+        SET
+            vendor_id = p_vendor_id,
+            vendor_cnpj = p_vendor_cnpj,
+            shipping_cost_id = p_shipping_cost_id
+        WHERE id = p_id;
+    ELSIF p_operation = 'DELETE' THEN
+        DELETE FROM vendor_address
+        WHERE id = p_id;
+    ELSE
+        RAISE_APPLICATION_ERROR(-20001, 'Operação inválida. Use INSERT, UPDATE ou DELETE.');
+    END IF;
+
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        RAISE;
+END;
+/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
