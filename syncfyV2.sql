@@ -504,7 +504,7 @@ END;
 /
 
 
--- Procedure UF 
+--1 Procedure UF 
 CREATE OR REPLACE PROCEDURE manipulate_uf (
    p_id NUMBER,
    p_uf CHAR,
@@ -530,7 +530,7 @@ BEGIN
 END manipulate_uf;
 
 
--- Procedure DDD
+--2 Procedure DDD
 CREATE OR REPLACE PROCEDURE GerenciarRegistro (
     p_Action IN VARCHAR2,
     p_ID IN NUMBER,
@@ -555,7 +555,7 @@ BEGIN
 END GerenciarRegistro;
 
 
--- Procedure Phone
+--3 Procedure Phone
 CREATE OR REPLACE PROCEDURE manage_phone (
     p_id IN NUMBER,
     p_number IN VARCHAR2,
@@ -596,7 +596,7 @@ BEGIN
 END;
 
 
--- Procedure zip_code
+--4 Procedure zip_code
 CREATE OR REPLACE PROCEDURE manipulate_zip_code (
     p_id IN NUMBER,
     p_zip_code IN VARCHAR2,
@@ -634,7 +634,7 @@ EXCEPTION
 END;
 /
 
--- Procedure zip_code
+--5 Procedure material
 CREATE OR REPLACE PROCEDURE manipulate_material (
     p_id IN NUMBER,
     p_unit_amount IN NUMBER,
@@ -696,7 +696,7 @@ EXCEPTION
 END;
 /
 
---Procedure Shipping cost
+--6 Procedure Shipping cost
 CREATE OR REPLACE PROCEDURE manipulate_shipping_cost (
     p_id IN NUMBER,
     p_cost IN NUMBER,
@@ -733,8 +733,11 @@ EXCEPTION
 END;
 /
 
+desc ;
 
---procedure Vendor Address
+
+
+--7 procedure  Address
 CREATE OR REPLACE PROCEDURE manage_vendor_address (
     p_vendor_id IN NUMBER,
     p_vendor_cnpj IN VARCHAR2,
@@ -777,9 +780,54 @@ EXCEPTION
         RAISE;
 END;
 /
-
-
-
+--8procedure Segment
+CREATE OR REPLACE PROCEDURE ManageMaterialOrder (
+    p_action IN VARCHAR2, -- 'INSERT', 'UPDATE', ou 'DELETE'
+    p_order_id IN NUMBER,
+    p_materialorder_id IN NUMBER,
+    p_quantity IN NUMBER
+) AS
+BEGIN
+    IF p_action = 'INSERT' THEN
+        INSERT INTO MaterialOrder (ORDER_ID, MATERIALORDER_ID, QUANTITY)
+        VALUES (p_order_id, p_materialorder_id, p_quantity);
+    ELSIF p_action = 'UPDATE' THEN
+        UPDATE MaterialOrder
+        SET QUANTITY = p_quantity
+        WHERE ORDER_ID = p_order_id AND MATERIALORDER_ID = p_materialorder_id;
+    ELSIF p_action = 'DELETE' THEN
+        DELETE FROM MaterialOrder
+        WHERE ORDER_ID = p_order_id AND MATERIALORDER_ID = p_materialorder_id;
+    ELSE
+        -- Handle invalid action
+        DBMS_OUTPUT.PUT_LINE('Ação inválida: ' || p_action);
+    END IF;
+END;
+/
+--9 procedure Country
+CREATE OR REPLACE PROCEDURE ManageCountry (
+    p_action IN VARCHAR2, 
+    p_id IN NUMBER,
+    p_country IN VARCHAR2,
+    p_address_id IN NUMBER
+) AS
+BEGIN
+    IF p_action = 'INSERT' THEN
+        INSERT INTO COUNTRY (ID, COUNTRY, ADDRESS_ID)
+        VALUES (p_id, p_country, p_address_id);
+    ELSIF p_action = 'UPDATE' THEN
+        UPDATE COUNTRY
+        SET COUNTRY = p_country, ADDRESS_ID = p_address_id
+        WHERE ID = p_id;
+    ELSIF p_action = 'DELETE' THEN
+        DELETE FROM COUNTRY
+        WHERE ID = p_id;
+    ELSE
+        -- Handle invalid action
+        DBMS_OUTPUT.PUT_LINE('Ação inválida: ' || p_action);
+    END IF;
+END;
+/
 
 
 
