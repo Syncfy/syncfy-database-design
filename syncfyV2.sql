@@ -1,23 +1,23 @@
-drop table ADDRESS cascade constraints;
-drop table category cascade constraints;
-drop table city cascade constraints;
-drop table COMPANY_USER cascade constraints;
-drop table COMPANY_USER_ADDRESS cascade constraints;
-drop table COUNTRY cascade constraints;
-drop table DDD cascade constraints;
-drop table IBGE_CODE cascade constraints;
-drop table MATERIAL cascade constraints;
-drop table shipping_cost cascade constraints;
-drop table UF cascade constraints;
-drop table MATERIALORDER cascade constraints;
-drop table NEIGHBORHOOD cascade constraints;
-drop table "Order" cascade constraints;
-drop table PHONE cascade constraints;
-drop table VENDOR cascade constraints;
-drop table VENDOR_ADDRESS cascade constraints;
-drop table ZIP_CODE cascade constraints;
-drop table SEGMENT cascade constraints;
-DROP SEQUENCE materialorder_materialorder_id;
+drop table ADDRESS cascade constraints; --
+drop table category cascade constraints; --
+drop table city cascade constraints; --
+drop table COMPANY_USER cascade constraints; --
+drop table COMPANY_USER_ADDRESS cascade constraints;--
+drop table COUNTRY cascade constraints; --
+drop table DDD cascade constraints; --
+drop table IBGE_CODE cascade constraints; --
+drop table MATERIAL cascade constraints; --
+drop table shipping_cost cascade constraints; --
+drop table UF cascade constraints; --
+drop table MATERIALORDER cascade constraints;--
+drop table NEIGHBORHOOD cascade constraints; --
+drop table "Order" cascade constraints; --
+drop table PHONE cascade constraints; --
+drop table VENDOR cascade constraints;--
+drop table VENDOR_ADDRESS cascade constraints;--
+drop table ZIP_CODE cascade constraints; --
+drop table SEGMENT cascade constraints;--
+DROP SEQUENCE materialorder_materialorder_id;-
 
 CREATE TABLE address (
     id                                     NUMBER NOT NULL,
@@ -733,10 +733,6 @@ EXCEPTION
 END;
 /
 
-desc ;
-
-
-
 --7 procedure  Address
 CREATE OR REPLACE PROCEDURE manage_vendor_address (
     p_vendor_id IN NUMBER,
@@ -828,15 +824,299 @@ BEGIN
     END IF;
 END;
 /
+--10 procedure City
+CREATE OR REPLACE PROCEDURE ManageCity (
+    p_operation IN VARCHAR2, 
+    p_city_id IN NUMBER,
+    p_city_name IN VARCHAR2,
+    p_address_id IN NUMBER
+) AS
+BEGIN
+    IF p_operation = 'INSERT' THEN
+        INSERT INTO CITY (CITY, ADDRESS_ID)
+        VALUES (p_city_name, p_address_id);
+    ELSIF p_operation = 'UPDATE' THEN
+        UPDATE CITY
+        SET CITY = p_city_name, ADDRESS_ID = p_address_id
+        WHERE ID = p_city_id;
+    ELSIF p_operation = 'DELETE' THEN
+        DELETE FROM CITY
+        WHERE ID = p_city_id;
+    ELSE
+        -- Tratar operação desconhecida
+        DBMS_OUTPUT.PUT_LINE('Operação não suportada.');
+    END IF;
 
+    COMMIT;
+END;
+/
 
+--11 procedure Category
+CREATE OR REPLACE PROCEDURE ManageCategory (
+    p_operation IN VARCHAR2, -- Pode ser 'INSERT', 'UPDATE' ou 'DELETE'
+    p_category_id IN NUMBER,
+    p_category_name IN VARCHAR2,
+    p_material_id IN NUMBER,
+    p_material_product_code IN CHAR
+) AS
+BEGIN
+    IF p_operation = 'INSERT' THEN
+        INSERT INTO CATEGORY (ID, CATEGORY, MATERIAL_ID, MATERIAL_PRODUCT_CODE)
+        VALUES (p_category_id, p_category_name, p_material_id, p_material_product_code);
+    ELSIF p_operation = 'UPDATE' THEN
+        UPDATE CATEGORY
+        SET CATEGORY = p_category_name, MATERIAL_ID = p_material_id, MATERIAL_PRODUCT_CODE = p_material_product_code
+        WHERE ID = p_category_id;
+    ELSIF p_operation = 'DELETE' THEN
+        DELETE FROM CATEGORY
+        WHERE ID = p_category_id;
+    ELSE
+        -- Tratar operação desconhecida
+        DBMS_OUTPUT.PUT_LINE('Operação não suportada.');
+    END IF;
 
+    COMMIT;
+END;
+/
+--12 procedure CompanyUser
+CREATE OR REPLACE PROCEDURE ManageCompanyUser (
+    p_operation IN VARCHAR2, -- Pode ser 'INSERT', 'UPDATE' ou 'DELETE'
+    p_user_id IN NUMBER,
+    p_cnpj IN CHAR,
+    p_name IN VARCHAR2,
+    p_soft_delete IN CHAR,
+    p_email IN VARCHAR2,
+    p_password IN VARCHAR2
+) AS
+BEGIN
+    IF p_operation = 'INSERT' THEN
+        INSERT INTO COMPANY_USER (ID, CNPJ, NAME, SOFT_DELETE, EMAIL, PASSWORD)
+        VALUES (p_user_id, p_cnpj, p_name, p_soft_delete, p_email, p_password);
+    ELSIF p_operation = 'UPDATE' THEN
+        UPDATE COMPANY_USER
+        SET CNPJ = p_cnpj, NAME = p_name, SOFT_DELETE = p_soft_delete, EMAIL = p_email, PASSWORD = p_password
+        WHERE ID = p_user_id;
+    ELSIF p_operation = 'DELETE' THEN
+        DELETE FROM COMPANY_USER
+        WHERE ID = p_user_id;
+    ELSE
+        -- Tratar operação desconhecida
+        DBMS_OUTPUT.PUT_LINE('Operação não suportada.');
+    END IF;
 
+    COMMIT;
+END;
+/
 
+--13 procedure CompanyUserAddress
+CREATE OR REPLACE PROCEDURE ManageCompanyUserAddress (
+    p_operation IN VARCHAR2, -- Pode ser 'INSERT', 'UPDATE' ou 'DELETE'
+    p_company_user_id IN NUMBER,
+    p_company_user_cnpj IN CHAR,
+    p_address_id IN NUMBER,
+    p_shipping_cost_id IN NUMBER
+) AS
+BEGIN
+    IF p_operation = 'INSERT' THEN
+        INSERT INTO COMPANY_USER_ADDRESS (COMPANY_USER_ID, COMPANY_USER_CNPJ, ID, SHIPPING_COST_ID)
+        VALUES (p_company_user_id, p_company_user_cnpj, p_address_id, p_shipping_cost_id);
+    ELSIF p_operation = 'UPDATE' THEN
+        UPDATE COMPANY_USER_ADDRESS
+        SET SHIPPING_COST_ID = p_shipping_cost_id
+        WHERE COMPANY_USER_ID = p_company_user_id AND COMPANY_USER_CNPJ = p_company_user_cnpj AND ID = p_address_id;
+    ELSIF p_operation = 'DELETE' THEN
+        DELETE FROM COMPANY_USER_ADDRESS
+        WHERE COMPANY_USER_ID = p_company_user_id AND COMPANY_USER_CNPJ = p_company_user_cnpj AND ID = p_address_id;
+    ELSE
+        -- Tratar operação desconhecida
+        DBMS_OUTPUT.PUT_LINE('Operação não suportada.');
+    END IF;
 
+    COMMIT;
+END;
+/
+--14 procedure IBGECode
+CREATE OR REPLACE PROCEDURE ManageIBGECode (
+    p_operation IN VARCHAR2, -- Pode ser 'INSERT', 'UPDATE' ou 'DELETE'
+    p_ibge_id IN NUMBER,
+    p_ibge_code IN NUMBER,
+    p_address_id IN NUMBER
+) AS
+BEGIN
+    IF p_operation = 'INSERT' THEN
+        INSERT INTO IBGE_CODE (ID, IBGE_CODE, ADDRESS_ID)
+        VALUES (p_ibge_id, p_ibge_code, p_address_id);
+    ELSIF p_operation = 'UPDATE' THEN
+        UPDATE IBGE_CODE
+        SET IBGE_CODE = p_ibge_code, ADDRESS_ID = p_address_id
+        WHERE ID = p_ibge_id;
+    ELSIF p_operation = 'DELETE' THEN
+        DELETE FROM IBGE_CODE
+        WHERE ID = p_ibge_id;
+    ELSE
+        -- Tratar operação desconhecida
+        DBMS_OUTPUT.PUT_LINE('Operação não suportada.');
+    END IF;
 
+    COMMIT;
+END;
+/
+--15 procedure IBGECode
+CREATE OR REPLACE PROCEDURE ManageMaterialOrder (
+    p_operation IN VARCHAR2, -- Pode ser 'INSERT', 'UPDATE' ou 'DELETE'
+    p_quantity IN NUMBER,
+    p_order_id IN NUMBER,
+    p_materialorder_id IN NUMBER
+) AS
+BEGIN
+    IF p_operation = 'INSERT' THEN
+        INSERT INTO MATERIALORDER (QUANTITY, ORDER_ID, MATERIALORDER_ID)
+        VALUES (p_quantity, p_order_id, p_materialorder_id);
+    ELSIF p_operation = 'UPDATE' THEN
+        UPDATE MATERIALORDER
+        SET QUANTITY = p_quantity
+        WHERE ORDER_ID = p_order_id AND MATERIALORDER_ID = p_materialorder_id;
+    ELSIF p_operation = 'DELETE' THEN
+        DELETE FROM MATERIALORDER
+        WHERE ORDER_ID = p_order_id AND MATERIALORDER_ID = p_materialorder_id;
+    ELSE
+        -- Tratar operação desconhecida
+        DBMS_OUTPUT.PUT_LINE('Operação não suportada.');
+    END IF;
 
+    COMMIT;
+END;
+/
 
+--16 procedure Neighborhood
+CREATE OR REPLACE PROCEDURE ManageNeighborhood (
+    p_operation IN VARCHAR2, -- Pode ser 'INSERT', 'UPDATE' ou 'DELETE'
+    p_neighborhood_id IN NUMBER,
+    p_neighborhood_name IN VARCHAR2,
+    p_address_id IN NUMBER
+) AS
+BEGIN
+    IF p_operation = 'INSERT' THEN
+        INSERT INTO NEIGHBORHOOD (ID, NEIGHBORHOOD, ADDRESS_ID)
+        VALUES (p_neighborhood_id, p_neighborhood_name, p_address_id);
+    ELSIF p_operation = 'UPDATE' THEN
+        UPDATE NEIGHBORHOOD
+        SET NEIGHBORHOOD = p_neighborhood_name, ADDRESS_ID = p_address_id
+        WHERE ID = p_neighborhood_id;
+    ELSIF p_operation = 'DELETE' THEN
+        DELETE FROM NEIGHBORHOOD
+        WHERE ID = p_neighborhood_id;
+    ELSE
+        -- Tratar operação desconhecida
+        DBMS_OUTPUT.PUT_LINE('Operação não suportada.');
+    END IF;
 
+    COMMIT;
+END;
+/
+
+--17 procedure Order
+CREATE OR REPLACE PROCEDURE ManageOrder (
+    p_operation IN VARCHAR2, -- Pode ser 'INSERT', 'UPDATE' ou 'DELETE'
+    p_order_id IN NUMBER,
+    p_created_at IN VARCHAR2,
+    p_updated_at IN VARCHAR2,
+    p_total_amount IN NUMBER,
+    p_delivery_date IN VARCHAR2,
+    p_order_number IN NUMBER,
+    p_description IN VARCHAR2,
+    p_vendor_id IN NUMBER,
+    p_vendor_cnpj IN NUMBER,
+    p_company_user_id IN NUMBER,
+    p_company_user_cnpj IN CHAR
+) AS
+BEGIN
+    IF p_operation = 'INSERT' THEN
+        INSERT INTO "Order" (
+            ID, CREATED_AT, UPDATED_AT, TOTAL_AMOUNT, DELIVERY_DATE, ORDER_NUMBER, DESCRIPTION, 
+            VENDOR_ID, VENDOR_CNPJ, COMPANY_USER_ID, COMPANY_USER_CNPJ
+        ) VALUES (
+            p_order_id, p_created_at, p_updated_at, p_total_amount, p_delivery_date, p_order_number, 
+            p_description, p_vendor_id, p_vendor_cnpj, p_company_user_id, p_company_user_cnpj
+        );
+    ELSIF p_operation = 'UPDATE' THEN
+        UPDATE "Order"
+        SET 
+            CREATED_AT = p_created_at, 
+            UPDATED_AT = p_updated_at, 
+            TOTAL_AMOUNT = p_total_amount, 
+            DELIVERY_DATE = p_delivery_date, 
+            ORDER_NUMBER = p_order_number, 
+            DESCRIPTION = p_description, 
+            VENDOR_ID = p_vendor_id, 
+            VENDOR_CNPJ = p_vendor_cnpj, 
+            COMPANY_USER_ID = p_company_user_id, 
+            COMPANY_USER_CNPJ = p_company_user_cnpj
+        WHERE ID = p_order_id;
+    ELSIF p_operation = 'DELETE' THEN
+        DELETE FROM "Order"
+        WHERE ID = p_order_id;
+    ELSE
+        -- Tratar operação desconhecida
+        DBMS_OUTPUT.PUT_LINE('Operação não suportada.');
+    END IF;
+
+    COMMIT;
+END;
+/
+--18 procedure Vendor
+CREATE OR REPLACE PROCEDURE ManageVendor (
+    p_operation IN VARCHAR2, -- Pode ser 'INSERT', 'UPDATE' ou 'DELETE'
+    p_vendor_id IN NUMBER,
+    p_cnpj IN NUMBER,
+    p_name IN VARCHAR2,
+    p_email IN VARCHAR2
+) AS
+BEGIN
+    IF p_operation = 'INSERT' THEN
+        INSERT INTO VENDOR (ID, CNPJ, NAME, EMAIL)
+        VALUES (p_vendor_id, p_cnpj, p_name, p_email);
+    ELSIF p_operation = 'UPDATE' THEN
+        UPDATE VENDOR
+        SET CNPJ = p_cnpj, NAME = p_name, EMAIL = p_email
+        WHERE ID = p_vendor_id;
+    ELSIF p_operation = 'DELETE' THEN
+        DELETE FROM VENDOR
+        WHERE ID = p_vendor_id;
+    ELSE
+        -- Tratar operação desconhecida
+        DBMS_OUTPUT.PUT_LINE('Operação não suportada.');
+    END IF;
+
+    COMMIT;
+END;
+/
+--18 procedure VendorAddress
+CREATE OR REPLACE PROCEDURE ManageVendorAddress (
+    p_operation IN VARCHAR2, -- Pode ser 'INSERT', 'UPDATE' ou 'DELETE'
+    p_vendor_id IN NUMBER,
+    p_vendor_cnpj IN NUMBER,
+    p_address_id IN NUMBER,
+    p_shipping_cost_id IN NUMBER
+) AS
+BEGIN
+    IF p_operation = 'INSERT' THEN
+        INSERT INTO VENDOR_ADDRESS (VENDOR_ID, VENDOR_CNPJ, ID, SHIPPING_COST_ID)
+        VALUES (p_vendor_id, p_vendor_cnpj, p_address_id, p_shipping_cost_id);
+    ELSIF p_operation = 'UPDATE' THEN
+        UPDATE VENDOR_ADDRESS
+        SET SHIPPING_COST_ID = p_shipping_cost_id
+        WHERE VENDOR_ID = p_vendor_id AND VENDOR_CNPJ = p_vendor_cnpj AND ID = p_address_id;
+    ELSIF p_operation = 'DELETE' THEN
+        DELETE FROM VENDOR_ADDRESS
+        WHERE VENDOR_ID = p_vendor_id AND VENDOR_CNPJ = p_vendor_cnpj AND ID = p_address_id;
+    ELSE
+        -- Tratar operação desconhecida
+        DBMS_OUTPUT.PUT_LINE('Operação não suportada.');
+    END IF;
+
+    COMMIT;
+END;
+/
 
 
