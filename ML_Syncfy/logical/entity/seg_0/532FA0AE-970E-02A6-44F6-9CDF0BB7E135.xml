@@ -16,7 +16,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id" id="DE9BEF1E-225B-11FA-1794-2C5B47293545">
+<Attribute name="Id_Address" id="DE9BEF1E-225B-11FA-1794-2C5B47293545">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:43 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
@@ -74,21 +74,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id_Company_User" id="22B740EF-9A27-625C-D4EF-53EF110AE8DE">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 01:15:22 UTC</createdTime>
-<generatorID>22775EE5-67BD-E965-0220-A84B8652ADBF</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>77DBB6E3-0147-349C-823D-0C51DDC4801D</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Id11" id="9CEAE756-C9B9-5911-4862-1AB54BAA170B">
+<Attribute name="Id_Vendor" id="9CEAE756-C9B9-5911-4862-1AB54BAA170B">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:30:08 UTC</createdTime>
 <generatorID>4A4F052B-ECDC-8134-6134-79CE8282C3CA</generatorID>
@@ -102,35 +88,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Cnpj1" id="963229EE-EDE1-291A-EAD8-10766021888E">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 01:30:08 UTC</createdTime>
-<generatorID>4A4F052B-ECDC-8134-6134-79CE8282C3CA</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>91254FB0-BFFC-B796-38F1-044BD1984DB3</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Id3" id="A311DAAF-ACC0-7121-22B7-44798B4A91B8">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 01:35:13 UTC</createdTime>
-<generatorID>22775EE5-67BD-E965-0220-A84B8652ADBF</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>17D523E3-FDED-0D3F-8ABA-D98AD71510D0</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Id2" id="F42D87C9-27F1-8ADA-7AAA-DA958F173C3E">
+<Attribute name="Id_Vendor_Address" id="F42D87C9-27F1-8ADA-7AAA-DA958F173C3E">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:35:56 UTC</createdTime>
 <generatorID>4A4F052B-ECDC-8134-6134-79CE8282C3CA</generatorID>
@@ -139,6 +97,20 @@
 <item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <referedAttribute>72A86280-98AF-06D5-91AD-352837A8EF6D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Pessoa" id="A0C2FBD1-97BF-556A-9A7B-229FD1C73977">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 04:07:16 UTC</createdTime>
+<generatorID>7518ADDF-56D6-CF40-2E44-A862B02CC8B9</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
+</engineerTo>
+<referedAttribute>D54EE564-2F27-BB39-2A63-F216F6845D14</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>

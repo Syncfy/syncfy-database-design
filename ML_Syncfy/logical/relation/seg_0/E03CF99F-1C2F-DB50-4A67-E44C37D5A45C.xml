@@ -1,9 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Possui" directorySegmentName="seg_0" id="3F30ABCB-40AD-9914-79A8-D5A398AAE960">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 00:22:43 UTC</createdTime>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_27" directorySegmentName="seg_0" id="E03CF99F-1C2F-DB50-4A67-E44C37D5A45C">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 04:07:00 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<importedID>03327961-6F82-8CA5-D803-710E5512D322</importedID>
 <engineerTo>
 <item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
@@ -13,8 +12,8 @@
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>CE96BADD-4E52-3810-B33D-F54E0D1F0AE2</sourceEntity>
-<targetCardinalityString>*</targetCardinalityString>
-<targetEntity>6325E5D6-C222-92CF-4F8F-068509A64DFE</targetEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>48093176-7B00-A140-ED69-91D4C1091625</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>

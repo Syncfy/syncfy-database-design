@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="48093176-7B00-A140-ED69-91D4C1091625" name="Pessoa">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:24:05 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="name" id="C15AF888-33B1-D384-1E15-C6BF32E05DFC">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:27:40 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="soft_delete" id="15908364-36CA-AF04-2E97-21D52D701BFC">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:30:15 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Email" id="7639B71C-E767-B825-5357-0B406FDB43D9">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:30:30 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Password" id="D3B6898D-E36B-351D-E7B2-49F948352453">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:30:39 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Pessoa" id="D54EE564-2F27-BB39-2A63-F216F6845D14">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:31:50 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_User" id="20E46D2D-0AD6-56C6-3B7D-F193824060EB">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 04:07:00 UTC</createdTime>
+<generatorID>E03CF99F-1C2F-DB50-4A67-E44C37D5A45C</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
+</engineerTo>
+<referedAttribute>EE38ADF2-CDEC-B5A7-CCDE-E09FF0018BE6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CC1E4FF5-9FBE-C0EA-B9C0-2C91D5F21BFE" name="Pessoa PK">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:38:21 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D54EE564-2F27-BB39-2A63-F216F6845D14</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

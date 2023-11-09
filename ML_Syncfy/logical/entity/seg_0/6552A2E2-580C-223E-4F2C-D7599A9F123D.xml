@@ -16,7 +16,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id" id="2F526B21-45A2-422B-8E02-73FBA0729690">
+<Attribute name="Id_Segment" id="2F526B21-45A2-422B-8E02-73FBA0729690">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:43 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
@@ -44,7 +44,7 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id2" id="2D5FBDCE-F282-6224-7B1E-5B1E5A36914A">
+<Attribute name="Id_Vendor" id="2D5FBDCE-F282-6224-7B1E-5B1E5A36914A">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:43 UTC</createdTime>
 <generatorID>08459320-8AE6-D057-CED1-3B2F41AFAD8F</generatorID>
@@ -54,21 +54,6 @@
 <item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <referedAttribute>D8428407-06B1-3F58-35D5-DCBA058DE69C</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Cnpj" id="1DBD0D08-E3BF-DFE0-AAA0-1154E3C397F3">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 00:22:43 UTC</createdTime>
-<generatorID>08459320-8AE6-D057-CED1-3B2F41AFAD8F</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<importedID>F19F1150-68C4-A3FC-0CD0-9A3C8DE45E78</importedID>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>62E2B7B0-125A-7EA1-C5D8-FB5665BE5465</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>

@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id1" id="0611EAD7-DB17-021B-389C-A43FCEEFB157">
+<Attribute name="Id_Vendor" id="0611EAD7-DB17-021B-389C-A43FCEEFB157">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:29:51 UTC</createdTime>
 <generatorID>80D98E22-832B-A467-167A-A5E5CF65A3F6</generatorID>
@@ -29,21 +29,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Cnpj" id="91254FB0-BFFC-B796-38F1-044BD1984DB3">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 01:29:51 UTC</createdTime>
-<generatorID>80D98E22-832B-A467-167A-A5E5CF65A3F6</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>62E2B7B0-125A-7EA1-C5D8-FB5665BE5465</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Id" id="72A86280-98AF-06D5-91AD-352837A8EF6D">
+<Attribute name="Id_Vendor_Address" id="72A86280-98AF-06D5-91AD-352837A8EF6D">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:35:53 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
@@ -55,7 +41,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id2" id="D5C0103E-75CE-B5B6-E234-8BB39BA41896">
+<Attribute name="Id_Shipping_Cost" id="D5C0103E-75CE-B5B6-E234-8BB39BA41896">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:40:50 UTC</createdTime>
 <generatorID>0EF0B6AF-2725-51A7-E7D9-573317F34AA5</generatorID>
@@ -81,7 +67,6 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>0611EAD7-DB17-021B-389C-A43FCEEFB157</attributeRef>
-<attributeRef>91254FB0-BFFC-B796-38F1-044BD1984DB3</attributeRef>
 <attributeRef>72A86280-98AF-06D5-91AD-352837A8EF6D</attributeRef>
 </usedAttributes>
 </identifier>

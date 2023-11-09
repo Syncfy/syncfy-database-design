@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id" id="0F934F54-1320-4A72-1EAE-1F2894AEF4AF">
+<Attribute name="Id_Category" id="0F934F54-1320-4A72-1EAE-1F2894AEF4AF">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:22:44 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
@@ -40,7 +40,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id1" id="A75FC320-E6EE-DF1D-F802-1A252B659A58">
+<Attribute name="Id_Material" id="A75FC320-E6EE-DF1D-F802-1A252B659A58">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:28:16 UTC</createdTime>
 <generatorID>3BFF4E17-C2CB-0905-E141-CF1177A29FB8</generatorID>
@@ -52,20 +52,6 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Product_Code" id="2A5D9782-DEC0-D281-4C89-6AEEC44FF1D3">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 01:28:16 UTC</createdTime>
-<generatorID>3BFF4E17-C2CB-0905-E141-CF1177A29FB8</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>6AFE46C9-BB54-284E-9890-7A05630F531F</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
