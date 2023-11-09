@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id1" id="77DBB6E3-0147-349C-823D-0C51DDC4801D">
+<Attribute name="Id_Company_User" id="77DBB6E3-0147-349C-823D-0C51DDC4801D">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:14:49 UTC</createdTime>
 <generatorID>6F819864-F12A-5F45-63F9-29BB553BA41E</generatorID>
@@ -28,21 +28,6 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Cnpj" id="B541A6D3-D3C1-BAAE-C37E-2B045D900CB9">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 01:14:49 UTC</createdTime>
-<generatorID>6F819864-F12A-5F45-63F9-29BB553BA41E</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>923BD0FC-07CA-D2B1-A1AB-82E275C3C4FB</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>14</dataTypeSize>
-<ownDataTypeParameters>14,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Id" id="17D523E3-FDED-0D3F-8ABA-D98AD71510D0">
 <createdBy>matpi</createdBy>
@@ -82,7 +67,6 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>77DBB6E3-0147-349C-823D-0C51DDC4801D</attributeRef>
-<attributeRef>B541A6D3-D3C1-BAAE-C37E-2B045D900CB9</attributeRef>
 <attributeRef>17D523E3-FDED-0D3F-8ABA-D98AD71510D0</attributeRef>
 </usedAttributes>
 </identifier>

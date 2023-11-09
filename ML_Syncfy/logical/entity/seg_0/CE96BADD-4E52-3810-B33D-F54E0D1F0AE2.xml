@@ -16,7 +16,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id" id="EE38ADF2-CDEC-B5A7-CCDE-E09FF0018BE6">
+<Attribute name="Id_Company_User" id="EE38ADF2-CDEC-B5A7-CCDE-E09FF0018BE6">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
@@ -116,7 +116,6 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>EE38ADF2-CDEC-B5A7-CCDE-E09FF0018BE6</attributeRef>
-<attributeRef>923BD0FC-07CA-D2B1-A1AB-82E275C3C4FB</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

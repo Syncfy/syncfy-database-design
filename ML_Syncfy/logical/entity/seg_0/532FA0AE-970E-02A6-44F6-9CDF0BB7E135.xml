@@ -74,7 +74,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id1" id="22B740EF-9A27-625C-D4EF-53EF110AE8DE">
+<Attribute name="Id_Company_User" id="22B740EF-9A27-625C-D4EF-53EF110AE8DE">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:15:22 UTC</createdTime>
 <generatorID>22775EE5-67BD-E965-0220-A84B8652ADBF</generatorID>
@@ -87,21 +87,6 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Cnpj" id="5A67526D-5DCD-79EA-F424-F898327CD6E0">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 01:15:22 UTC</createdTime>
-<generatorID>22775EE5-67BD-E965-0220-A84B8652ADBF</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>B541A6D3-D3C1-BAAE-C37E-2B045D900CB9</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>14</dataTypeSize>
-<ownDataTypeParameters>14,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Id11" id="9CEAE756-C9B9-5911-4862-1AB54BAA170B">
 <createdBy>matpi</createdBy>
