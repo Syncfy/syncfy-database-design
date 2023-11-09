@@ -114,36 +114,6 @@
 <dataTypeSize>250</dataTypeSize>
 <ownDataTypeParameters>250,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id_Vendor" id="5AA03CD0-3863-5F6D-C2DB-6970FD4745F9">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 00:22:43 UTC</createdTime>
-<generatorID>A56D2F68-3E3D-9B23-8026-519A391AEEA5</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<importedID>08D08AE8-09FE-4334-F9FD-70E3039E54B3</importedID>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>D8428407-06B1-3F58-35D5-DCBA058DE69C</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Id_User" id="FEE9E49B-7D43-AF74-F505-0F0F77B61CE3">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 00:22:43 UTC</createdTime>
-<generatorID>0190CEB4-CFD9-3A1E-278B-2CD01AC11A87</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<importedID>EF101F70-618A-F6BF-0930-089E84B95E19</importedID>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>EE38ADF2-CDEC-B5A7-CCDE-E09FF0018BE6</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="1F66DF28-D12F-3204-0739-AD2061DA4E07" name="Order PK">

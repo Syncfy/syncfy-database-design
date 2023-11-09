@@ -44,21 +44,6 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id_Vendor" id="2D5FBDCE-F282-6224-7B1E-5B1E5A36914A">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 00:22:43 UTC</createdTime>
-<generatorID>08459320-8AE6-D057-CED1-3B2F41AFAD8F</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<importedID>079726A3-9651-9378-78F6-B58BF0532CFF</importedID>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>D8428407-06B1-3F58-35D5-DCBA058DE69C</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="21DC2928-0C76-B96A-4EF7-57EFBF999725" name="Segment PK">

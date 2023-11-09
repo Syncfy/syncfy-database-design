@@ -30,21 +30,6 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id_Order" id="AA632B61-F257-A61E-1C29-DF9C497D85D5">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 00:22:43 UTC</createdTime>
-<generatorID>A9CD9CB4-0D5E-27ED-CF7B-21FAB11CE267</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<importedID>C2C7C892-FC9B-F26C-01C5-ED8D396FEDBD</importedID>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>35EA8A44-B3B7-2088-5716-C6F8E15470EE</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Id_MaterialOrder" id="AB534F7A-AF85-B5A0-9788-FAD711CB5022">
 <createdBy>mniac</createdBy>
 <createdTime>2023-11-09 03:18:30 UTC</createdTime>

@@ -86,33 +86,6 @@
 <logicalDatatype>LOGDT025</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id_Vendor" id="0962B193-D864-EB85-7C95-57410D56EE8A">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 00:22:42 UTC</createdTime>
-<generatorID>58DB2FD7-4A1B-BC7C-18AD-B649B3124413</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<importedID>8A77005C-B397-09E1-4273-391852B78BCE</importedID>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>D8428407-06B1-3F58-35D5-DCBA058DE69C</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Id_MaterialOrder" id="F122404B-041C-57BC-FBBD-32AA8803FEE1">
-<createdBy>mniac</createdBy>
-<createdTime>2023-11-09 03:19:44 UTC</createdTime>
-<generatorID>0DFA3985-6439-AE5E-9E7D-51F7EEC139F5</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>AB534F7A-AF85-B5A0-9788-FAD711CB5022</referedAttribute>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="163C2649-A97D-0CCC-EC5C-1A66551ED37B" name="Material PK">

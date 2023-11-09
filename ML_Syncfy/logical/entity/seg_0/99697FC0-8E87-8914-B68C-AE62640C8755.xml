@@ -43,21 +43,6 @@
 <logicalDatatype>LOGDT026</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id_Order" id="5EE11B83-6FEF-CB42-1DC8-A6AA157894D3">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 00:22:42 UTC</createdTime>
-<generatorID>42D8E01C-491A-796A-6E7A-8C797FCB0146</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<importedID>D3F7CB7B-0368-C97F-5260-8AFF35008083</importedID>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>35EA8A44-B3B7-2088-5716-C6F8E15470EE</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="D8B95DF2-13C7-BAD2-A093-E3CBF44C2757" name="Shipping_Cost PK">

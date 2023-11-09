@@ -1,18 +1,18 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Possuiv9" directorySegmentName="seg_0" id="4A4F052B-ECDC-8134-6134-79CE8282C3CA">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 01:30:08 UTC</createdTime>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_34" directorySegmentName="seg_0" id="79A22FAE-7260-26F7-4B7C-1B29AB081EF7">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 22:12:25 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
 <item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
-<sourcePk>C070A064-6450-8DA5-F739-8836E28D1099</sourcePk>
+<sourcePk>0B239572-10E3-3B62-5C2B-7403BB50D2C6</sourcePk>
 <identifying>false</identifying>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>57B4EF1F-36FB-9A87-D96D-9C4D497383DE</sourceEntity>
-<targetCardinalityString>1</targetCardinalityString>
+<sourceEntity>02221C79-DEB0-5037-4067-53644792F35A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
 <targetEntity>532FA0AE-970E-02A6-44F6-9CDF0BB7E135</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>

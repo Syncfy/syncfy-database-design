@@ -40,20 +40,6 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id_Material" id="A75FC320-E6EE-DF1D-F802-1A252B659A58">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 01:28:16 UTC</createdTime>
-<generatorID>3BFF4E17-C2CB-0905-E141-CF1177A29FB8</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>AC22EB92-0561-EF04-9A6D-FC1EF53E583C</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="4E7ADA5B-01B3-0CD1-48A1-9BF5A749CA26" name="Category PK">
