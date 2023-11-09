@@ -4,8 +4,7 @@
 <createdTime>2023-10-20 01:17:52 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -16,13 +15,12 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id" id="453E1349-17F3-A450-D0C8-2DF58B218132">
+<Attribute name="Id_UF" id="453E1349-17F3-A450-D0C8-2DF58B218132">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:20:20 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -34,8 +32,7 @@
 <createdTime>2023-10-20 01:20:34 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -43,16 +40,28 @@
 <dataTypeSize>2</dataTypeSize>
 <ownDataTypeParameters>2,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Id_Address" id="C854AF34-D292-AB13-7B29-F5290E816042">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:09:13 UTC</createdTime>
+<generatorID>D14B7A9B-7BDE-ECC7-B789-21D87DC4180A</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
+</engineerTo>
+<referedAttribute>DE9BEF1E-225B-11FA-1794-2C5B47293545</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="0784DEF3-804E-FCB8-C539-18BFF17ACBCF" name="UF PK">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:20:24 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="false"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

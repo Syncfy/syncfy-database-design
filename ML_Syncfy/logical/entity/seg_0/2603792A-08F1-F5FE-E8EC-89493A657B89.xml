@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="51AFC5C4-6D8F-BDAD-B677-1D94A150FA9F" name="Ddd">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 01:31:09 UTC</createdTime>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2603792A-08F1-F5FE-E8EC-89493A657B89" name="PF">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:24:56 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
 <item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
@@ -15,26 +15,25 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id_ddd" id="E06C1D7A-DE10-FDCE-EC7C-27F0F76CF100">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 01:32:41 UTC</createdTime>
+<Attribute name="ID_PF" id="15984AA3-BED2-6FA5-4DCD-78C49C79036F">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:40:36 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
 <item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
+<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Ddd" id="0E3ABCDD-FF47-28BA-FF05-1B163750071E">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 01:32:57 UTC</createdTime>
+<Attribute name="ID_Pessoa" id="06E0F008-D884-E93B-0C64-B29E85C33829">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:59:30 UTC</createdTime>
+<generatorID>A5E3109D-0B42-C267-BA0F-A2402BB82106</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
 <item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
+<referedAttribute>D54EE564-2F27-BB39-2A63-F216F6845D14</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -42,16 +41,16 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="5E5DF053-5578-AC3B-C9DC-9B6405E66315" name="Ddd PK">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 01:32:52 UTC</createdTime>
+<identifier id="5FEC8EB2-1517-8D60-4095-95CE71036AC7" name="PF PK">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:44:29 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
 <item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>E06C1D7A-DE10-FDCE-EC7C-27F0F76CF100</attributeRef>
+<attributeRef>15984AA3-BED2-6FA5-4DCD-78C49C79036F</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

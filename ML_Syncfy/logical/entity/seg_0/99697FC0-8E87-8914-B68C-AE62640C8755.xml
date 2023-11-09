@@ -16,7 +16,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id" id="B7C75C71-14CE-EDB0-A6B2-C7FFA0F7C9E4">
+<Attribute name="Id_Shipping_Cost" id="B7C75C71-14CE-EDB0-A6B2-C7FFA0F7C9E4">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
@@ -43,7 +43,7 @@
 <logicalDatatype>LOGDT026</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id1" id="5EE11B83-6FEF-CB42-1DC8-A6AA157894D3">
+<Attribute name="Id_Order" id="5EE11B83-6FEF-CB42-1DC8-A6AA157894D3">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <generatorID>42D8E01C-491A-796A-6E7A-8C797FCB0146</generatorID>

@@ -16,7 +16,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id" id="35EA8A44-B3B7-2088-5716-C6F8E15470EE">
+<Attribute name="Id_Order" id="35EA8A44-B3B7-2088-5716-C6F8E15470EE">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
@@ -114,7 +114,7 @@
 <dataTypeSize>250</dataTypeSize>
 <ownDataTypeParameters>250,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id1" id="5AA03CD0-3863-5F6D-C2DB-6970FD4745F9">
+<Attribute name="Id_Vendor" id="5AA03CD0-3863-5F6D-C2DB-6970FD4745F9">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:43 UTC</createdTime>
 <generatorID>A56D2F68-3E3D-9B23-8026-519A391AEEA5</generatorID>
@@ -129,22 +129,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Cnpj" id="303FFC15-6CDA-4509-D027-28C3A4860B56">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 00:22:43 UTC</createdTime>
-<generatorID>A56D2F68-3E3D-9B23-8026-519A391AEEA5</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<importedID>B6220CF0-4004-F633-07DB-195B595C5211</importedID>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>62E2B7B0-125A-7EA1-C5D8-FB5665BE5465</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Id2" id="FEE9E49B-7D43-AF74-F505-0F0F77B61CE3">
+<Attribute name="Id_User" id="FEE9E49B-7D43-AF74-F505-0F0F77B61CE3">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:43 UTC</createdTime>
 <generatorID>0190CEB4-CFD9-3A1E-278B-2CD01AC11A87</generatorID>
@@ -158,22 +143,6 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Cnpj1" id="80FC1994-5D10-638C-DC32-D8D429D077F1">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 00:22:43 UTC</createdTime>
-<generatorID>0190CEB4-CFD9-3A1E-278B-2CD01AC11A87</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<importedID>CB89840D-BFF9-383C-115D-9B797BB43033</importedID>
-<engineerTo>
-<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
-</engineerTo>
-<referedAttribute>923BD0FC-07CA-D2B1-A1AB-82E275C3C4FB</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>14</dataTypeSize>
-<ownDataTypeParameters>14,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

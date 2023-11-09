@@ -16,7 +16,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id" id="D8428407-06B1-3F58-35D5-DCBA058DE69C">
+<Attribute name="Id_Vendor" id="D8428407-06B1-3F58-35D5-DCBA058DE69C">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
@@ -37,6 +37,7 @@
 <engineerTo>
 <item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -85,7 +86,6 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>D8428407-06B1-3F58-35D5-DCBA058DE69C</attributeRef>
-<attributeRef>62E2B7B0-125A-7EA1-C5D8-FB5665BE5465</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

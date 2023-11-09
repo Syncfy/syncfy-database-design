@@ -4,8 +4,7 @@
 <createdTime>2023-10-20 01:17:40 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -16,13 +15,12 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id" id="2AE49291-66D7-C557-04E5-F5221503FA19">
+<Attribute name="Id_Zip_Code" id="2AE49291-66D7-C557-04E5-F5221503FA19">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:26:44 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -34,10 +32,23 @@
 <createdTime>2023-10-20 01:26:13 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_Address" id="CCB54044-8579-1570-061E-04748ACBF7E9">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:09:13 UTC</createdTime>
+<generatorID>AB818871-9697-6F8E-BC97-BE393B6A585B</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
+</engineerTo>
+<referedAttribute>DE9BEF1E-225B-11FA-1794-2C5B47293545</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -49,10 +60,8 @@
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:26:49 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="false"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
