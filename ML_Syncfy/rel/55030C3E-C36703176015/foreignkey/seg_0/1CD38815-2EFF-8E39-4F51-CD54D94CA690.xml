@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1CD38815-2EFF-8E39-4F51-CD54D94CA690" containerWithKeyObject="2E09FC23-D0EE-F878-1DEF-DE885DB4B91A" localFKIndex="D05B953C-2528-048D-87CC-A178218611D2" name="City_UF_FK">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>DB22F8AC-4FDC-729E-EA7E-ED1577EB5D53</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referredTableLongName>UF</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>63E72D45-92C9-DCC1-D575-BDE79D080C87</referredTableID>
+<keyObject>41130CE7-6EB6-72A6-2CC9-45A77FE63D81</keyObject>
+<referredKeyID>41130CE7-6EB6-72A6-2CC9-45A77FE63D81</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id_UF</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B92A0A83-FECD-0B56-7590-04F6E85EADF7" name="Material">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>739C310B-FB00-E3D1-15CA-854AB00C68CD</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_Material" id="3781078B-B94D-AEDC-C23A-4DC4882596CE">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>AC22EB92-0561-EF04-9A6D-FC1EF53E583C</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Unit_Amount" id="1EFADC44-03B2-360F-9111-DDF3B525C5E3">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>CF2425CB-FC45-67B5-610C-FFE4DF19C2AA</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="D6F82B33-BA87-855D-1411-81A506CD1042">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>C67641CD-53FF-F0B7-2C95-ED1C45884254</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Description" id="3664C4C0-7133-9D74-14C6-8B538174C576">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>99F6082D-BF11-E92B-0C10-9F81C971E9C4</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Product_Code" id="B479D5D6-C709-CF22-DC9B-9497E4B4EA13">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>6AFE46C9-BB54-284E-9890-7A05630F531F</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Category_Id_Category" id="EBC172A9-DB55-03D9-9156-A8CEBEB6E14E">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>2226262E-BC08-251F-CEE0-FB732B49A33A</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DCBFE926-D0A3-102D-3FE7-7B2B5645D048" referredColumn="32C5843D-F73F-F8FD-81E8-60AA967637FB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="123CAFC6-B211-5D82-DDFE-D7851E19DBC3" name="Material_PK">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>163C2649-A97D-0CCC-EC5C-1A66551ED37B</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3781078B-B94D-AEDC-C23A-4DC4882596CE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="98C50505-6669-13CB-F0CB-9A7F349B1F76" name="Material__IDX">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>89EC6F64-292A-4293-20AC-06D83E8EBE9C</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="EBC172A9-DB55-03D9-9156-A8CEBEB6E14E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4F83DB9F-EC6F-4A17-21AF-E74354B7842C" name="Material_Category_FK">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>89EC6F64-292A-4293-20AC-06D83E8EBE9C</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EBC172A9-DB55-03D9-9156-A8CEBEB6E14E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
