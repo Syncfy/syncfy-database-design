@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DCBFE926-D0A3-102D-3FE7-7B2B5645D048" containerWithKeyObject="B92A0A83-FECD-0B56-7590-04F6E85EADF7" localFKIndex="4F83DB9F-EC6F-4A17-21AF-E74354B7842C" name="Material_Category_FK">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>89EC6F64-292A-4293-20AC-06D83E8EBE9C</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referredTableLongName>Category</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FB8F0B7F-7ADD-3320-E033-BAB2ABA262C6</referredTableID>
+<keyObject>66D14DC6-A266-09B2-2F20-43F700C9A173</keyObject>
+<referredKeyID>66D14DC6-A266-09B2-2F20-43F700C9A173</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id_Category</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="48093176-7B00-A140-ED69-91D4C1091625" name="PESSOA">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:24:05 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="NOME" id="C15AF888-33B1-D384-1E15-C6BF32E05DFC">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:27:40 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SOFT_DELETE" id="15908364-36CA-AF04-2E97-21D52D701BFC">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:30:15 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EMAIL" id="7639B71C-E767-B825-5357-0B406FDB43D9">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:30:30 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="COD_PESSOA" id="D54EE564-2F27-BB39-2A63-F216F6845D14">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:31:50 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="COD_ENDERECO" id="E2ABFA4E-B0E0-58B4-20B6-D894329CEB4E">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:36:04 UTC</createdTime>
+<generatorID>06F04326-658A-9071-3976-608D46016ABE</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referedAttribute>DE9BEF1E-225B-11FA-1794-2C5B47293545</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="COD_USER" id="9ECE5E32-BCB2-7CA3-2C1D-90D3C76AC39B">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-10 01:01:37 UTC</createdTime>
+<generatorID>634CF166-000C-5EFA-4253-9ED4D47A7EE1</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referedAttribute>BEED01E7-20FE-409B-AA51-0F73C2577D84</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CC1E4FF5-9FBE-C0EA-B9C0-2C91D5F21BFE" name="Pessoa PK">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:38:21 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D54EE564-2F27-BB39-2A63-F216F6845D14</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

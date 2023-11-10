@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6322BE6C-8436-8213-D7FD-AACDD3B8EAA7" name="PESSOA_JURIDICA">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:24:41 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="COD_PJ" id="DD4E2A42-1918-CC08-4EA2-67C60F1104FC">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:31:20 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CNPJ" id="417D4F40-2D50-1693-D253-41DCC9A18E8A">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:31:20 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="COD_PESSOA" id="C882942B-16F7-EE73-B5E2-66C75715931D">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:59:23 UTC</createdTime>
+<generatorID>55C79D0A-3A3B-D38B-91FF-B5417A4D1318</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referedAttribute>D54EE564-2F27-BB39-2A63-F216F6845D14</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="COD_SEGMENTO" id="D90B2790-CB4B-812A-9E0A-3B39D39065E9">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:46 UTC</createdTime>
+<generatorID>C424E6A1-E5DE-993E-EBB8-6DB96C31A419</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referedAttribute>2F526B21-45A2-422B-8E02-73FBA0729690</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="31CB4495-36A8-FB3D-78B8-CA1D6F5B33E8" name="PJ PK">
+<createdBy>mniac</createdBy>
+<createdTime>2023-11-09 03:38:08 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DD4E2A42-1918-CC08-4EA2-67C60F1104FC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

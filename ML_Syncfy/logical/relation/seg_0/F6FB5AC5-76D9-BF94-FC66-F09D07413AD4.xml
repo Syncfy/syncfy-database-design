@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_31" directorySegmentName="seg_0" id="F6FB5AC5-76D9-BF94-FC66-F09D07413AD4">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 22:12:06 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="4893BEAB-C935-BC41-986E-E03D8A938A13" value="true"/>
+</engineerTo>
+<sourcePk>2B05A1F5-9BD0-453D-1913-96685DCB0FA3</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>E856A6AF-446D-9CFB-028B-155D1F44CE73</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>79C1FBA5-E4B4-B2BF-66B3-B2350DE2D2D4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6128A7F9-4428-B76B-B116-8D9CCC759AB2" name="MaterialOrder">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>FDCA0ED2-A849-053D-1F0D-4E790A287C12</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Quantity" id="DE90C1E3-6407-7A04-4C28-6AFECF830552">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>FABFC37D-7545-3580-4AB0-7AA7AFEB17ED</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Id_MaterialOrder" id="0B95BEF3-613F-C648-5948-299B85E3ED8D">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>AB534F7A-AF85-B5A0-9788-FAD711CB5022</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Order_Id_Order" id="2E8AD3D9-46FD-8172-BC74-5232B5D1E9FA">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>15D4C099-395E-BA45-BEAB-88EDD70A1F84</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="659F37D0-0ECB-938A-E55D-A503CD460CF1" referredColumn="D7F1B621-9D16-5C4E-70E8-CC01FB21B24E"/>
+</associations>
+</Column>
+<Column name="Material_Id_Material" id="7575312D-FEE5-FBC3-D6EC-FC2515B895D7">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>2E693F6C-4472-6783-24D5-D444E787126D</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6E36AABF-A94D-922D-77E5-84CF9089B6D0" referredColumn="3781078B-B94D-AEDC-C23A-4DC4882596CE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E0936598-BD79-2BCD-2707-17EA39EBF170" name="MaterialOrder_PK">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>F675B23B-939E-9522-9626-2C9ADA64260A</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B95BEF3-613F-C648-5948-299B85E3ED8D"/>
+<colUsage columnID="2E8AD3D9-46FD-8172-BC74-5232B5D1E9FA"/>
+<colUsage columnID="7575312D-FEE5-FBC3-D6EC-FC2515B895D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E1FBF9F6-A0FF-6FF8-9FEC-316B67F4B4A7" name="MaterialOrder_Order_FK">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>2BFC6269-8BE4-2749-D0AD-5CFEE94CA745</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2E8AD3D9-46FD-8172-BC74-5232B5D1E9FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="33632535-8113-4382-77C8-480DF669427F" name="MaterialOrder_Material_FK">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 23:46:57 UTC</createdTime>
+<generatorID>1FD5AE19-D73A-BB73-1DF7-552EF3444BFF</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7575312D-FEE5-FBC3-D6EC-FC2515B895D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

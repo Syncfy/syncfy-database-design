@@ -1,12 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="79C1FBA5-E4B4-B2BF-66B3-B2350DE2D2D4" name="UF">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="79C1FBA5-E4B4-B2BF-66B3-B2350DE2D2D4" name="ESTADO">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:17:52 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -16,32 +12,35 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id" id="453E1349-17F3-A450-D0C8-2DF58B218132">
+<Attribute name="COD_ESTADO" id="453E1349-17F3-A450-D0C8-2DF58B218132">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:20:20 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Uf" id="5FEEEDB8-8731-06CA-CC65-51CC73DD8280">
+<Attribute name="ESTADO" id="5FEEEDB8-8731-06CA-CC65-51CC73DD8280">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:20:34 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="true"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>2</dataTypeSize>
 <ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="COD_PAIS" id="59467886-C835-5668-E8C5-D43C926D1C24">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 22:12:06 UTC</createdTime>
+<generatorID>F6FB5AC5-76D9-BF94-FC66-F09D07413AD4</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referedAttribute>6A0BF8D7-FF61-BC1F-6CA1-8B7980115F05</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -49,11 +48,6 @@
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:20:24 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
-<engineerTo>
-<item key="E3517374-A0BE-41DE-CD55-ED14FF66C968" value="false"/>
-<item key="61F48727-3E8B-9EEE-308A-D92D555BE410" value="true"/>
-</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>453E1349-17F3-A450-D0C8-2DF58B218132</attributeRef>
