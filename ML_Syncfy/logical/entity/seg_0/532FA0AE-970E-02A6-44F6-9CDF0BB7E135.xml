@@ -1,12 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="532FA0AE-970E-02A6-44F6-9CDF0BB7E135" name="Address">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="532FA0AE-970E-02A6-44F6-9CDF0BB7E135" name="ENDERECO">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>9E437B7C-71E5-6804-6085-615D558D3ADE</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -16,27 +13,32 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id_Address" id="DE9BEF1E-225B-11FA-1794-2C5B47293545">
+<Attribute name="COD_ENDERECO" id="DE9BEF1E-225B-11FA-1794-2C5B47293545">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:43 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>631FE8C1-6E7E-E8B5-7EA9-A2CE0BC8E27F</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Street" id="3FF70125-4DDA-902D-8A2E-BF807022E096">
+<Attribute name="CEP" id="10CD28C3-A305-8B84-747D-1D18D7135D95">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-09 22:20:14 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LOGRADOURO" id="3FF70125-4DDA-902D-8A2E-BF807022E096">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:43 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>A05E105E-9966-6C73-4B20-7C07B54ED767</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -44,14 +46,11 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Number" id="A1E3FA15-32F4-41DD-37AF-4D6C77FE9B4D">
+<Attribute name="NUMERO" id="A1E3FA15-32F4-41DD-37AF-4D6C77FE9B4D">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:43 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>520503C6-4597-EFE8-9E7B-44F9EB05A60E</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -59,14 +58,11 @@
 <dataTypeSize>5</dataTypeSize>
 <ownDataTypeParameters>5,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Complement" id="AEEE47EE-954A-3C8D-08AB-53819848010E">
+<Attribute name="COMPLEMENTO" id="AEEE47EE-954A-3C8D-08AB-53819848010E">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:43 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>B65F445B-306B-985A-25A7-291C86957F94</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -74,33 +70,16 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id_Neighborhood" id="CC855337-9408-11CF-E00D-C02227F976CF">
+<Attribute name="COD_BAIRRO" id="CC855337-9408-11CF-E00D-C02227F976CF">
 <createdBy>logonrmlocal</createdBy>
 <createdTime>2023-11-09 22:12:25 UTC</createdTime>
 <generatorID>79A22FAE-7260-26F7-4B7C-1B29AB081EF7</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <referedAttribute>2C82AF05-5172-D5CC-CF08-0E0C2F3BE7E2</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Zip_Code" id="10CD28C3-A305-8B84-747D-1D18D7135D95">
-<createdBy>logonrmlocal</createdBy>
-<createdTime>2023-11-09 22:20:14 UTC</createdTime>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>8</dataTypeSize>
-<ownDataTypeParameters>8,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -109,9 +88,6 @@
 <createdTime>2023-10-20 00:22:43 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>F9A74380-24E8-BFF0-4313-CC7925750F70</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>DE9BEF1E-225B-11FA-1794-2C5B47293545</attributeRef>

@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="78D939AB-1A73-E97A-E870-950C6392BB07" name="PESSOA">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-10 01:05:48 UTC</createdTime>
+<generatorID>48093176-7B00-A140-ED69-91D4C1091625</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NOME" id="ADEB1839-DE60-DF18-6C47-06330D7D1EDE">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-10 01:05:48 UTC</createdTime>
+<generatorID>C15AF888-33B1-D384-1E15-C6BF32E05DFC</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SOFT_DELETE" id="55E6BABB-7DCC-B403-3550-FAE2ACC25FF3">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-10 01:05:48 UTC</createdTime>
+<generatorID>15908364-36CA-AF04-2E97-21D52D701BFC</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="DB6392FC-1A36-E5E2-4BA4-9BD3A0B23ACB">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-10 01:05:48 UTC</createdTime>
+<generatorID>7639B71C-E767-B825-5357-0B406FDB43D9</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COD_PESSOA" id="1F4D6CD1-16F6-040E-D705-559C9F662303">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-10 01:05:48 UTC</createdTime>
+<generatorID>D54EE564-2F27-BB39-2A63-F216F6845D14</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENDERECO_COD_ENDERECO" id="843CDDB3-AC63-3185-9C81-A6D39B27F1D8">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-10 01:05:48 UTC</createdTime>
+<generatorID>E2ABFA4E-B0E0-58B4-20B6-D894329CEB4E</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DAE44515-96BF-9751-4A7D-BA8054ED47C2" referredColumn="F3B5FCF6-121D-EE95-8477-42E9E847C006"/>
+</associations>
+</Column>
+<Column name="USUARIO_COD_USER" id="3C487242-2979-4817-C183-CF22A36AD972">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-10 01:05:48 UTC</createdTime>
+<generatorID>9ECE5E32-BCB2-7CA3-2C1D-90D3C76AC39B</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7B616AC9-0B69-3638-EB96-DCD603D03A2F" referredColumn="A2C63926-3CBB-1AEE-F4A0-F2DD477465B2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="09AF9B65-6280-BBBB-60C2-8771B050B301" name="PESSOA_PK">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-10 01:05:48 UTC</createdTime>
+<generatorID>CC1E4FF5-9FBE-C0EA-B9C0-2C91D5F21BFE</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F4D6CD1-16F6-040E-D705-559C9F662303"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EA72BCDE-17F1-D385-3C53-E1F54D57AC53" name="PESSOA__IDX">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-10 01:05:48 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>634CF166-000C-5EFA-4253-9ED4D47A7EE1</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="3C487242-2979-4817-C183-CF22A36AD972"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7635B5C6-80EB-A12F-E859-7EE2EDB5E9C2" name="PESSOA_USUARIO_FK">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-10 01:05:48 UTC</createdTime>
+<generatorID>634CF166-000C-5EFA-4253-9ED4D47A7EE1</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C487242-2979-4817-C183-CF22A36AD972"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B6A80C0E-7402-845B-9946-36E84AA196DA" name="PESSOA_ENDERECO_FK">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-10 01:05:48 UTC</createdTime>
+<generatorID>06F04326-658A-9071-3976-608D46016ABE</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="843CDDB3-AC63-3185-9C81-A6D39B27F1D8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

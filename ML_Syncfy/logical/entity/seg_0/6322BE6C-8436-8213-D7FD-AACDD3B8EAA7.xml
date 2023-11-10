@@ -1,11 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6322BE6C-8436-8213-D7FD-AACDD3B8EAA7" name="PJ">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6322BE6C-8436-8213-D7FD-AACDD3B8EAA7" name="PESSOA_JURIDICA">
 <createdBy>mniac</createdBy>
 <createdTime>2023-11-09 03:24:41 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -15,13 +12,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id_PJ" id="DD4E2A42-1918-CC08-4EA2-67C60F1104FC">
+<Attribute name="COD_PJ" id="DD4E2A42-1918-CC08-4EA2-67C60F1104FC">
 <createdBy>mniac</createdBy>
 <createdTime>2023-11-09 03:31:20 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -31,9 +25,6 @@
 <createdBy>mniac</createdBy>
 <createdTime>2023-11-09 03:31:20 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -41,28 +32,22 @@
 <dataTypeSize>14</dataTypeSize>
 <ownDataTypeParameters>14,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id_Pessoa" id="C882942B-16F7-EE73-B5E2-66C75715931D">
+<Attribute name="COD_PESSOA" id="C882942B-16F7-EE73-B5E2-66C75715931D">
 <createdBy>mniac</createdBy>
 <createdTime>2023-11-09 03:59:23 UTC</createdTime>
 <generatorID>55C79D0A-3A3B-D38B-91FF-B5417A4D1318</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <referedAttribute>D54EE564-2F27-BB39-2A63-F216F6845D14</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id_Segment" id="D90B2790-CB4B-812A-9E0A-3B39D39065E9">
+<Attribute name="COD_SEGMENTO" id="D90B2790-CB4B-812A-9E0A-3B39D39065E9">
 <createdBy>logonrmlocal</createdBy>
 <createdTime>2023-11-09 23:46:46 UTC</createdTime>
 <generatorID>C424E6A1-E5DE-993E-EBB8-6DB96C31A419</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <referedAttribute>2F526B21-45A2-422B-8E02-73FBA0729690</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -75,9 +60,6 @@
 <createdBy>mniac</createdBy>
 <createdTime>2023-11-09 03:38:08 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>DD4E2A42-1918-CC08-4EA2-67C60F1104FC</attributeRef>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="988F76D2-C4E8-D111-9ACD-FCC186DF8E03" containerWithKeyObject="C2E77A10-029F-34D4-E4F7-E72F9DF2151A" localFKIndex="CC0E9F07-7F3D-ADEE-2899-1498A4BE9D6C" name="CIDADE_ESTADO_FK">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-10 01:05:48 UTC</createdTime>
+<generatorID>DB22F8AC-4FDC-729E-EA7E-ED1577EB5D53</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referredTableLongName>ESTADO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>77557011-969B-DA76-0440-E71F94494006</referredTableID>
+<keyObject>574964F0-4C42-C4C1-4788-BF77140EACA1</keyObject>
+<referredKeyID>574964F0-4C42-C4C1-4788-BF77140EACA1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>COD_ESTADO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
