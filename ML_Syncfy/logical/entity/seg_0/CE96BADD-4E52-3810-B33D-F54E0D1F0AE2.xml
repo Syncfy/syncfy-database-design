@@ -1,12 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CE96BADD-4E52-3810-B33D-F54E0D1F0AE2" name="User">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CE96BADD-4E52-3810-B33D-F54E0D1F0AE2" name="USUARIO">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>91A43A89-DECF-75D6-FD70-3745F86F7F01</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -16,27 +13,11 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id_User" id="EE38ADF2-CDEC-B5A7-CCDE-E09FF0018BE6">
-<createdBy>matpi</createdBy>
-<createdTime>2023-10-20 00:22:42 UTC</createdTime>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<importedID>74CF39B2-325E-4845-D77D-0D7218A12914</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="User" id="DB06CAEA-AC30-7A73-9722-8B32908CC6DC">
+<Attribute name="USUARIO" id="DB06CAEA-AC30-7A73-9722-8B32908CC6DC">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>617405D0-35DE-0469-1A31-4635B0478A6E</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -44,20 +25,26 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Password" id="74063D16-62A8-029F-C4E0-5BD9A2FC4DBC">
+<Attribute name="SENHA" id="74063D16-62A8-029F-C4E0-5BD9A2FC4DBC">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>56374C82-A3FE-1DD4-417C-89FDADB2E632</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>30</dataTypeSize>
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="COD_USER" id="BEED01E7-20FE-409B-AA51-0F73C2577D84">
+<createdBy>logonrmlocal</createdBy>
+<createdTime>2023-11-10 01:01:26 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -66,12 +53,9 @@
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>0C454AFA-8B73-8F7A-39CB-0C9A39B75F93</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>EE38ADF2-CDEC-B5A7-CCDE-E09FF0018BE6</attributeRef>
+<attributeRef>BEED01E7-20FE-409B-AA51-0F73C2577D84</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

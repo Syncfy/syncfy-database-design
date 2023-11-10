@@ -1,12 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="856B125B-8B8A-07FE-DC86-05A7E0F3CE89" name="Order">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="856B125B-8B8A-07FE-DC86-05A7E0F3CE89" name="PEDIDO">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>9607AB4D-1747-9FF7-3CB0-CE38C9B3F653</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -16,97 +13,79 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id_Order" id="35EA8A44-B3B7-2088-5716-C6F8E15470EE">
+<Attribute name="COD_PEDIDO" id="35EA8A44-B3B7-2088-5716-C6F8E15470EE">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>D6BAAD7E-24D4-9922-A9A4-FEEE3B8C18A2</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Created_at" id="DDE8BF29-E251-D20B-8E41-644B779B1B16">
+<Attribute name="DATA_CRIACAO" id="DDE8BF29-E251-D20B-8E41-644B779B1B16">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>1E457680-DCE5-B531-6957-89D74F03E499</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Updated_at" id="CAA50F5E-1BF0-9D74-EA4E-CF8FC80422DE">
+<Attribute name="DATA_ATUALIZACAO" id="CAA50F5E-1BF0-9D74-EA4E-CF8FC80422DE">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>E13E188A-7230-D46C-F705-533133C9ADEF</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Total_Amount" id="480C7330-8994-D526-53A3-AE589092BFFA">
+<Attribute name="PRECO_TOTAL" id="480C7330-8994-D526-53A3-AE589092BFFA">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>ED16E40E-8819-C52E-18A5-3A5BA7224185</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT026</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Delivery_Date" id="0A4B40AC-BC03-2425-D7FC-7A035A42E777">
+<Attribute name="DATA_ENTREGA" id="0A4B40AC-BC03-2425-D7FC-7A035A42E777">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>D237C1A4-2D77-CA4E-DA86-C07F6AA4FC93</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Order_Number" id="E37AD668-6372-CEDC-588B-66F3608B432C">
+<Attribute name="NUMERO_PEDIDO" id="E37AD668-6372-CEDC-588B-66F3608B432C">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>AEE6DBAE-0C38-4F11-D3FD-A20499ABA95F</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Description" id="D05B8161-B2DB-9CFE-E8B0-76DC04FE8371">
+<Attribute name="DESCRICAO" id="D05B8161-B2DB-9CFE-E8B0-76DC04FE8371">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>1BF5597F-3F61-0A68-F476-7458CEE82267</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -114,40 +93,32 @@
 <dataTypeSize>250</dataTypeSize>
 <ownDataTypeParameters>250,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id_Shipping_Cost" id="478624E9-1C4E-0DD1-819D-D809B08B8CBD">
+<Attribute name="COD_FRETE" id="478624E9-1C4E-0DD1-819D-D809B08B8CBD">
 <createdBy>logonrmlocal</createdBy>
 <createdTime>2023-11-09 23:31:43 UTC</createdTime>
 <generatorID>18D4B5E2-F90D-1BFC-F4D4-0EEC9F75C34D</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <referedAttribute>B7C75C71-14CE-EDB0-A6B2-C7FFA0F7C9E4</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_PF" id="B4540F34-EA0E-893C-FB68-63467E245155">
+<Attribute name="COD_PF" id="B4540F34-EA0E-893C-FB68-63467E245155">
 <createdBy>logonrmlocal</createdBy>
 <createdTime>2023-11-09 23:37:08 UTC</createdTime>
 <generatorID>0328CBA4-B209-AAA2-9450-85E2AE45B21D</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <referedAttribute>15984AA3-BED2-6FA5-4DCD-78C49C79036F</referedAttribute>
-<use>0</use>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id_PJ" id="6BED660D-B58E-62D0-4A2B-E5251C7983C8">
+<Attribute name="COD_PJ" id="6BED660D-B58E-62D0-4A2B-E5251C7983C8">
 <createdBy>logonrmlocal</createdBy>
 <createdTime>2023-11-09 23:37:11 UTC</createdTime>
 <generatorID>5BA85605-3685-CFBA-56EF-6731CBE27924</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <referedAttribute>DD4E2A42-1918-CC08-4EA2-67C60F1104FC</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -161,9 +132,6 @@
 <createdTime>2023-10-20 00:22:43 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>641EB8CD-3CAB-86B7-2738-EEF7E363D3CE</importedID>
-<engineerTo>
-<item key="55030C3E-A46E-74C7-A186-C36703176015" value="true"/>
-</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>35EA8A44-B3B7-2088-5716-C6F8E15470EE</attributeRef>
