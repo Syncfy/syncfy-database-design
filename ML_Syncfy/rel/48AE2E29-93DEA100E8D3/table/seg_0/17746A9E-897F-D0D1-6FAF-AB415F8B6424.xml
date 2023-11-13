@@ -25,8 +25,11 @@
 <createdTime>2023-11-10 01:05:48 UTC</createdTime>
 <generatorID>AB534F7A-AF85-B5A0-9788-FAD711CB5022</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="PEDIDO_COD_PEDIDO" id="6430DC89-651D-60D8-F214-7D41E7C90C44">
