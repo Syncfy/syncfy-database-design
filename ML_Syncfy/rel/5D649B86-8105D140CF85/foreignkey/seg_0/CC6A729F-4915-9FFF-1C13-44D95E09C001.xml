@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CC6A729F-4915-9FFF-1C13-44D95E09C001" containerWithKeyObject="FC12FE59-BA51-7DD1-EE64-BB64E8956CEB" localFKIndex="A1BDDAD1-54FC-6BE2-E3FA-3F177CA04A3A" name="ENDERECO_BAIRRO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>79A22FAE-7260-26F7-4B7C-1B29AB081EF7</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referredTableLongName>BAIRRO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6778EAA8-FB61-8CA2-57D5-9086A244AEF5</referredTableID>
+<keyObject>8F934524-D2D3-3C19-8823-4F2F8F833B8E</keyObject>
+<referredKeyID>8F934524-D2D3-3C19-8823-4F2F8F833B8E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>COD_BAIRRO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

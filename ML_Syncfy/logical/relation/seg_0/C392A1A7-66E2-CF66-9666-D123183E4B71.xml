@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_18" directorySegmentName="seg_0" id="C392A1A7-66E2-CF66-9666-D123183E4B71">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-16 23:28:58 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="48AE2E29-17BB-A9D9-B3EE-93DEA100E8D3" value="true"/>
+</engineerTo>
+<sourcePk>CC1E4FF5-9FBE-C0EA-B9C0-2C91D5F21BFE</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>48093176-7B00-A140-ED69-91D4C1091625</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6325E5D6-C222-92CF-4F8F-068509A64DFE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

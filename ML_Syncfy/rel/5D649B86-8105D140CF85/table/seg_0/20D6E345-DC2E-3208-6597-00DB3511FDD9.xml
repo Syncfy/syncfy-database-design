@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="20D6E345-DC2E-3208-6597-00DB3511FDD9" name="PESSOA">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>48093176-7B00-A140-ED69-91D4C1091625</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NOME" id="98677027-2CCD-0756-EB0E-AE0E9C0D955F">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>C15AF888-33B1-D384-1E15-C6BF32E05DFC</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SOFT_DELETE" id="344243F5-082F-8E31-F974-B60F492C7323">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>15908364-36CA-AF04-2E97-21D52D701BFC</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="579AEBC4-7407-7D49-7325-568F72F509C2">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>7639B71C-E767-B825-5357-0B406FDB43D9</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COD_PESSOA" id="1A8A7653-0625-4524-53E7-194B26283C2A">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>D54EE564-2F27-BB39-2A63-F216F6845D14</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENDERECO_COD_ENDERECO" id="080A4FAD-7613-3D1B-79CE-50F86611ADFA">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>E2ABFA4E-B0E0-58B4-20B6-D894329CEB4E</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="402E7E2A-E4BD-6B0D-617F-55BEBF7A9E2C" referredColumn="545B346A-B0F0-D720-7134-B096F7B15900"/>
+</associations>
+</Column>
+<Column name="USUARIO_COD_USER" id="86D098E5-0B02-E8B0-B106-4CBA2C0CA23F">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>9ECE5E32-BCB2-7CA3-2C1D-90D3C76AC39B</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C275671C-FE0B-09B5-B01C-FF9891514728" referredColumn="00CD9BCD-3E6E-619E-E99F-659404B91266"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B246A6EF-993D-2F15-FF73-0C3330227149" name="PESSOA_PK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>CC1E4FF5-9FBE-C0EA-B9C0-2C91D5F21BFE</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1A8A7653-0625-4524-53E7-194B26283C2A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BEE53FC3-F7F4-779B-C478-D8C91E1B372B" name="PESSOA__IDX">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>634CF166-000C-5EFA-4253-9ED4D47A7EE1</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="86D098E5-0B02-E8B0-B106-4CBA2C0CA23F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8FF590BD-5131-3DCA-07F3-FD1A8902048E" name="PESSOA_USUARIO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>634CF166-000C-5EFA-4253-9ED4D47A7EE1</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="86D098E5-0B02-E8B0-B106-4CBA2C0CA23F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="993CC9FB-C243-6AA5-34C3-4F1F38FC4B6A" name="PESSOA_ENDERECO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>06F04326-658A-9071-3976-608D46016ABE</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="080A4FAD-7613-3D1B-79CE-50F86611ADFA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

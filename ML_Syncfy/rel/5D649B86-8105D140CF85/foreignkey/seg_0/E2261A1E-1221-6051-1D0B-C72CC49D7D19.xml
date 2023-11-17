@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E2261A1E-1221-6051-1D0B-C72CC49D7D19" containerWithKeyObject="72CBE910-66A5-EC8F-E87F-CDAA6D585D56" localFKIndex="42B56549-22BE-6CE6-5B23-B617FC896E0E" name="PESSOA_JURIDICA_SEGMENTO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>C424E6A1-E5DE-993E-EBB8-6DB96C31A419</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referredTableLongName>SEGMENTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>728C4ACF-3187-D759-E2F1-196C137A20E7</referredTableID>
+<keyObject>B42E9128-DBE1-C9DC-85E2-A0B1786F4BCA</keyObject>
+<referredKeyID>B42E9128-DBE1-C9DC-85E2-A0B1786F4BCA</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>COD_SEGMENTO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

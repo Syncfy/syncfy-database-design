@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E054716B-C4B4-8B1C-EA31-B7DB0AE4B78E" name="PESSOA_FISICA">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>2603792A-08F1-F5FE-E8EC-89493A657B89</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COD_PF" id="DE7FA3B9-0DA7-3534-D5CF-9C9C117C505F">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>15984AA3-BED2-6FA5-4DCD-78C49C79036F</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_NASC" id="267BC77C-8E79-134D-F50B-4B1075463F5A">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>A1E38783-1987-1C23-A974-1FD9669A4C18</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PESSOA_COD_PESSOA" id="9FEA9C66-9839-5E8D-086B-45E6D18C7527">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>54F7FA3D-246B-B4D9-68E1-8B3A00D9FDCE</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BA30C363-5BA2-D9E4-F6B3-D41222441457" referredColumn="1A8A7653-0625-4524-53E7-194B26283C2A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F56E26E0-1D02-F3B5-03A7-3B3240ACF9D6" name="PESSOA_FISICA_PK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>5FEC8EB2-1517-8D60-4095-95CE71036AC7</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DE7FA3B9-0DA7-3534-D5CF-9C9C117C505F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BFAE39F2-7C9D-0E99-535A-757B038EE72C" name="PESSOA_FISICA__IDX">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>72BCAA40-3285-A597-7151-88C6E8492A17</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="9FEA9C66-9839-5E8D-086B-45E6D18C7527"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1AF0A9CB-DA55-E4B5-94B8-CD5133AB5AF9" name="PESSOA_FISICA_PESSOA_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-17 00:02:18 UTC</createdTime>
+<generatorID>72BCAA40-3285-A597-7151-88C6E8492A17</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9FEA9C66-9839-5E8D-086B-45E6D18C7527"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
