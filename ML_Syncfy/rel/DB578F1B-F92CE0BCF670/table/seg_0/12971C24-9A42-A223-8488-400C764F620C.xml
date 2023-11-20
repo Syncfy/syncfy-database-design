@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="12971C24-9A42-A223-8488-400C764F620C" name="ENDERECO">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>532FA0AE-970E-02A6-44F6-9CDF0BB7E135</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COD_ENDERECO" id="DEBC52B0-0753-111D-15B2-7C3AD283D4B7">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>DE9BEF1E-225B-11FA-1794-2C5B47293545</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CEP" id="2E4E3C69-3966-B48B-B41E-6800ED155722">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>10CD28C3-A305-8B84-747D-1D18D7135D95</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOGRADOURO" id="7F59B992-3B3E-D0D5-EB30-E8C1DA73D33B">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>3FF70125-4DDA-902D-8A2E-BF807022E096</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUMERO" id="D0619604-BF41-2AC9-F543-3C8CD1A18E2A">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>A1E3FA15-32F4-41DD-37AF-4D6C77FE9B4D</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMPLEMENTO" id="6CF49BCE-AED5-1C1B-5AC1-37259AD91724">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>AEEE47EE-954A-3C8D-08AB-53819848010E</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BAIRRO_COD_BAIRRO" id="9ABDB27F-224C-DC92-AAF9-4D7C42F573D8">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>CC855337-9408-11CF-E00D-C02227F976CF</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F79343BA-5B89-4FC1-3921-63F195CAB6D6" referredColumn="AA4C7300-923D-1909-0EF5-365A44D701DB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9984DE9D-EBA2-CE6F-18E6-DDD0C5A5018D" name="ENDERECO_PK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>915B855F-24D9-7F03-B799-631747227721</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DEBC52B0-0753-111D-15B2-7C3AD283D4B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7A652752-015D-3399-1ED1-A5E94DC0C2D4" name="ENDERECO_BAIRRO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>79A22FAE-7260-26F7-4B7C-1B29AB081EF7</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9ABDB27F-224C-DC92-AAF9-4D7C42F573D8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="42839D82-DB6C-40F2-14F3-6524C5091AAB" name="PESSOA_JURIDICA">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>6322BE6C-8436-8213-D7FD-AACDD3B8EAA7</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COD_PJ" id="F982DE08-B78D-3505-D500-E432C457EE26">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>DD4E2A42-1918-CC08-4EA2-67C60F1104FC</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CNPJ" id="38634009-F164-A657-FC7E-EBCA2B34CC40">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>417D4F40-2D50-1693-D253-41DCC9A18E8A</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PESSOA_COD_PESSOA" id="0D1D639C-C7D5-0576-CC0A-53960D4182C0">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>C882942B-16F7-EE73-B5E2-66C75715931D</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B5E03468-DE64-46F0-B568-3DD86DD2AA6B" referredColumn="35A07E62-0EF5-9BEA-1329-9C21882E84BB"/>
+</associations>
+</Column>
+<Column name="SEGMENTO_COD_SEGMENTO" id="AD0E2214-D1A8-3E41-A677-4FA1AC16403A">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>D90B2790-CB4B-812A-9E0A-3B39D39065E9</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FE30197C-EBB7-2188-3F33-546200012B1B" referredColumn="AB21009C-EBE0-EFEF-8C1E-2DFF3459822A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="502F44F7-806C-AF19-34D5-BDB6B11AC769" name="PESSOA_JURIDICA_PK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>31CB4495-36A8-FB3D-78B8-CA1D6F5B33E8</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F982DE08-B78D-3505-D500-E432C457EE26"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="84CE9882-0008-C95B-D358-A0A727A5EBA7" name="PESSOA_JURIDICA__IDX">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>55C79D0A-3A3B-D38B-91FF-B5417A4D1318</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="0D1D639C-C7D5-0576-CC0A-53960D4182C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C9BFECCE-0CBD-CEED-B39F-8918A5CC237A" name="PESSOA_JURIDICA__IDXv1">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>C424E6A1-E5DE-993E-EBB8-6DB96C31A419</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="AD0E2214-D1A8-3E41-A677-4FA1AC16403A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7F9EF4FB-2E72-49CB-16B6-E25A6834BD6F" name="PESSOA_JURIDICA_PESSOA_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>55C79D0A-3A3B-D38B-91FF-B5417A4D1318</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D1D639C-C7D5-0576-CC0A-53960D4182C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="906C5C8D-5693-65A7-FC16-EE8C2E329999" name="PESSOA_JURIDICA_SEGMENTO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>C424E6A1-E5DE-993E-EBB8-6DB96C31A419</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD0E2214-D1A8-3E41-A677-4FA1AC16403A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

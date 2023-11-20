@@ -31,9 +31,8 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>11</dataTypeSize>
-<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="DATA_ATUALIZACAO" id="CAA50F5E-1BF0-9D74-EA4E-CF8FC80422DE">
 <createdBy>matpi</createdBy>
@@ -43,9 +42,8 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>11</dataTypeSize>
-<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="PRECO_TOTAL" id="480C7330-8994-D526-53A3-AE589092BFFA">
 <createdBy>matpi</createdBy>
@@ -66,9 +64,8 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>11</dataTypeSize>
-<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="NUMERO_PEDIDO" id="E37AD668-6372-CEDC-588B-66F3608B432C">
 <createdBy>matpi</createdBy>
@@ -110,6 +107,7 @@
 <generatorID>0328CBA4-B209-AAA2-9450-85E2AE45B21D</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <referedAttribute>15984AA3-BED2-6FA5-4DCD-78C49C79036F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>

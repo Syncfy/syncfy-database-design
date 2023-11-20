@@ -23,7 +23,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="QTD_UNITARIA" id="CF2425CB-FC45-67B5-610C-FFE4DF19C2AA">
+<Attribute name="VALOR_UNITARIO" id="CF2425CB-FC45-67B5-610C-FFE4DF19C2AA">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>

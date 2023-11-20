@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C124BE73-445E-C3A8-5200-88BC41B81F29" containerWithKeyObject="54463B61-E52B-989B-215D-727C11F00BFB" localFKIndex="08B30DC1-349F-1374-F917-162FCB829280" name="PESSOA_ENDERECO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 03:31:16 UTC</createdTime>
+<generatorID>06F04326-658A-9071-3976-608D46016ABE</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referredTableLongName>ENDERECO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>12971C24-9A42-A223-8488-400C764F620C</referredTableID>
+<keyObject>9984DE9D-EBA2-CE6F-18E6-DDD0C5A5018D</keyObject>
+<referredKeyID>9984DE9D-EBA2-CE6F-18E6-DDD0C5A5018D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>COD_ENDERECO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
