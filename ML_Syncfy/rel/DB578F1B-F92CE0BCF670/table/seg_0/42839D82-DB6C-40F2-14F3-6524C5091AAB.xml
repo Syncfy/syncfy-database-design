@@ -62,6 +62,18 @@
 <colAssociation fkAssociation="FE30197C-EBB7-2188-3F33-546200012B1B" referredColumn="AB21009C-EBE0-EFEF-8C1E-2DFF3459822A"/>
 </associations>
 </Column>
+<Column name="TIPO" id="8E7FB23C-02D9-902C-D73F-275EB4EDAB92">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 19:25:11 UTC</createdTime>
+<generatorID>62FFCA5E-0440-3B72-046C-5F1FAD1D02B8</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="502F44F7-806C-AF19-34D5-BDB6B11AC769" name="PESSOA_JURIDICA_PK">

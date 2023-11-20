@@ -46,6 +46,18 @@
 <colAssociation fkAssociation="7E81B7AB-EDE5-8E6A-274F-DBE2AA59AE61" referredColumn="35A07E62-0EF5-9BEA-1329-9C21882E84BB"/>
 </associations>
 </Column>
+<Column name="CPF" id="919AFAA2-46DC-79CB-3592-203A96F6EDA5">
+<createdBy>matpi</createdBy>
+<createdTime>2023-11-20 19:26:17 UTC</createdTime>
+<generatorID>D5200418-E4B3-1666-6E30-B91BBA3A935F</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="04A30C91-92FA-A254-EF34-ACDDE826F78B" name="PESSOA_FISICA_PK">
