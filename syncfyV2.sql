@@ -75,10 +75,10 @@ ALTER TABLE pais ADD CONSTRAINT pais_pk PRIMARY KEY ( cod_pais );
 
 CREATE TABLE pedido (
     cod_pedido             NUMBER NOT NULL,
-    data_criacao           VARCHAR2(11),
-    data_atualizacao       VARCHAR2(11),
+    data_criacao           DATE,
+    data_atualizacao       DATE,
     preco_total            NUMBER,
-    data_entrega           VARCHAR2(11),
+    data_entrega           DATE,
     numero_pedido          NUMBER,
     descricao              VARCHAR2(250),
     frete_cod_frete        NUMBER NOT NULL,
@@ -95,15 +95,12 @@ ALTER TABLE pedido ADD CONSTRAINT pedido_pk PRIMARY KEY ( cod_pedido );
 
 CREATE TABLE pedido_produto (
     quantidade          NUMBER,
-    id_pedido_produto   CHAR(10) NOT NULL,
-    pedido_cod_pedido   NUMBER NOT NULL,
-    produto_cod_produto NUMBER NOT NULL
+    cod_pedido_produto  NUMBER NOT NULL,
+    produto_cod_produto NUMBER NOT NULL,
+    pedido_cod_pedido   NUMBER NOT NULL
 );
 
-ALTER TABLE pedido_produto
-    ADD CONSTRAINT pedido_produto_pk PRIMARY KEY ( id_pedido_produto,
-                                                   pedido_cod_pedido,
-                                                   produto_cod_produto );
+ALTER TABLE pedido_produto ADD CONSTRAINT pedido_produto_pk PRIMARY KEY ( cod_pedido_produto );
 
 CREATE TABLE pessoa (
     nome                  VARCHAR2(50),
@@ -123,8 +120,9 @@ ALTER TABLE pessoa ADD CONSTRAINT pessoa_pk PRIMARY KEY ( cod_pessoa );
 
 CREATE TABLE pessoa_fisica (
     cod_pf            NUMBER NOT NULL,
-    data_nasc         VARCHAR2(11),
-    pessoa_cod_pessoa NUMBER NOT NULL
+    data_nasc         DATE,
+    pessoa_cod_pessoa NUMBER NOT NULL,
+    cpf               VARCHAR2(11) NOT NULL
 );
 
 CREATE UNIQUE INDEX pessoa_fisica__idx ON
@@ -138,7 +136,8 @@ CREATE TABLE pessoa_juridica (
     cod_pj                NUMBER NOT NULL,
     cnpj                  CHAR(14),
     pessoa_cod_pessoa     NUMBER NOT NULL,
-    segmento_cod_segmento NUMBER NOT NULL
+    segmento_cod_segmento NUMBER NOT NULL,
+    tipo                  VARCHAR2(10) NOT NULL
 );
 
 CREATE UNIQUE INDEX pessoa_juridica__idx ON
@@ -155,7 +154,7 @@ ALTER TABLE pessoa_juridica ADD CONSTRAINT pessoa_juridica_pk PRIMARY KEY ( cod_
 
 CREATE TABLE produto (
     cod_produto             NUMBER NOT NULL,
-    qtd_unitaria            NUMBER,
+    valor_unitario          NUMBER,
     nome                    VARCHAR2(20),
     descricao               VARCHAR2(250),
     sku                     VARCHAR2(15) NOT NULL,
@@ -179,12 +178,11 @@ ALTER TABLE segmento ADD CONSTRAINT segmento_pk PRIMARY KEY ( cod_segmento );
 CREATE TABLE telefone (
     cod_telefone      NUMBER NOT NULL,
     numero            CHAR(9),
-    pessoa_cod_pessoa NUMBER NOT NULL,
-    ddd               NUMBER
+    ddd               NUMBER,
+    pessoa_cod_pessoa NUMBER NOT NULL
 );
 
-ALTER TABLE telefone ADD CONSTRAINT telefone_pk PRIMARY KEY ( cod_telefone,
-                                                              pessoa_cod_pessoa );
+ALTER TABLE telefone ADD CONSTRAINT telefone_pk PRIMARY KEY ( cod_telefone );
 
 CREATE TABLE usuario (
     usuario  VARCHAR2(50),
@@ -258,13 +256,13 @@ ALTER TABLE telefone
     ADD CONSTRAINT telefone_pessoa_fk FOREIGN KEY ( pessoa_cod_pessoa )
         REFERENCES pessoa ( cod_pessoa );
         
---------------Funções de Validação Telefone-------------------------
+--------------Funcoes de Validacao Telefone-------------------------
 CREATE OR REPLACE FUNCTION validar_telefone (
     p_ddd IN NUMBER,
     p_numero IN CHAR
 ) RETURN BOOLEAN
 IS
-    v_pattern VARCHAR2(30) := '^\d{9}$'; -- Padrão para número de telefone de 9 dígitos
+    v_pattern VARCHAR2(30) := '^\d{9}$'; -- Padrao para numero de telefone de 9 digitos
 BEGIN
     IF REGEXP_LIKE(p_numero, v_pattern) THEN
         RETURN TRUE;
@@ -276,20 +274,20 @@ END;
 
 DECLARE
     v_ddd NUMBER := 11;  -- Substitua pelo DDD que deseja testar
-    v_numero CHAR(9) := '123456789';  -- Substitua pelo número que deseja testar
+    v_numero CHAR(9) := '123456789';  -- Substitua pelo numero que deseja testar
     v_is_valid BOOLEAN;
 BEGIN
     v_is_valid := validar_telefone(v_ddd, v_numero);
 
     IF v_is_valid THEN
-        DBMS_OUTPUT.PUT_LINE('Número de telefone válido.');
+        DBMS_OUTPUT.PUT_LINE('Nï¿½mero de telefone vï¿½lido.');
     ELSE
-        DBMS_OUTPUT.PUT_LINE('Número de telefone inválido.');
+        DBMS_OUTPUT.PUT_LINE('Nï¿½mero de telefone invï¿½lido.');
     END IF;
 END;
 /
 
---------------Funções de Validação Cep-------------------------
+--------------Funï¿½ï¿½es de Validaï¿½ï¿½o Cep-------------------------
 CREATE OR REPLACE FUNCTION validar_cep(p_cep IN CHAR) RETURN BOOLEAN IS
 BEGIN
     IF REGEXP_LIKE(p_cep, '^\d{8}$') THEN
@@ -307,15 +305,15 @@ BEGIN
     v_is_valid := validar_cep(v_cep);
 
     IF v_is_valid THEN
-        DBMS_OUTPUT.PUT_LINE('CEP válido.');
+        DBMS_OUTPUT.PUT_LINE('CEP vï¿½lido.');
     ELSE
-        DBMS_OUTPUT.PUT_LINE('CEP inválido.');
+        DBMS_OUTPUT.PUT_LINE('CEP invï¿½lido.');
     END IF;
 END;
 /
 
---------------Bloco anônimo com cursor para pelo uma consulta no banco de dados com um Join-------------------------
---O cursor c_pedido faz uma consulta que seleciona o código do pedido, a data de criação do pedido e o 
+--------------Bloco anï¿½nimo com cursor para pelo uma consulta no banco de dados com um Join-------------------------
+--O cursor c_pedido faz uma consulta que seleciona o cï¿½digo do pedido, a data de criaï¿½ï¿½o do pedido e o 
 --nome da pessoa vinculada a esse pedido. --
 
 DECLARE
@@ -331,16 +329,16 @@ BEGIN
    LOOP
       FETCH c_pedido INTO v_cod_pedido, v_data_criacao, v_nome;
       EXIT WHEN c_pedido%NOTFOUND;
-      -- Aqui você pode realizar operações com os dados recuperados
-      DBMS_OUTPUT.PUT_LINE('Código do Pedido: ' || v_cod_pedido);
-      DBMS_OUTPUT.PUT_LINE('Data de Criação: ' || v_data_criacao);
+      -- Aqui vocï¿½ pode realizar operaï¿½ï¿½es com os dados recuperados
+      DBMS_OUTPUT.PUT_LINE('Cï¿½digo do Pedido: ' || v_cod_pedido);
+      DBMS_OUTPUT.PUT_LINE('Data de Criaï¿½ï¿½o: ' || v_data_criacao);
       DBMS_OUTPUT.PUT_LINE('Nome da Pessoa: ' || v_nome);
    END LOOP;
    CLOSE c_pedido;
 END;
 /  
 
---------------Criar uma procedure que imprima um relatório com pelo menos um regra de negócio, que contenha funções, inner Join, order by, sum ou count.-------------------------
+--------------Criar uma procedure que imprima um relatï¿½rio com pelo menos um regra de negï¿½cio, que contenha funï¿½ï¿½es, inner Join, order by, sum ou count.-------------------------
 CREATE OR REPLACE PROCEDURE relatorio_produtos_mais_vendidos AS
 BEGIN
     FOR produto_rec IN (
@@ -357,7 +355,7 @@ BEGIN
     ) 
     LOOP
         DBMS_OUTPUT.PUT_LINE('Produto: ' || produto_rec.PRODUTO);
-        DBMS_OUTPUT.PUT_LINE('Número de Vendas: ' || produto_rec.NUM_VENDAS);
+        DBMS_OUTPUT.PUT_LINE('Nï¿½mero de Vendas: ' || produto_rec.NUM_VENDAS);
         DBMS_OUTPUT.NEW_LINE;
     END LOOP;
 END;
@@ -368,7 +366,7 @@ BEGIN
 END;
 /
 
---------------Criação das Procedures-------------------------
+--------------Criaï¿½ï¿½o das Procedures-------------------------
 
 CREATE OR REPLACE PROCEDURE gerenciar_bairro (
     p_cod_bairro IN NUMBER,
@@ -721,8 +719,3 @@ BEGIN
     END IF;
 END;
 /
-
-
-
-        
-        
