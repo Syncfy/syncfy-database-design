@@ -4,6 +4,9 @@
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>A7FEF545-F5BC-5F38-E1F5-875AD4DF5978</importedID>
+<engineerTo>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -18,16 +21,22 @@
 <createdTime>2023-10-20 00:22:43 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>835E20E5-FA90-68F3-A7BA-F987BB658818</importedID>
+<engineerTo>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="SEGMENTO" id="4C7F8591-B108-FA81-108C-F055ED514EDA">
+<Attribute name="NOME" id="4C7F8591-B108-FA81-108C-F055ED514EDA">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:43 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>E1402C3E-BC10-4FF7-3515-3B2B637975C9</importedID>
+<engineerTo>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -42,6 +51,9 @@
 <createdTime>2023-10-20 00:22:43 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>AF544815-A316-87CB-416A-E9362DAB697D</importedID>
+<engineerTo>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>2F526B21-45A2-422B-8E02-73FBA0729690</attributeRef>

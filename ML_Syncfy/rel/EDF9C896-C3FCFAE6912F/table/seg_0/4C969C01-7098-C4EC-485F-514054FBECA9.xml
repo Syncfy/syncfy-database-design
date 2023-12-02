@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4C969C01-7098-C4EC-485F-514054FBECA9" name="CIDADE">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>77660684-C9DC-4C83-91E9-9E9B0E66BE06</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COD_CIDADE" id="FE560257-0AB4-D86D-1566-BEFE32100AE4">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>5C452E27-6566-8DA2-55E3-3FD7E19E9BD8</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="B0CBD0F6-71E0-65E9-F6CD-13ABD94491DB">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>844B54A6-1A0B-E945-CE80-2893DB9777F7</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COD_IBGE" id="64355711-7A03-F93C-D551-760DCA1F0D62">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>B4213F09-0074-4C22-4288-E65EC99ACF86</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO_COD_ESTADO" id="BC56219C-FB91-F6A2-A0A1-E2EE170EA3B3">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>7256C473-86BA-76B6-A63F-EA6449E274F0</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7AF6A8AD-1EC6-DA13-3F5F-6AEDE7B160DD" referredColumn="B3F9605B-8664-709D-0972-1C049FE88A13"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0145CBE4-7C25-88B0-19B5-77902B417C81" name="CIDADE_PK">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>03DFD3AE-5DAD-B82F-8A8D-BED4F07D0BD3</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE560257-0AB4-D86D-1566-BEFE32100AE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0FB481F2-0249-136F-3FC8-C99B8969DB41" name="CIDADE_ESTADO_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>DB22F8AC-4FDC-729E-EA7E-ED1577EB5D53</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BC56219C-FB91-F6A2-A0A1-E2EE170EA3B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

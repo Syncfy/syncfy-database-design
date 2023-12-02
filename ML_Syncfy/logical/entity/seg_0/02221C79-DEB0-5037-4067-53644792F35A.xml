@@ -3,6 +3,9 @@
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:16:09 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -16,15 +19,21 @@
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:37:02 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="BAIRRO" id="D5FCCBA3-32EE-3A7F-2880-AE645D72792C">
+<Attribute name="NOME" id="D5FCCBA3-32EE-3A7F-2880-AE645D72792C">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:37:23 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -36,6 +45,9 @@
 <createdTime>2023-11-09 22:12:21 UTC</createdTime>
 <generatorID>FD71726B-581F-A961-CAD5-D16A3F325746</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
+</engineerTo>
 <referedAttribute>5C452E27-6566-8DA2-55E3-3FD7E19E9BD8</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -48,6 +60,9 @@
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 01:37:12 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>2C82AF05-5172-D5CC-CF08-0E0C2F3BE7E2</attributeRef>

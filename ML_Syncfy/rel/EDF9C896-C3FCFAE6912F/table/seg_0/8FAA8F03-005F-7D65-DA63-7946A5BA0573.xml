@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8FAA8F03-005F-7D65-DA63-7946A5BA0573" name="PESSOA">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>48093176-7B00-A140-ED69-91D4C1091625</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NOME" id="19344B66-BA0D-4C15-CC7E-6262A8B70B33">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>C15AF888-33B1-D384-1E15-C6BF32E05DFC</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SOFT_DELETE" id="5A4BC711-1C43-5300-CF98-8890D0A511F4">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>15908364-36CA-AF04-2E97-21D52D701BFC</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="6D3C6C01-4B06-F715-1B72-C1CA7D69E0CC">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>7639B71C-E767-B825-5357-0B406FDB43D9</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COD_PESSOA" id="53512DC5-5BD8-655D-45DA-04A9A0E14CED">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>D54EE564-2F27-BB39-2A63-F216F6845D14</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USUARIO_COD_USER" id="94D6D3C8-5E72-D476-B04B-98AAD00A93A1">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>9ECE5E32-BCB2-7CA3-2C1D-90D3C76AC39B</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CBA6BFAB-5C97-2EE0-9591-F65A86B8A2DC" referredColumn="E817BAE2-09CF-59B1-503C-F0066C7CA561"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BC2CE749-0140-5FE3-BB4C-522277FE1AD9" name="PESSOA_PK">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>CC1E4FF5-9FBE-C0EA-B9C0-2C91D5F21BFE</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53512DC5-5BD8-655D-45DA-04A9A0E14CED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="929F60E1-3413-9F3A-63F6-418281388D84" name="PESSOA__IDX">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>634CF166-000C-5EFA-4253-9ED4D47A7EE1</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="94D6D3C8-5E72-D476-B04B-98AAD00A93A1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F87DE45F-377A-5993-6F92-DEC06E0DA928" name="PESSOA_USUARIO_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>634CF166-000C-5EFA-4253-9ED4D47A7EE1</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="94D6D3C8-5E72-D476-B04B-98AAD00A93A1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

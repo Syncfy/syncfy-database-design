@@ -4,7 +4,7 @@
 <createdTime>2023-11-09 03:24:05 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="48AE2E29-17BB-A9D9-B3EE-93DEA100E8D3" value="true"/>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2023-11-09 03:27:40 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="48AE2E29-17BB-A9D9-B3EE-93DEA100E8D3" value="true"/>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -34,7 +34,7 @@
 <createdTime>2023-11-09 03:30:15 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="48AE2E29-17BB-A9D9-B3EE-93DEA100E8D3" value="true"/>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -48,7 +48,7 @@
 <createdTime>2023-11-09 03:30:30 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="48AE2E29-17BB-A9D9-B3EE-93DEA100E8D3" value="true"/>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -62,22 +62,8 @@
 <createdTime>2023-11-09 03:31:50 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="48AE2E29-17BB-A9D9-B3EE-93DEA100E8D3" value="true"/>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="COD_ENDERECO" id="E2ABFA4E-B0E0-58B4-20B6-D894329CEB4E">
-<createdBy>logonrmlocal</createdBy>
-<createdTime>2023-11-09 23:36:04 UTC</createdTime>
-<generatorID>06F04326-658A-9071-3976-608D46016ABE</generatorID>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="48AE2E29-17BB-A9D9-B3EE-93DEA100E8D3" value="true"/>
-</engineerTo>
-<referedAttribute>DE9BEF1E-225B-11FA-1794-2C5B47293545</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -89,7 +75,7 @@
 <generatorID>634CF166-000C-5EFA-4253-9ED4D47A7EE1</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="48AE2E29-17BB-A9D9-B3EE-93DEA100E8D3" value="true"/>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
 </engineerTo>
 <referedAttribute>BEED01E7-20FE-409B-AA51-0F73C2577D84</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -104,7 +90,7 @@
 <createdTime>2023-11-09 03:38:21 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="48AE2E29-17BB-A9D9-B3EE-93DEA100E8D3" value="true"/>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

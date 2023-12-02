@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="41436040-B476-5769-BE9A-35DCD65E9443" name="PAIS">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>E856A6AF-446D-9CFB-028B-155D1F44CE73</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COD_PAIS" id="14B081C3-0D84-EF03-0039-FB63F09AC95F">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>6A0BF8D7-FF61-BC1F-6CA1-8B7980115F05</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="47EC857E-4069-10F5-8F81-777752C440E2">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>1540E634-590A-113B-81E4-CE2BD3E7C1CB</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F87FDECA-DEE6-D97D-B94A-9F76ABC6ABBF" name="PAIS_PK">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>2B05A1F5-9BD0-453D-1913-96685DCB0FA3</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14B081C3-0D84-EF03-0039-FB63F09AC95F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

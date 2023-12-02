@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C0497BE3-2EC6-B111-DEB6-9DB3D7B4BD72" containerWithKeyObject="9C7F656B-C688-726A-BFEA-39BB27211A8B" localFKIndex="38714175-28D5-DB9E-E036-930B312CD78E" name="PEDIDO_FRETE_FK">
+<createdBy>user</createdBy>
+<createdTime>2023-12-02 19:29:24 UTC</createdTime>
+<generatorID>18D4B5E2-F90D-1BFC-F4D4-0EEC9F75C34D</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referredTableLongName>FRETE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A4D1F272-1246-B4E2-8CB6-DEFA3D6360DC</referredTableID>
+<keyObject>026B7D43-753B-B4F8-FA60-911CB9FCDAE4</keyObject>
+<referredKeyID>026B7D43-753B-B4F8-FA60-911CB9FCDAE4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>COD_FRETE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

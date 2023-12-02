@@ -4,7 +4,7 @@
 <createdTime>2023-11-09 03:24:41 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="DB578F1B-DDEC-9F69-E54D-F92CE0BCF670" value="true"/>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -15,26 +15,13 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="COD_PJ" id="DD4E2A42-1918-CC08-4EA2-67C60F1104FC">
-<createdBy>mniac</createdBy>
-<createdTime>2023-11-09 03:31:20 UTC</createdTime>
-<ownerDesignName>ML_Syncfy</ownerDesignName>
-<engineerTo>
-<item key="DB578F1B-DDEC-9F69-E54D-F92CE0BCF670" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="CNPJ" id="417D4F40-2D50-1693-D253-41DCC9A18E8A">
 <createdBy>mniac</createdBy>
 <createdTime>2023-11-09 03:31:20 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="DB578F1B-DDEC-9F69-E54D-F92CE0BCF670" value="true"/>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
@@ -47,7 +34,7 @@
 <generatorID>55C79D0A-3A3B-D38B-91FF-B5417A4D1318</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="DB578F1B-DDEC-9F69-E54D-F92CE0BCF670" value="true"/>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
 </engineerTo>
 <referedAttribute>D54EE564-2F27-BB39-2A63-F216F6845D14</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -61,7 +48,7 @@
 <generatorID>C424E6A1-E5DE-993E-EBB8-6DB96C31A419</generatorID>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="DB578F1B-DDEC-9F69-E54D-F92CE0BCF670" value="true"/>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
 </engineerTo>
 <referedAttribute>2F526B21-45A2-422B-8E02-73FBA0729690</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -74,7 +61,7 @@
 <createdTime>2023-11-20 19:18:23 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <engineerTo>
-<item key="DB578F1B-DDEC-9F69-E54D-F92CE0BCF670" value="true"/>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -88,13 +75,12 @@
 <createdBy>mniac</createdBy>
 <createdTime>2023-11-09 03:38:08 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="DB578F1B-DDEC-9F69-E54D-F92CE0BCF670" value="false"/>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>DD4E2A42-1918-CC08-4EA2-67C60F1104FC</attributeRef>
+<attributeRef>417D4F40-2D50-1693-D253-41DCC9A18E8A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

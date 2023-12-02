@@ -1,24 +1,22 @@
-set serveroutput on;
-DROP TABLE bairro CASCADE CONSTRAINTS;
-drop table categoria cascade constraints;
-drop table cidade cascade constraints;
-drop table endereco cascade constraints;
-drop table estado cascade constraints;
-drop table frete cascade constraints;
-drop table pais cascade constraints;
-drop table pedido cascade constraints;
-drop table pedido_produto cascade constraints;
-drop table pessoa cascade constraints;
-drop table pessoa_fisica cascade constraints;
-drop table pessoa_juridica cascade constraints;
-drop table produto cascade constraints;
-drop table segmento cascade constraints;
-drop table telefone cascade constraints;
-drop table usuario cascade constraints;
-
+drop table BAIRRO cascade constraint;
+drop table CATEGORIA cascade constraint;
+drop table CIDADE cascade constraint;
+drop table ENDERECO cascade constraint;
+drop table ESTADO cascade constraint;
+drop table FRETE cascade constraint;
+drop table PAIS cascade constraint;
+drop table PEDIDO cascade constraint;
+drop table PEDIDO_PRODUTO cascade constraint;
+drop table PESSOA cascade constraint;
+drop table PESSOA_FISICA cascade constraint;
+drop table PESSOA_JURIDICA cascade constraint;
+drop table PRODUTO cascade constraint;
+drop table SEGMENTO cascade constraint;
+drop table TELEFONE cascade constraint;
+drop table USUARIO cascade constraint;
 CREATE TABLE bairro (
     cod_bairro        NUMBER NOT NULL,
-    bairro            VARCHAR2(30),
+    nome              VARCHAR2(30),
     cidade_cod_cidade NUMBER NOT NULL
 );
 
@@ -26,14 +24,14 @@ ALTER TABLE bairro ADD CONSTRAINT bairro_pk PRIMARY KEY ( cod_bairro );
 
 CREATE TABLE categoria (
     cod_categoria NUMBER NOT NULL,
-    categoria     VARCHAR2(30)
+    categoria     VARCHAR2(30) 
 );
 
 ALTER TABLE categoria ADD CONSTRAINT categoria_pk PRIMARY KEY ( cod_categoria );
 
 CREATE TABLE cidade (
     cod_cidade        NUMBER NOT NULL,
-    cidade            VARCHAR2(30),
+    nome              VARCHAR2(30),
     cod_ibge          NUMBER,
     estado_cod_estado NUMBER NOT NULL
 );
@@ -46,14 +44,15 @@ CREATE TABLE endereco (
     logradouro        VARCHAR2(50),
     numero            CHAR(5),
     complemento       VARCHAR2(50),
-    bairro_cod_bairro NUMBER NOT NULL
+    bairro_cod_bairro NUMBER NOT NULL,
+    pessoa_cod_pessoa NUMBER NOT NULL
 );
 
 ALTER TABLE endereco ADD CONSTRAINT endereco_pk PRIMARY KEY ( cod_endereco );
 
 CREATE TABLE estado (
     cod_estado    NUMBER NOT NULL,
-    estado        CHAR(2) NOT NULL,
+    nome          CHAR(2) NOT NULL,
     pais_cod_pais NUMBER NOT NULL
 );
 
@@ -68,22 +67,21 @@ ALTER TABLE frete ADD CONSTRAINT frete_pk PRIMARY KEY ( cod_frete );
 
 CREATE TABLE pais (
     cod_pais NUMBER NOT NULL,
-    pais     VARCHAR2(30)
+    nome     VARCHAR2(30)
 );
 
 ALTER TABLE pais ADD CONSTRAINT pais_pk PRIMARY KEY ( cod_pais );
 
 CREATE TABLE pedido (
-    cod_pedido             NUMBER NOT NULL,
-    data_criacao           DATE,
-    data_atualizacao       DATE,
-    preco_total            NUMBER,
-    data_entrega           DATE,
-    numero_pedido          NUMBER,
-    descricao              VARCHAR2(250),
-    frete_cod_frete        NUMBER NOT NULL,
-    pessoa_fisica_cod_pf   NUMBER NOT NULL,
-    pessoa_juridica_cod_pj NUMBER NOT NULL
+    cod_pedido           NUMBER NOT NULL,
+    data_criacao         DATE,
+    data_atualizacao     DATE,
+    preco_total          NUMBER,
+    data_entrega         DATE,
+    numero_pedido        NUMBER,
+    descricao            VARCHAR2(250),
+    frete_cod_frete      NUMBER NOT NULL,
+    pessoa_juridica_cnpj CHAR(14) NOT NULL
 );
 
 CREATE UNIQUE INDEX pedido__idx ON
@@ -103,12 +101,11 @@ CREATE TABLE pedido_produto (
 ALTER TABLE pedido_produto ADD CONSTRAINT pedido_produto_pk PRIMARY KEY ( cod_pedido_produto );
 
 CREATE TABLE pessoa (
-    nome                  VARCHAR2(50),
-    soft_delete           CHAR(1),
-    email                 VARCHAR2(150),
-    cod_pessoa            NUMBER NOT NULL,
-    endereco_cod_endereco NUMBER NOT NULL,
-    usuario_cod_user      NUMBER NOT NULL
+    nome             VARCHAR2(50),
+    soft_delete      CHAR(1),
+    email            VARCHAR2(150),
+    cod_pessoa       NUMBER NOT NULL,
+    usuario_cod_user NUMBER NOT NULL
 );
 
 CREATE UNIQUE INDEX pessoa__idx ON
@@ -118,26 +115,11 @@ CREATE UNIQUE INDEX pessoa__idx ON
 
 ALTER TABLE pessoa ADD CONSTRAINT pessoa_pk PRIMARY KEY ( cod_pessoa );
 
-CREATE TABLE pessoa_fisica (
-    cod_pf            NUMBER NOT NULL,
-    data_nasc         DATE,
-    pessoa_cod_pessoa NUMBER NOT NULL,
-    cpf               VARCHAR2(11) NOT NULL
-);
-
-CREATE UNIQUE INDEX pessoa_fisica__idx ON
-    pessoa_fisica (
-        pessoa_cod_pessoa
-    ASC );
-
-ALTER TABLE pessoa_fisica ADD CONSTRAINT pessoa_fisica_pk PRIMARY KEY ( cod_pf );
-
 CREATE TABLE pessoa_juridica (
-    cod_pj                NUMBER NOT NULL,
-    cnpj                  CHAR(14),
+    cnpj                  CHAR(14) NOT NULL,
     pessoa_cod_pessoa     NUMBER NOT NULL,
     segmento_cod_segmento NUMBER NOT NULL,
-    tipo                  VARCHAR2(10) NOT NULL
+    tipo                  CHAR(10) NOT NULL
 );
 
 CREATE UNIQUE INDEX pessoa_juridica__idx ON
@@ -150,14 +132,14 @@ CREATE UNIQUE INDEX pessoa_juridica__idxv1 ON
         segmento_cod_segmento
     ASC );
 
-ALTER TABLE pessoa_juridica ADD CONSTRAINT pessoa_juridica_pk PRIMARY KEY ( cod_pj );
+ALTER TABLE pessoa_juridica ADD CONSTRAINT pessoa_juridica_pk PRIMARY KEY ( cnpj );
 
 CREATE TABLE produto (
     cod_produto             NUMBER NOT NULL,
     valor_unitario          NUMBER,
     nome                    VARCHAR2(20),
     descricao               VARCHAR2(250),
-    sku                     VARCHAR2(15) NOT NULL,
+    sku                     CHAR(10) NOT NULL,
     categoria_cod_categoria NUMBER NOT NULL
 );
 
@@ -170,7 +152,7 @@ ALTER TABLE produto ADD CONSTRAINT produto_pk PRIMARY KEY ( cod_produto );
 
 CREATE TABLE segmento (
     cod_segmento NUMBER NOT NULL,
-    segmento     VARCHAR2(20)
+    nome         VARCHAR2(20)
 );
 
 ALTER TABLE segmento ADD CONSTRAINT segmento_pk PRIMARY KEY ( cod_segmento );
@@ -185,7 +167,7 @@ CREATE TABLE telefone (
 ALTER TABLE telefone ADD CONSTRAINT telefone_pk PRIMARY KEY ( cod_telefone );
 
 CREATE TABLE usuario (
-    usuario  VARCHAR2(50),
+    nome     VARCHAR2(50),
     senha    VARCHAR2(30),
     cod_user NUMBER NOT NULL
 );
@@ -204,6 +186,10 @@ ALTER TABLE endereco
     ADD CONSTRAINT endereco_bairro_fk FOREIGN KEY ( bairro_cod_bairro )
         REFERENCES bairro ( cod_bairro );
 
+ALTER TABLE endereco
+    ADD CONSTRAINT endereco_pessoa_fk FOREIGN KEY ( pessoa_cod_pessoa )
+        REFERENCES pessoa ( cod_pessoa );
+
 ALTER TABLE estado
     ADD CONSTRAINT estado_pais_fk FOREIGN KEY ( pais_cod_pais )
         REFERENCES pais ( cod_pais );
@@ -213,12 +199,8 @@ ALTER TABLE pedido
         REFERENCES frete ( cod_frete );
 
 ALTER TABLE pedido
-    ADD CONSTRAINT pedido_pessoa_fisica_fk FOREIGN KEY ( pessoa_fisica_cod_pf )
-        REFERENCES pessoa_fisica ( cod_pf );
-
-ALTER TABLE pedido
-    ADD CONSTRAINT pedido_pessoa_juridica_fk FOREIGN KEY ( pessoa_juridica_cod_pj )
-        REFERENCES pessoa_juridica ( cod_pj );
+    ADD CONSTRAINT pedido_pessoa_juridica_fk FOREIGN KEY ( pessoa_juridica_cnpj )
+        REFERENCES pessoa_juridica ( cnpj );
 
 ALTER TABLE pedido_produto
     ADD CONSTRAINT pedido_produto_pedido_fk FOREIGN KEY ( pedido_cod_pedido )
@@ -227,14 +209,6 @@ ALTER TABLE pedido_produto
 ALTER TABLE pedido_produto
     ADD CONSTRAINT pedido_produto_produto_fk FOREIGN KEY ( produto_cod_produto )
         REFERENCES produto ( cod_produto );
-
-ALTER TABLE pessoa
-    ADD CONSTRAINT pessoa_endereco_fk FOREIGN KEY ( endereco_cod_endereco )
-        REFERENCES endereco ( cod_endereco );
-
-ALTER TABLE pessoa_fisica
-    ADD CONSTRAINT pessoa_fisica_pessoa_fk FOREIGN KEY ( pessoa_cod_pessoa )
-        REFERENCES pessoa ( cod_pessoa );
 
 ALTER TABLE pessoa_juridica
     ADD CONSTRAINT pessoa_juridica_pessoa_fk FOREIGN KEY ( pessoa_cod_pessoa )
@@ -255,14 +229,16 @@ ALTER TABLE produto
 ALTER TABLE telefone
     ADD CONSTRAINT telefone_pessoa_fk FOREIGN KEY ( pessoa_cod_pessoa )
         REFERENCES pessoa ( cod_pessoa );
+
         
---------------Funcoes de Validacao Telefone-------------------------
+--------------Funcoes de Validacao Telefone FUNCIONADNO-------------------------
+set serveroutput on;
 CREATE OR REPLACE FUNCTION validar_telefone (
     p_ddd IN NUMBER,
     p_numero IN CHAR
 ) RETURN BOOLEAN
 IS
-    v_pattern VARCHAR2(30) := '^\d{9}$'; -- Padrao para numero de telefone de 9 digitos
+    v_pattern VARCHAR2(30) := '^\d{9}$';
 BEGIN
     IF REGEXP_LIKE(p_numero, v_pattern) THEN
         RETURN TRUE;
@@ -273,21 +249,21 @@ END;
 /
 
 DECLARE
-    v_ddd NUMBER := 11;  -- Substitua pelo DDD que deseja testar
-    v_numero CHAR(9) := '123456789';  -- Substitua pelo numero que deseja testar
+    v_ddd NUMBER := 11;  
+    v_numero CHAR(9) := '123456789';  
     v_is_valid BOOLEAN;
 BEGIN
     v_is_valid := validar_telefone(v_ddd, v_numero);
 
     IF v_is_valid THEN
-        DBMS_OUTPUT.PUT_LINE('Nï¿½mero de telefone vï¿½lido.');
+        DBMS_OUTPUT.PUT_LINE('Numero de telefone valido.');
     ELSE
-        DBMS_OUTPUT.PUT_LINE('Nï¿½mero de telefone invï¿½lido.');
+        DBMS_OUTPUT.PUT_LINE('Numero de telefone invalido.');
     END IF;
 END;
 /
 
---------------Funï¿½ï¿½es de Validaï¿½ï¿½o Cep-------------------------
+--------------Função de Validação  Cep funcionando-------------------------
 CREATE OR REPLACE FUNCTION validar_cep(p_cep IN CHAR) RETURN BOOLEAN IS
 BEGIN
     IF REGEXP_LIKE(p_cep, '^\d{8}$') THEN
@@ -305,40 +281,45 @@ BEGIN
     v_is_valid := validar_cep(v_cep);
 
     IF v_is_valid THEN
-        DBMS_OUTPUT.PUT_LINE('CEP vï¿½lido.');
+        DBMS_OUTPUT.PUT_LINE('CEP valido.');
     ELSE
-        DBMS_OUTPUT.PUT_LINE('CEP invï¿½lido.');
+        DBMS_OUTPUT.PUT_LINE('CEP invalido.');
     END IF;
 END;
 /
 
---------------Bloco anï¿½nimo com cursor para pelo uma consulta no banco de dados com um Join-------------------------
+--------------Bloco anonimo com cursor para pelo uma consulta no banco de dados com um Join-------------------------
 --O cursor c_pedido faz uma consulta que seleciona o cï¿½digo do pedido, a data de criaï¿½ï¿½o do pedido e o 
 --nome da pessoa vinculada a esse pedido. --
-
 DECLARE
    CURSOR c_pedido IS
-      SELECT P.COD_PEDIDO, P.DATA_CRIACAO, PE.NOME
+      SELECT P.COD_PEDIDO, P.DATA_CRIACAO, PJ.CNPJ AS PESSOA_JURIDICA_CNPJ
       FROM PEDIDO P
-      INNER JOIN PESSOA PE ON P.PESSOA_FISICA_COD_PF = PE.COD_PESSOA;
+      INNER JOIN PESSOA_JURIDICA PJ ON P.PESSOA_JURIDICA_CNPJ = PJ.CNPJ;
+
    v_cod_pedido NUMBER;
-   v_data_criacao VARCHAR2(11);
-   v_nome VARCHAR2(50);
+   v_data_criacao DATE;
+   v_pessoa_juridica_cnpj CHAR(14);
 BEGIN
    OPEN c_pedido;
    LOOP
-      FETCH c_pedido INTO v_cod_pedido, v_data_criacao, v_nome;
+      FETCH c_pedido INTO
+         v_cod_pedido,
+         v_data_criacao,
+         v_pessoa_juridica_cnpj;
+
       EXIT WHEN c_pedido%NOTFOUND;
-      -- Aqui vocï¿½ pode realizar operaï¿½ï¿½es com os dados recuperados
-      DBMS_OUTPUT.PUT_LINE('Cï¿½digo do Pedido: ' || v_cod_pedido);
-      DBMS_OUTPUT.PUT_LINE('Data de Criaï¿½ï¿½o: ' || v_data_criacao);
-      DBMS_OUTPUT.PUT_LINE('Nome da Pessoa: ' || v_nome);
+
+      DBMS_OUTPUT.PUT_LINE('Código do Pedido: ' || v_cod_pedido);
+      DBMS_OUTPUT.PUT_LINE('Data de Criação: ' || TO_CHAR(v_data_criacao, 'DD-MON-YYYY'));
+      DBMS_OUTPUT.PUT_LINE('CNPJ Pessoa Jurídica: ' || v_pessoa_juridica_cnpj);
    END LOOP;
+
    CLOSE c_pedido;
 END;
-/  
+/
 
---------------Criar uma procedure que imprima um relatï¿½rio com pelo menos um regra de negï¿½cio, que contenha funï¿½ï¿½es, inner Join, order by, sum ou count.-------------------------
+--------------Criar uma procedure que imprima um relatorio com pelo menos um regra de negï¿½cio, que contenha funï¿½ï¿½es, inner Join, order by, sum ou count.-------------------------
 CREATE OR REPLACE PROCEDURE relatorio_produtos_mais_vendidos AS
 BEGIN
     FOR produto_rec IN (
@@ -360,27 +341,27 @@ BEGIN
     END LOOP;
 END;
 /
-
+set serveroutput on;
 BEGIN
     relatorio_produtos_mais_vendidos;
 END;
 /
 
---------------Criaï¿½ï¿½o das Procedures-------------------------
-
+--------------Criação das Procedures-------------------------
+----Procedures bairro---
 CREATE OR REPLACE PROCEDURE gerenciar_bairro (
     p_cod_bairro IN NUMBER,
-    p_bairro IN VARCHAR2,
+    p_nome IN VARCHAR2,
     p_cidade_cod_cidade IN NUMBER,
     p_operacao IN VARCHAR2
 ) AS
 BEGIN
     IF p_operacao = 'INSERT' THEN
-        INSERT INTO bairro (cod_bairro, bairro, cidade_cod_cidade)
-        VALUES (p_cod_bairro, p_bairro, p_cidade_cod_cidade);
+        INSERT INTO bairro (cod_bairro, nome, cidade_cod_cidade)
+        VALUES (p_cod_bairro, p_nome, p_cidade_cod_cidade);
     ELSIF p_operacao = 'UPDATE' THEN
         UPDATE bairro
-        SET bairro = p_bairro, cidade_cod_cidade = p_cidade_cod_cidade
+        SET nome = p_nome, cidade_cod_cidade = p_cidade_cod_cidade
         WHERE cod_bairro = p_cod_bairro;
     ELSIF p_operacao = 'DELETE' THEN
         DELETE FROM bairro
@@ -388,7 +369,7 @@ BEGIN
     END IF;
 END;
 /
-
+----Procedures categoria---
 CREATE OR REPLACE PROCEDURE gerenciar_categoria (
     p_cod_categoria IN NUMBER,
     p_categoria IN VARCHAR2,
@@ -408,21 +389,21 @@ BEGIN
     END IF;
 END;
 /
-
+----Procedures cidade---
 CREATE OR REPLACE PROCEDURE gerenciar_cidade (
     p_cod_cidade IN NUMBER,
-    p_cidade IN VARCHAR2,
+    p_nome IN VARCHAR2,
     p_cod_ibge IN NUMBER,
     p_estado_cod_estado IN NUMBER,
     p_operacao IN VARCHAR2
 ) AS
 BEGIN
     IF p_operacao = 'INSERT' THEN
-        INSERT INTO cidade (cod_cidade, cidade, cod_ibge, estado_cod_estado)
-        VALUES (p_cod_cidade, p_cidade, p_cod_ibge, p_estado_cod_estado);
+        INSERT INTO cidade (cod_cidade, nome, cod_ibge, estado_cod_estado)
+        VALUES (p_cod_cidade, p_nome, p_cod_ibge, p_estado_cod_estado);
     ELSIF p_operacao = 'UPDATE' THEN
         UPDATE cidade
-        SET cidade = p_cidade, cod_ibge = p_cod_ibge, estado_cod_estado = p_estado_cod_estado
+        SET nome = p_nome, cod_ibge = p_cod_ibge, estado_cod_estado = p_estado_cod_estado
         WHERE cod_cidade = p_cod_cidade;
     ELSIF p_operacao = 'DELETE' THEN
         DELETE FROM cidade
@@ -430,7 +411,7 @@ BEGIN
     END IF;
 END;
 /
-
+----Procedures endereco---
 CREATE OR REPLACE PROCEDURE gerenciar_endereco (
     p_cod_endereco IN NUMBER,
     p_cep IN CHAR,
@@ -457,17 +438,17 @@ END;
 
 CREATE OR REPLACE PROCEDURE gerenciar_estado (
     p_cod_estado IN NUMBER,
-    p_estado IN CHAR,
+    p_nome IN CHAR, 
     p_pais_cod_pais IN NUMBER,
     p_operacao IN VARCHAR2
 ) AS
 BEGIN
     IF p_operacao = 'INSERT' THEN
-        INSERT INTO estado (cod_estado, estado, pais_cod_pais)
-        VALUES (p_cod_estado, p_estado, p_pais_cod_pais);
+        INSERT INTO estado (cod_estado, nome, pais_cod_pais)
+        VALUES (p_cod_estado, p_nome, p_pais_cod_pais);
     ELSIF p_operacao = 'UPDATE' THEN
         UPDATE estado
-        SET estado = p_estado, pais_cod_pais = p_pais_cod_pais
+        SET nome = p_nome, pais_cod_pais = p_pais_cod_pais
         WHERE cod_estado = p_cod_estado;
     ELSIF p_operacao = 'DELETE' THEN
         DELETE FROM estado
@@ -495,19 +476,18 @@ BEGIN
     END IF;
 END;
 /
-
 CREATE OR REPLACE PROCEDURE gerenciar_pais (
     p_cod_pais IN NUMBER,
-    p_pais IN VARCHAR2(30),
+    p_nome IN VARCHAR2,
     p_operacao IN VARCHAR2
 ) AS
 BEGIN
     IF p_operacao = 'INSERT' THEN
-        INSERT INTO pais (cod_pais, pais)
-        VALUES (p_cod_pais, p_pais);
+        INSERT INTO pais (cod_pais, nome)
+        VALUES (p_cod_pais, p_nome);
     ELSIF p_operacao = 'UPDATE' THEN
         UPDATE pais
-        SET pais = p_pais
+        SET nome = p_nome
         WHERE cod_pais = p_cod_pais;
     ELSIF p_operacao = 'DELETE' THEN
         DELETE FROM pais
@@ -515,53 +495,87 @@ BEGIN
     END IF;
 END;
 /
-        
+
 CREATE OR REPLACE PROCEDURE gerenciar_pedido (
     p_cod_pedido IN NUMBER,
-    p_data_criacao IN VARCHAR2,
-    p_data_atualizacao IN VARCHAR2,
+    p_data_criacao IN DATE,
+    p_data_atualizacao IN DATE,
     p_preco_total IN NUMBER,
-    p_data_entrega IN VARCHAR2,
+    p_data_entrega IN DATE,
     p_numero_pedido IN NUMBER,
     p_descricao IN VARCHAR2,
     p_frete_cod_frete IN NUMBER,
-    p_pessoa_fisica_cod_pf IN NUMBER,
-    p_pessoa_juridica_cod_pj IN NUMBER,
-    p_operacao IN VARCHAR2
+    p_pessoa_juridica_cnpj IN CHAR
 ) AS
 BEGIN
-    IF p_operacao = 'INSERT' THEN
-        INSERT INTO pedido (cod_pedido, data_criacao, data_atualizacao, preco_total, data_entrega, numero_pedido, descricao, frete_cod_frete, pessoa_fisica_cod_pf, pessoa_juridica_cod_pj)
-        VALUES (p_cod_pedido, p_data_criacao, p_data_atualizacao, p_preco_total, p_data_entrega, p_numero_pedido, p_descricao, p_frete_cod_frete, p_pessoa_fisica_cod_pf, p_pessoa_juridica_cod_pj);
-    ELSIF p_operacao = 'UPDATE' THEN
-        UPDATE pedido
-        SET data_criacao = p_data_criacao, data_atualizacao = p_data_atualizacao, preco_total = p_preco_total, data_entrega = p_data_entrega, numero_pedido = p_numero_pedido, descricao = p_descricao, frete_cod_frete = p_frete_cod_frete, pessoa_fisica_cod_pf = p_pessoa_fisica_cod_pf, pessoa_juridica_cod_pj = p_pessoa_juridica_cod_pj
-        WHERE cod_pedido = p_cod_pedido;
-    ELSIF p_operacao = 'DELETE' THEN
-        DELETE FROM pedido
-        WHERE cod_pedido = p_cod_pedido;
-    END IF;
+    INSERT INTO pedido (
+        cod_pedido,
+        data_criacao,
+        data_atualizacao,
+        preco_total,
+        data_entrega,
+        numero_pedido,
+        descricao,
+        frete_cod_frete,
+        pessoa_juridica_cnpj
+    ) VALUES (
+        p_cod_pedido,
+        p_data_criacao,
+        p_data_atualizacao,
+        p_preco_total,
+        p_data_entrega,
+        p_numero_pedido,
+        p_descricao,
+        p_frete_cod_frete,
+        p_pessoa_juridica_cnpj
+    );
+
+    COMMIT; 
+
+EXCEPTION
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Erro: ' || SQLCODE || ' - ' || SQLERRM);
+        ROLLBACK; 
 END;
 /
-
-CREATE OR REPLACE PROCEDURE gerenciar_pedido_produto (
-    p_quantidade IN NUMBER,
-    p_id_pedido_produto IN CHAR,
-    p_pedido_cod_pedido IN NUMBER,
-    p_produto_cod_produto IN NUMBER,
+CREATE OR REPLACE PROCEDURE gerenciar_produto (
+    p_cod_produto IN NUMBER,
+    p_valor_unitario IN NUMBER,
+    p_nome IN VARCHAR2,
+    p_descricao IN VARCHAR2,
+    p_sku IN CHAR,
+    p_categoria_cod_categoria IN NUMBER,
     p_operacao IN VARCHAR2
 ) AS
 BEGIN
     IF p_operacao = 'INSERT' THEN
-        INSERT INTO pedido_produto (quantidade, id_pedido_produto, pedido_cod_pedido, produto_cod_produto)
-        VALUES (p_quantidade, p_id_pedido_produto, p_pedido_cod_pedido, p_produto_cod_produto);
+        INSERT INTO produto (
+            cod_produto,
+            valor_unitario,
+            nome,
+            descricao,
+            sku,
+            categoria_cod_categoria
+        ) VALUES (
+            p_cod_produto,
+            p_valor_unitario,
+            p_nome,
+            p_descricao,
+            p_sku,
+            p_categoria_cod_categoria
+        );
     ELSIF p_operacao = 'UPDATE' THEN
-        UPDATE pedido_produto
-        SET quantidade = p_quantidade
-        WHERE id_pedido_produto = p_id_pedido_produto;
+        UPDATE produto
+        SET
+            valor_unitario = p_valor_unitario,
+            nome = p_nome,
+            descricao = p_descricao,
+            sku = p_sku,
+            categoria_cod_categoria = p_categoria_cod_categoria
+        WHERE cod_produto = p_cod_produto;
     ELSIF p_operacao = 'DELETE' THEN
-        DELETE FROM pedido_produto
-        WHERE id_pedido_produto = p_id_pedido_produto;
+        DELETE FROM produto
+        WHERE cod_produto = p_cod_produto;
     END IF;
 END;
 /
@@ -571,17 +585,32 @@ CREATE OR REPLACE PROCEDURE gerenciar_pessoa (
     p_soft_delete IN CHAR,
     p_email IN VARCHAR2,
     p_cod_pessoa IN NUMBER,
-    p_endereco_cod_endereco IN NUMBER,
     p_usuario_cod_user IN NUMBER,
     p_operacao IN VARCHAR2
 ) AS
 BEGIN
     IF p_operacao = 'INSERT' THEN
-        INSERT INTO pessoa (nome, soft_delete, email, cod_pessoa, endereco_cod_endereco, usuario_cod_user)
-        VALUES (p_nome, p_soft_delete, p_email, p_cod_pessoa, p_endereco_cod_endereco, p_usuario_cod_user);
+        INSERT INTO pessoa (
+            nome,
+            soft_delete,
+            email,
+            cod_pessoa,
+            usuario_cod_user
+        ) VALUES (
+            p_nome,
+            p_soft_delete,
+            p_email,
+            p_cod_pessoa,
+            p_usuario_cod_user
+        );
     ELSIF p_operacao = 'UPDATE' THEN
         UPDATE pessoa
-        SET nome = p_nome, soft_delete = p_soft_delete, email = p_email, endereco_cod_endereco = p_endereco_cod_endereco, usuario_cod_user = p_usuario_cod_user
+        SET
+            nome = p_nome,
+            soft_delete = p_soft_delete,
+            email = p_email,
+            cod_pessoa = p_cod_pessoa,
+            usuario_cod_user = p_usuario_cod_user
         WHERE cod_pessoa = p_cod_pessoa;
     ELSIF p_operacao = 'DELETE' THEN
         DELETE FROM pessoa
@@ -590,85 +619,58 @@ BEGIN
 END;
 /
 
-CREATE OR REPLACE PROCEDURE gerenciar_pessoa_fisica (
-    p_cod_pf IN NUMBER,
-    p_data_nasc IN VARCHAR2,
-    p_pessoa_cod_pessoa IN NUMBER,
-    p_operacao IN VARCHAR2
-) AS
-BEGIN
-    IF p_operacao = 'INSERT' THEN
-        INSERT INTO pessoa_fisica (cod_pf, data_nasc, pessoa_cod_pessoa)
-        VALUES (p_cod_pf, p_data_nasc, p_pessoa_cod_pessoa);
-    ELSIF p_operacao = 'UPDATE' THEN
-        UPDATE pessoa_fisica
-        SET data_nasc = p_data_nasc
-        WHERE cod_pf = p_cod_pf;
-    ELSIF p_operacao = 'DELETE' THEN
-        DELETE FROM pessoa_fisica
-        WHERE cod_pf = p_cod_pf;
-    END IF;
-END;
-/
-
 CREATE OR REPLACE PROCEDURE gerenciar_pessoa_juridica (
-    p_cod_pj IN NUMBER,
     p_cnpj IN CHAR,
     p_pessoa_cod_pessoa IN NUMBER,
     p_segmento_cod_segmento IN NUMBER,
+    p_tipo IN CHAR,
     p_operacao IN VARCHAR2
 ) AS
 BEGIN
     IF p_operacao = 'INSERT' THEN
-        INSERT INTO pessoa_juridica (cod_pj, cnpj, pessoa_cod_pessoa, segmento_cod_segmento)
-        VALUES (p_cod_pj, p_cnpj, p_pessoa_cod_pessoa, p_segmento_cod_segmento);
+        INSERT INTO pessoa_juridica (
+            cnpj,
+            pessoa_cod_pessoa,
+            segmento_cod_segmento,
+            tipo
+        ) VALUES (
+            p_cnpj,
+            p_pessoa_cod_pessoa,
+            p_segmento_cod_segmento,
+            p_tipo
+        );
     ELSIF p_operacao = 'UPDATE' THEN
         UPDATE pessoa_juridica
-        SET cnpj = p_cnpj
-        WHERE cod_pj = p_cod_pj;
+        SET
+            pessoa_cod_pessoa = p_pessoa_cod_pessoa,
+            segmento_cod_segmento = p_segmento_cod_segmento,
+            tipo = p_tipo
+        WHERE cnpj = p_cnpj;
     ELSIF p_operacao = 'DELETE' THEN
         DELETE FROM pessoa_juridica
-        WHERE cod_pj = p_cod_pj;
-    END IF;
-END;
-/
-
-CREATE OR REPLACE PROCEDURE gerenciar_produto (
-    p_cod_produto IN NUMBER,
-    p_qtd_unitaria IN NUMBER,
-    p_nome IN VARCHAR2,
-    p_descricao IN VARCHAR2,
-    p_sku IN VARCHAR2,
-    p_categoria_cod_categoria IN NUMBER,
-    p_operacao IN VARCHAR2
-) AS
-BEGIN
-    IF p_operacao = 'INSERT' THEN
-        INSERT INTO produto (cod_produto, qtd_unitaria, nome, descricao, sku, categoria_cod_categoria)
-        VALUES (p_cod_produto, p_qtd_unitaria, p_nome, p_descricao, p_sku, p_categoria_cod_categoria);
-    ELSIF p_operacao = 'UPDATE' THEN
-        UPDATE produto
-        SET qtd_unitaria = p_qtd_unitaria, nome = p_nome, descricao = p_descricao, sku = p_sku, categoria_cod_categoria = p_categoria_cod_categoria
-        WHERE cod_produto = p_cod_produto;
-    ELSIF p_operacao = 'DELETE' THEN
-        DELETE FROM produto
-        WHERE cod_produto = p_cod_produto;
+        WHERE cnpj = p_cnpj;
     END IF;
 END;
 /
 
 CREATE OR REPLACE PROCEDURE gerenciar_segmento (
     p_cod_segmento IN NUMBER,
-    p_segmento IN VARCHAR2,
+    p_nome IN VARCHAR2,
     p_operacao IN VARCHAR2
 ) AS
 BEGIN
     IF p_operacao = 'INSERT' THEN
-        INSERT INTO segmento (cod_segmento, segmento)
-        VALUES (p_cod_segmento, p_segmento);
+        INSERT INTO segmento (
+            cod_segmento,
+            nome
+        ) VALUES (
+            p_cod_segmento,
+            p_nome
+        );
     ELSIF p_operacao = 'UPDATE' THEN
         UPDATE segmento
-        SET segmento = p_segmento
+        SET
+            nome = p_nome
         WHERE cod_segmento = p_cod_segmento;
     ELSIF p_operacao = 'DELETE' THEN
         DELETE FROM segmento
@@ -676,6 +678,7 @@ BEGIN
     END IF;
 END;
 /
+
 
 CREATE OR REPLACE PROCEDURE gerenciar_telefone (
     p_cod_telefone IN NUMBER,
@@ -700,18 +703,27 @@ END;
 /
 
 CREATE OR REPLACE PROCEDURE gerenciar_usuario (
-    p_usuario IN VARCHAR2,
+    p_nome IN VARCHAR2,
     p_senha IN VARCHAR2,
     p_cod_user IN NUMBER,
     p_operacao IN VARCHAR2
 ) AS
 BEGIN
     IF p_operacao = 'INSERT' THEN
-        INSERT INTO usuario (usuario, senha, cod_user)
-        VALUES (p_usuario, p_senha, p_cod_user);
+        INSERT INTO usuario (
+            nome,
+            senha,
+            cod_user
+        ) VALUES (
+            p_nome,
+            p_senha,
+            p_cod_user
+        );
     ELSIF p_operacao = 'UPDATE' THEN
         UPDATE usuario
-        SET usuario = p_usuario, senha = p_senha
+        SET
+            nome = p_nome,
+            senha = p_senha
         WHERE cod_user = p_cod_user;
     ELSIF p_operacao = 'DELETE' THEN
         DELETE FROM usuario
@@ -719,3 +731,4 @@ BEGIN
     END IF;
 END;
 /
+

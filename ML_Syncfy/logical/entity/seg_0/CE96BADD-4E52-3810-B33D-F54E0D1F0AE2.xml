@@ -4,6 +4,9 @@
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>91A43A89-DECF-75D6-FD70-3745F86F7F01</importedID>
+<engineerTo>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -13,11 +16,14 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="USUARIO" id="DB06CAEA-AC30-7A73-9722-8B32908CC6DC">
+<Attribute name="NOME" id="DB06CAEA-AC30-7A73-9722-8B32908CC6DC">
 <createdBy>matpi</createdBy>
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>617405D0-35DE-0469-1A31-4635B0478A6E</importedID>
+<engineerTo>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -30,6 +36,9 @@
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>56374C82-A3FE-1DD4-417C-89FDADB2E632</importedID>
+<engineerTo>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -41,6 +50,9 @@
 <createdBy>logonrmlocal</createdBy>
 <createdTime>2023-11-10 01:01:26 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
+<engineerTo>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -53,6 +65,9 @@
 <createdTime>2023-10-20 00:22:42 UTC</createdTime>
 <ownerDesignName>ML_Syncfy</ownerDesignName>
 <importedID>0C454AFA-8B73-8F7A-39CB-0C9A39B75F93</importedID>
+<engineerTo>
+<item key="EDF9C896-FE96-C206-5216-C3FCFAE6912F" value="true"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>BEED01E7-20FE-409B-AA51-0F73C2577D84</attributeRef>
