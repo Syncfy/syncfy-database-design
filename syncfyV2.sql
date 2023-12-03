@@ -8,12 +8,12 @@ drop table PAIS cascade constraint;
 drop table PEDIDO cascade constraint;
 drop table PEDIDO_PRODUTO cascade constraint;
 drop table PESSOA cascade constraint;
-drop table PESSOA_FISICA cascade constraint;
 drop table PESSOA_JURIDICA cascade constraint;
 drop table PRODUTO cascade constraint;
 drop table SEGMENTO cascade constraint;
 drop table TELEFONE cascade constraint;
 drop table USUARIO cascade constraint;
+
 CREATE TABLE bairro (
     cod_bairro        NUMBER NOT NULL,
     nome              VARCHAR2(30),
@@ -52,7 +52,7 @@ ALTER TABLE endereco ADD CONSTRAINT endereco_pk PRIMARY KEY ( cod_endereco );
 
 CREATE TABLE estado (
     cod_estado    NUMBER NOT NULL,
-    nome          CHAR(2) NOT NULL,
+    nome          VARCHAR(30) NOT NULL,
     pais_cod_pais NUMBER NOT NULL
 );
 
@@ -231,8 +231,7 @@ ALTER TABLE telefone
         REFERENCES pessoa ( cod_pessoa );
 
         
---------------Funcoes de Validacao Telefone FUNCIONADNO-------------------------
-set serveroutput on;
+--------------Funcoes de Validacao Telefone -------------------------
 CREATE OR REPLACE FUNCTION validar_telefone (
     p_ddd IN NUMBER,
     p_numero IN CHAR
@@ -263,34 +262,60 @@ BEGIN
 END;
 /
 
---------------Função de Validação  Cep funcionando-------------------------
-CREATE OR REPLACE FUNCTION validar_cep(p_cep IN CHAR) RETURN BOOLEAN IS
+--------------Função de Validação Cnpj-------------------------
+CREATE OR REPLACE FUNCTION validar_cnpj(p_cnpj IN VARCHAR2) RETURN BOOLEAN AS
+    v_cnpj VARCHAR2(14);
+    v_soma NUMBER := 0;
+    v_peso NUMBER := 5;
 BEGIN
-    IF REGEXP_LIKE(p_cep, '^\d{8}$') THEN
-        RETURN TRUE;
-    ELSE
+   
+    v_cnpj := REGEXP_REPLACE(p_cnpj, '[^0-9]', '');
+
+    IF LENGTH(v_cnpj) <> 14 THEN
         RETURN FALSE;
     END IF;
-END;
+
+    IF LENGTH(TRIM(TRANSLATE(v_cnpj, '0123456789', '0000000000'))) = 0 THEN
+        RETURN FALSE;
+    END IF;
+
+    FOR i IN 1..12 LOOP
+        v_soma := v_soma + TO_NUMBER(SUBSTR(v_cnpj, i, 1)) * v_peso;
+        v_peso := v_peso - 1;
+        IF v_peso < 2 THEN
+            v_peso := 9;
+        END IF;
+    END LOOP;
+
+    IF MOD(v_soma, 11) <> TO_NUMBER(SUBSTR(v_cnpj, 13, 1)) THEN
+        RETURN FALSE;
+    END IF;
+
+    RETURN TRUE;
+EXCEPTION
+    WHEN OTHERS THEN
+        RETURN FALSE;
+END validar_cnpj;
 /
-
 DECLARE
-    v_cep CHAR(8) := '12345678';  -- Substitua pelo CEP que deseja validar
-    v_is_valid BOOLEAN;
+    v_result BOOLEAN;
 BEGIN
-    v_is_valid := validar_cep(v_cep);
-
-    IF v_is_valid THEN
-        DBMS_OUTPUT.PUT_LINE('CEP valido.');
+    v_result := validar_cnpj('12345678000199'); 
+    IF v_result THEN
+        DBMS_OUTPUT.PUT_LINE('CNPJ válido.');
     ELSE
-        DBMS_OUTPUT.PUT_LINE('CEP invalido.');
+        DBMS_OUTPUT.PUT_LINE('CNPJ inválido.');
     END IF;
 END;
 /
+
+
 
 --------------Bloco anonimo com cursor para pelo uma consulta no banco de dados com um Join-------------------------
 --O cursor c_pedido faz uma consulta que seleciona o cï¿½digo do pedido, a data de criaï¿½ï¿½o do pedido e o 
 --nome da pessoa vinculada a esse pedido. --
+SET SERVEROUTPUT ON;
+
 DECLARE
    CURSOR c_pedido IS
       SELECT P.COD_PEDIDO, P.DATA_CRIACAO, PJ.CNPJ AS PESSOA_JURIDICA_CNPJ
@@ -320,75 +345,52 @@ END;
 /
 
 --------------Criar uma procedure que imprima um relatorio com pelo menos um regra de negï¿½cio, que contenha funï¿½ï¿½es, inner Join, order by, sum ou count.-------------------------
-CREATE OR REPLACE PROCEDURE relatorio_produtos_mais_vendidos AS
+CREATE OR REPLACE PROCEDURE gerenciar_pais (
+    p_cod_pais IN NUMBER,
+    p_nome IN VARCHAR2,
+    p_operacao IN VARCHAR2
+) AS
 BEGIN
-    FOR produto_rec IN (
-        SELECT
-            P.NOME AS PRODUTO,
-            COUNT(PP.PEDIDO_COD_PEDIDO) AS NUM_VENDAS
-        FROM
-            PRODUTO P
-            INNER JOIN PEDIDO_PRODUTO PP ON P.COD_PRODUTO = PP.PRODUTO_COD_PRODUTO
-        GROUP BY
-            P.NOME
-        ORDER BY
-            NUM_VENDAS DESC
-    ) 
-    LOOP
-        DBMS_OUTPUT.PUT_LINE('Produto: ' || produto_rec.PRODUTO);
-        DBMS_OUTPUT.PUT_LINE('Nï¿½mero de Vendas: ' || produto_rec.NUM_VENDAS);
-        DBMS_OUTPUT.NEW_LINE;
-    END LOOP;
-END;
-/
-set serveroutput on;
-BEGIN
-    relatorio_produtos_mais_vendidos;
+    IF p_operacao = 'INSERT' THEN
+        INSERT INTO pais (cod_pais, nome)
+        VALUES (p_cod_pais, p_nome);
+    ELSIF p_operacao = 'UPDATE' THEN
+        UPDATE pais
+        SET nome = p_nome
+        WHERE cod_pais = p_cod_pais;
+    ELSIF p_operacao = 'DELETE' THEN
+        DELETE FROM pais
+        WHERE cod_pais = p_cod_pais;
+    END IF;
 END;
 /
 
---------------Criação das Procedures-------------------------
-----Procedures bairro---
-CREATE OR REPLACE PROCEDURE gerenciar_bairro (
-    p_cod_bairro IN NUMBER,
-    p_nome IN VARCHAR2,
-    p_cidade_cod_cidade IN NUMBER,
+EXEC gerenciar_pais(1,'Holanda','INSERT');
+
+CREATE OR REPLACE PROCEDURE gerenciar_estado (
+    p_cod_estado IN NUMBER,
+    p_nome IN VARCHAR, 
+    p_pais_cod_pais IN NUMBER,
     p_operacao IN VARCHAR2
 ) AS
 BEGIN
     IF p_operacao = 'INSERT' THEN
-        INSERT INTO bairro (cod_bairro, nome, cidade_cod_cidade)
-        VALUES (p_cod_bairro, p_nome, p_cidade_cod_cidade);
+        INSERT INTO estado (cod_estado, nome, pais_cod_pais)
+        VALUES (p_cod_estado, p_nome, p_pais_cod_pais);
     ELSIF p_operacao = 'UPDATE' THEN
-        UPDATE bairro
-        SET nome = p_nome, cidade_cod_cidade = p_cidade_cod_cidade
-        WHERE cod_bairro = p_cod_bairro;
+        UPDATE estado
+        SET nome = p_nome, pais_cod_pais = p_pais_cod_pais
+        WHERE cod_estado = p_cod_estado;
     ELSIF p_operacao = 'DELETE' THEN
-        DELETE FROM bairro
-        WHERE cod_bairro = p_cod_bairro;
+        DELETE FROM estado
+        WHERE cod_estado = p_cod_estado;
     END IF;
 END;
 /
-----Procedures categoria---
-CREATE OR REPLACE PROCEDURE gerenciar_categoria (
-    p_cod_categoria IN NUMBER,
-    p_categoria IN VARCHAR2,
-    p_operacao IN VARCHAR2
-) AS
-BEGIN
-    IF p_operacao = 'INSERT' THEN
-        INSERT INTO categoria (cod_categoria, categoria)
-        VALUES (p_cod_categoria, p_categoria);
-    ELSIF p_operacao = 'UPDATE' THEN
-        UPDATE categoria
-        SET categoria = p_categoria
-        WHERE cod_categoria = p_cod_categoria;
-    ELSIF p_operacao = 'DELETE' THEN
-        DELETE FROM categoria
-        WHERE cod_categoria = p_cod_categoria;
-    END IF;
-END;
-/
+
+EXEC gerenciar_estado(1,'Paraiba',1,'INSERT');
+
+
 ----Procedures cidade---
 CREATE OR REPLACE PROCEDURE gerenciar_cidade (
     p_cod_cidade IN NUMBER,
@@ -411,51 +413,171 @@ BEGIN
     END IF;
 END;
 /
-----Procedures endereco---
-CREATE OR REPLACE PROCEDURE gerenciar_endereco (
-    p_cod_endereco IN NUMBER,
-    p_cep IN CHAR,
-    p_logradouro IN VARCHAR2,
-    p_numero IN CHAR,
-    p_complemento IN VARCHAR2,
-    p_bairro_cod_bairro IN NUMBER,
+
+EXEC gerenciar_cidade(1,'Sao Paulo',1,1,'INSERT');
+
+----Procedures bairro---
+CREATE OR REPLACE PROCEDURE gerenciar_bairro (
+    p_cod_bairro IN NUMBER,
+    p_nome IN VARCHAR2,
+    p_cidade_cod_cidade IN NUMBER,
     p_operacao IN VARCHAR2
 ) AS
 BEGIN
     IF p_operacao = 'INSERT' THEN
-        INSERT INTO endereco (cod_endereco, cep, logradouro, numero, complemento, bairro_cod_bairro)
-        VALUES (p_cod_endereco, p_cep, p_logradouro, p_numero, p_complemento, p_bairro_cod_bairro);
+        INSERT INTO bairro (cod_bairro, nome, cidade_cod_cidade)
+        VALUES (p_cod_bairro, p_nome, p_cidade_cod_cidade);
     ELSIF p_operacao = 'UPDATE' THEN
-        UPDATE endereco
-        SET cep = p_cep, logradouro = p_logradouro, numero = p_numero, complemento = p_complemento, bairro_cod_bairro = p_bairro_cod_bairro
-        WHERE cod_endereco = p_cod_endereco;
+        UPDATE bairro
+        SET nome = p_nome, cidade_cod_cidade = p_cidade_cod_cidade
+        WHERE cod_bairro = p_cod_bairro;
     ELSIF p_operacao = 'DELETE' THEN
-        DELETE FROM endereco
-        WHERE cod_endereco = p_cod_endereco;
+        DELETE FROM bairro
+        WHERE cod_bairro = p_cod_bairro;
     END IF;
 END;
 /
 
-CREATE OR REPLACE PROCEDURE gerenciar_estado (
-    p_cod_estado IN NUMBER,
-    p_nome IN CHAR, 
-    p_pais_cod_pais IN NUMBER,
+EXEC gerenciar_bairro(1,'Jardim França',1,'INSERT');
+
+CREATE OR REPLACE PROCEDURE gerenciar_usuario (
+    p_nome IN VARCHAR2,
+    p_senha IN VARCHAR2,
+    p_cod_user IN NUMBER,
     p_operacao IN VARCHAR2
 ) AS
 BEGIN
     IF p_operacao = 'INSERT' THEN
-        INSERT INTO estado (cod_estado, nome, pais_cod_pais)
-        VALUES (p_cod_estado, p_nome, p_pais_cod_pais);
+        INSERT INTO usuario (
+            nome,
+            senha,
+            cod_user
+        ) VALUES (
+            p_nome,
+            p_senha,
+            p_cod_user
+        );
     ELSIF p_operacao = 'UPDATE' THEN
-        UPDATE estado
-        SET nome = p_nome, pais_cod_pais = p_pais_cod_pais
-        WHERE cod_estado = p_cod_estado;
+        UPDATE usuario
+        SET
+            nome = p_nome,
+            senha = p_senha
+        WHERE cod_user = p_cod_user;
     ELSIF p_operacao = 'DELETE' THEN
-        DELETE FROM estado
-        WHERE cod_estado = p_cod_estado;
+        DELETE FROM usuario
+        WHERE cod_user = p_cod_user;
     END IF;
 END;
 /
+
+EXEC gerenciar_usuario('Gabriel','34345',1,'INSERT');
+
+CREATE OR REPLACE PROCEDURE gerenciar_pessoa (
+    p_nome IN VARCHAR2,
+    p_soft_delete IN CHAR,
+    p_email IN VARCHAR2,
+    p_cod_pessoa IN NUMBER,
+    p_usuario_cod_user IN NUMBER,
+    p_operacao IN VARCHAR2
+) AS
+BEGIN
+    IF p_operacao = 'INSERT' THEN
+        INSERT INTO pessoa (
+            nome,
+            soft_delete,
+            email,
+            cod_pessoa,
+            usuario_cod_user
+        ) VALUES (
+            p_nome,
+            p_soft_delete,
+            p_email,
+            p_cod_pessoa,
+            p_usuario_cod_user
+        );
+    ELSIF p_operacao = 'UPDATE' THEN
+        UPDATE pessoa
+        SET
+            nome = p_nome,
+            soft_delete = p_soft_delete,
+            email = p_email,
+            cod_pessoa = p_cod_pessoa,
+            usuario_cod_user = p_usuario_cod_user
+        WHERE cod_pessoa = p_cod_pessoa;
+    ELSIF p_operacao = 'DELETE' THEN
+        DELETE FROM pessoa
+        WHERE cod_pessoa = p_cod_pessoa;
+    END IF;
+END;
+/
+
+EXEC gerenciar_pessoa('Gabriel','S','gabriel@nicaris@gmail.com',1,1,'INSERT');
+
+CREATE OR REPLACE PROCEDURE gerenciar_segmento (
+    p_cod_segmento IN NUMBER,
+    p_nome IN VARCHAR2,
+    p_operacao IN VARCHAR2
+) AS
+BEGIN
+    IF p_operacao = 'INSERT' THEN
+        INSERT INTO segmento (
+            cod_segmento,
+            nome
+        ) VALUES (
+            p_cod_segmento,
+            p_nome
+        );
+    ELSIF p_operacao = 'UPDATE' THEN
+        UPDATE segmento
+        SET
+            nome = p_nome
+        WHERE cod_segmento = p_cod_segmento;
+    ELSIF p_operacao = 'DELETE' THEN
+        DELETE FROM segmento
+        WHERE cod_segmento = p_cod_segmento;
+    END IF;
+END;
+/
+
+EXEC gerenciar_segmento(1,'Medico','INSERT');
+
+
+CREATE OR REPLACE PROCEDURE gerenciar_pessoa_juridica (
+    p_cnpj IN CHAR,
+    p_pessoa_cod_pessoa IN NUMBER,
+    p_segmento_cod_segmento IN NUMBER,
+    p_tipo IN CHAR,
+    p_operacao IN VARCHAR2
+) AS
+BEGIN
+    IF p_operacao = 'INSERT' THEN
+        INSERT INTO pessoa_juridica (
+            cnpj,
+            pessoa_cod_pessoa,
+            segmento_cod_segmento,
+            tipo
+        ) VALUES (
+            p_cnpj,
+            p_pessoa_cod_pessoa,
+            p_segmento_cod_segmento,
+            p_tipo
+        );
+    ELSIF p_operacao = 'UPDATE' THEN
+        UPDATE pessoa_juridica
+        SET
+            pessoa_cod_pessoa = p_pessoa_cod_pessoa,
+            segmento_cod_segmento = p_segmento_cod_segmento,
+            tipo = p_tipo
+        WHERE cnpj = p_cnpj;
+    ELSIF p_operacao = 'DELETE' THEN
+        DELETE FROM pessoa_juridica
+        WHERE cnpj = p_cnpj;
+    END IF;
+END;
+/
+
+EXEC gerenciar_pessoa_juridica (15948721569808,1,1,'empresasss','INSERT');
+
 
 CREATE OR REPLACE PROCEDURE gerenciar_frete (
     p_cod_frete IN NUMBER,
@@ -476,25 +598,7 @@ BEGIN
     END IF;
 END;
 /
-CREATE OR REPLACE PROCEDURE gerenciar_pais (
-    p_cod_pais IN NUMBER,
-    p_nome IN VARCHAR2,
-    p_operacao IN VARCHAR2
-) AS
-BEGIN
-    IF p_operacao = 'INSERT' THEN
-        INSERT INTO pais (cod_pais, nome)
-        VALUES (p_cod_pais, p_nome);
-    ELSIF p_operacao = 'UPDATE' THEN
-        UPDATE pais
-        SET nome = p_nome
-        WHERE cod_pais = p_cod_pais;
-    ELSIF p_operacao = 'DELETE' THEN
-        DELETE FROM pais
-        WHERE cod_pais = p_cod_pais;
-    END IF;
-END;
-/
+EXEC gerenciar_frete (1,100,'INSERT');
 
 CREATE OR REPLACE PROCEDURE gerenciar_pedido (
     p_cod_pedido IN NUMBER,
@@ -505,32 +609,52 @@ CREATE OR REPLACE PROCEDURE gerenciar_pedido (
     p_numero_pedido IN NUMBER,
     p_descricao IN VARCHAR2,
     p_frete_cod_frete IN NUMBER,
-    p_pessoa_juridica_cnpj IN CHAR
+    p_pessoa_juridica_cnpj IN CHAR,
+    p_operacao IN VARCHAR2
 ) AS
 BEGIN
-    INSERT INTO pedido (
-        cod_pedido,
-        data_criacao,
-        data_atualizacao,
-        preco_total,
-        data_entrega,
-        numero_pedido,
-        descricao,
-        frete_cod_frete,
-        pessoa_juridica_cnpj
-    ) VALUES (
-        p_cod_pedido,
-        p_data_criacao,
-        p_data_atualizacao,
-        p_preco_total,
-        p_data_entrega,
-        p_numero_pedido,
-        p_descricao,
-        p_frete_cod_frete,
-        p_pessoa_juridica_cnpj
-    );
+    IF p_cod_pedido IS NULL THEN
+        INSERT INTO pedido (
+            cod_pedido,
+            data_criacao,
+            data_atualizacao,
+            preco_total,
+            data_entrega,
+            numero_pedido,
+            descricao,
+            frete_cod_frete,
+            pessoa_juridica_cnpj
+        ) VALUES (
+            p_cod_pedido,
+            p_data_criacao,
+            p_data_atualizacao,
+            p_preco_total,
+            p_data_entrega,
+            p_numero_pedido,
+            p_descricao,
+            p_frete_cod_frete,
+            p_pessoa_juridica_cnpj
+        );
+    ELSIF p_operacao = 'UPDATE' THEN
+        -- Atualização de um pedido existente
+        UPDATE pedido
+        SET
+            data_criacao = p_data_criacao,
+            data_atualizacao = p_data_atualizacao,
+            preco_total = p_preco_total,
+            data_entrega = p_data_entrega,
+            numero_pedido = p_numero_pedido,
+            descricao = p_descricao,
+            frete_cod_frete = p_frete_cod_frete,
+            pessoa_juridica_cnpj = p_pessoa_juridica_cnpj
+        WHERE cod_pedido = p_cod_pedido;
+    ELSIF p_operacao = 'DELETE' THEN
+        -- Exclusão de um pedido existente
+        DELETE FROM pedido
+        WHERE cod_pedido = p_cod_pedido;
+    END IF;
 
-    COMMIT; 
+    COMMIT;
 
 EXCEPTION
     WHEN OTHERS THEN
@@ -538,6 +662,33 @@ EXCEPTION
         ROLLBACK; 
 END;
 /
+
+EXEC gerenciar_pedido (1,'02/12/23','02/12/23',100,'02/12/23',1,'Quadro colorido',1,15948721569808,'INSERT');
+
+
+CREATE OR REPLACE PROCEDURE gerenciar_categoria (
+    p_cod_categoria IN NUMBER,
+    p_categoria IN VARCHAR2,
+    p_operacao IN VARCHAR2
+) AS
+BEGIN
+    IF p_operacao = 'INSERT' THEN
+        INSERT INTO categoria (cod_categoria, categoria)
+        VALUES (p_cod_categoria, p_categoria);
+    ELSIF p_operacao = 'UPDATE' THEN
+        UPDATE categoria
+        SET categoria = p_categoria
+        WHERE cod_categoria = p_cod_categoria;
+    ELSIF p_operacao = 'DELETE' THEN
+        DELETE FROM categoria
+        WHERE cod_categoria = p_cod_categoria;
+    END IF;
+END;
+/
+
+EXEC gerenciar_categoria (1,'squi','INSERT');
+
+
 CREATE OR REPLACE PROCEDURE gerenciar_produto (
     p_cod_produto IN NUMBER,
     p_valor_unitario IN NUMBER,
@@ -579,156 +730,6 @@ BEGIN
     END IF;
 END;
 /
+EXEC gerenciar_produto (1,232,'Tablet','tecnologico','tecngicopp',1,'INSERT');
 
-CREATE OR REPLACE PROCEDURE gerenciar_pessoa (
-    p_nome IN VARCHAR2,
-    p_soft_delete IN CHAR,
-    p_email IN VARCHAR2,
-    p_cod_pessoa IN NUMBER,
-    p_usuario_cod_user IN NUMBER,
-    p_operacao IN VARCHAR2
-) AS
-BEGIN
-    IF p_operacao = 'INSERT' THEN
-        INSERT INTO pessoa (
-            nome,
-            soft_delete,
-            email,
-            cod_pessoa,
-            usuario_cod_user
-        ) VALUES (
-            p_nome,
-            p_soft_delete,
-            p_email,
-            p_cod_pessoa,
-            p_usuario_cod_user
-        );
-    ELSIF p_operacao = 'UPDATE' THEN
-        UPDATE pessoa
-        SET
-            nome = p_nome,
-            soft_delete = p_soft_delete,
-            email = p_email,
-            cod_pessoa = p_cod_pessoa,
-            usuario_cod_user = p_usuario_cod_user
-        WHERE cod_pessoa = p_cod_pessoa;
-    ELSIF p_operacao = 'DELETE' THEN
-        DELETE FROM pessoa
-        WHERE cod_pessoa = p_cod_pessoa;
-    END IF;
-END;
-/
-
-CREATE OR REPLACE PROCEDURE gerenciar_pessoa_juridica (
-    p_cnpj IN CHAR,
-    p_pessoa_cod_pessoa IN NUMBER,
-    p_segmento_cod_segmento IN NUMBER,
-    p_tipo IN CHAR,
-    p_operacao IN VARCHAR2
-) AS
-BEGIN
-    IF p_operacao = 'INSERT' THEN
-        INSERT INTO pessoa_juridica (
-            cnpj,
-            pessoa_cod_pessoa,
-            segmento_cod_segmento,
-            tipo
-        ) VALUES (
-            p_cnpj,
-            p_pessoa_cod_pessoa,
-            p_segmento_cod_segmento,
-            p_tipo
-        );
-    ELSIF p_operacao = 'UPDATE' THEN
-        UPDATE pessoa_juridica
-        SET
-            pessoa_cod_pessoa = p_pessoa_cod_pessoa,
-            segmento_cod_segmento = p_segmento_cod_segmento,
-            tipo = p_tipo
-        WHERE cnpj = p_cnpj;
-    ELSIF p_operacao = 'DELETE' THEN
-        DELETE FROM pessoa_juridica
-        WHERE cnpj = p_cnpj;
-    END IF;
-END;
-/
-
-CREATE OR REPLACE PROCEDURE gerenciar_segmento (
-    p_cod_segmento IN NUMBER,
-    p_nome IN VARCHAR2,
-    p_operacao IN VARCHAR2
-) AS
-BEGIN
-    IF p_operacao = 'INSERT' THEN
-        INSERT INTO segmento (
-            cod_segmento,
-            nome
-        ) VALUES (
-            p_cod_segmento,
-            p_nome
-        );
-    ELSIF p_operacao = 'UPDATE' THEN
-        UPDATE segmento
-        SET
-            nome = p_nome
-        WHERE cod_segmento = p_cod_segmento;
-    ELSIF p_operacao = 'DELETE' THEN
-        DELETE FROM segmento
-        WHERE cod_segmento = p_cod_segmento;
-    END IF;
-END;
-/
-
-
-CREATE OR REPLACE PROCEDURE gerenciar_telefone (
-    p_cod_telefone IN NUMBER,
-    p_numero IN CHAR,
-    p_pessoa_cod_pessoa IN NUMBER,
-    p_ddd IN NUMBER,
-    p_operacao IN VARCHAR2
-) AS
-BEGIN
-    IF p_operacao = 'INSERT' THEN
-        INSERT INTO telefone (cod_telefone, numero, pessoa_cod_pessoa, ddd)
-        VALUES (p_cod_telefone, p_numero, p_pessoa_cod_pessoa, p_ddd);
-    ELSIF p_operacao = 'UPDATE' THEN
-        UPDATE telefone
-        SET numero = p_numero, ddd = p_ddd
-        WHERE cod_telefone = p_cod_telefone;
-    ELSIF p_operacao = 'DELETE' THEN
-        DELETE FROM telefone
-        WHERE cod_telefone = p_cod_telefone;
-    END IF;
-END;
-/
-
-CREATE OR REPLACE PROCEDURE gerenciar_usuario (
-    p_nome IN VARCHAR2,
-    p_senha IN VARCHAR2,
-    p_cod_user IN NUMBER,
-    p_operacao IN VARCHAR2
-) AS
-BEGIN
-    IF p_operacao = 'INSERT' THEN
-        INSERT INTO usuario (
-            nome,
-            senha,
-            cod_user
-        ) VALUES (
-            p_nome,
-            p_senha,
-            p_cod_user
-        );
-    ELSIF p_operacao = 'UPDATE' THEN
-        UPDATE usuario
-        SET
-            nome = p_nome,
-            senha = p_senha
-        WHERE cod_user = p_cod_user;
-    ELSIF p_operacao = 'DELETE' THEN
-        DELETE FROM usuario
-        WHERE cod_user = p_cod_user;
-    END IF;
-END;
-/
 
