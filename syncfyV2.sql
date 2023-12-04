@@ -309,13 +309,30 @@ BEGIN
 END;
 /
 
+--------------Criar uma procedure que imprima um relatório com pelo menos uma regra de negócio, que contenha funções, inner Join, order by, sum ou count-------------------------
+SET SERVEROUTPUT ON;
+CREATE OR REPLACE PROCEDURE gerar_relatorio IS
+BEGIN
+  FOR categoria_rec IN (
+    SELECT c.categoria, COUNT(p.cod_produto) AS num_produtos, SUM(p.valor_unitario) AS valor_total
+    FROM categoria c
+    INNER JOIN produto p ON c.cod_categoria = p.categoria_cod_categoria
+    GROUP BY c.categoria
+    ORDER BY c.categoria
+  ) LOOP
+    DBMS_OUTPUT.PUT_LINE('Categoria: ' || categoria_rec.categoria);
+    DBMS_OUTPUT.PUT_LINE('Número de Produtos: ' || categoria_rec.num_produtos);
+    DBMS_OUTPUT.PUT_LINE('Valor Total: ' || TO_CHAR(categoria_rec.valor_total, 'FM$999,999,999.99'));
+    DBMS_OUTPUT.PUT_LINE('-------------------------------------');
+  END LOOP;
+END gerar_relatorio;
+/
 
+EXEC gerar_relatorio;
 
 --------------Bloco anonimo com cursor para pelo uma consulta no banco de dados com um Join-------------------------
 --O cursor c_pedido faz uma consulta que seleciona o cï¿½digo do pedido, a data de criaï¿½ï¿½o do pedido e o 
 --nome da pessoa vinculada a esse pedido. --
-SET SERVEROUTPUT ON;
-
 DECLARE
    CURSOR c_pedido IS
       SELECT P.COD_PEDIDO, P.DATA_CRIACAO, PJ.CNPJ AS PESSOA_JURIDICA_CNPJ
@@ -343,8 +360,7 @@ BEGIN
    CLOSE c_pedido;
 END;
 /
-
---------------Criar uma procedure que imprima um relatorio com pelo menos um regra de negï¿½cio, que contenha funï¿½ï¿½es, inner Join, order by, sum ou count.-------------------------
+--Procedures par Insert, Update e Delete--
 CREATE OR REPLACE PROCEDURE gerenciar_pais (
     p_cod_pais IN NUMBER,
     p_nome IN VARCHAR2,
