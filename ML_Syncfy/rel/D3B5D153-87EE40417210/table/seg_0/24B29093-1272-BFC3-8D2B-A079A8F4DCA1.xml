@@ -1,0 +1,141 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="24B29093-1272-BFC3-8D2B-A079A8F4DCA1" name="ENDERECO">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>532FA0AE-970E-02A6-44F6-9CDF0BB7E135</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COD_ENDERECO" id="0BD0496D-0621-E1A5-2795-473B4BB9DD04">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>DE9BEF1E-225B-11FA-1794-2C5B47293545</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CEP" id="6722CCAE-5423-A0FA-A6BC-BDB23ADFACE3">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>10CD28C3-A305-8B84-747D-1D18D7135D95</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOGRADOURO" id="6374E4B8-6350-9522-D075-EC7B9B136556">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>3FF70125-4DDA-902D-8A2E-BF807022E096</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUMERO" id="6BA0EDBF-35D0-D96D-EDB9-2EA603ECB9AB">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>A1E3FA15-32F4-41DD-37AF-4D6C77FE9B4D</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMPLEMENTO" id="4CEBF34C-FF48-F976-C3D1-A3809FD5FCFC">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>AEEE47EE-954A-3C8D-08AB-53819848010E</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BAIRRO_COD_BAIRRO" id="472FDE0E-8A3A-D78D-B2D0-12D787623D54">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>CC855337-9408-11CF-E00D-C02227F976CF</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F54B97F5-D6A4-6D4C-3496-6BD484B425CF" referredColumn="DA0A5507-3334-2D5C-CDF4-2EAC1C786910"/>
+</associations>
+</Column>
+<Column name="PESSOA_COD_PESSOA" id="045EC6E5-0E6B-046E-80F5-3958ACB1D49D">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>427500A7-FADA-9037-FA61-EE34831ADC4D</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F45DB92A-E753-2C1A-6BF4-9B3249100C10" referredColumn="0008BB6B-4EE2-2A19-6E3F-0F77493FF530"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2A1382AF-7E81-C54A-4D2E-8FF25D3537E6" name="ENDERECO_PK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>915B855F-24D9-7F03-B799-631747227721</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BD0496D-0621-E1A5-2795-473B4BB9DD04"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4719604-1BA9-64D8-671D-B96D223C8145" name="ENDERECO_BAIRRO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:26 UTC</createdTime>
+<generatorID>79A22FAE-7260-26F7-4B7C-1B29AB081EF7</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="472FDE0E-8A3A-D78D-B2D0-12D787623D54"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BD763822-7884-FDBD-D95D-BE889A8875AD" name="ENDERECO_PESSOA_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:26 UTC</createdTime>
+<generatorID>2E82DD6E-D698-0719-BCA7-C70E1362E9D3</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="045EC6E5-0E6B-046E-80F5-3958ACB1D49D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0666885B-D2DC-4064-3A2C-4881C72FE7CB" containerWithKeyObject="D457E77C-8A05-CD44-5809-A8EEE1CC55E0" localFKIndex="F4AE6357-9847-B327-5EF3-5CD0114DEE9D" name="PEDIDO_PRODUTO_PRODUTO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>BFF286E5-A832-F167-53FB-5DFEE5A1E49D</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referredTableLongName>PRODUTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D119A7C7-A4A1-3D1E-C478-24F1BF3EE2E5</referredTableID>
+<keyObject>862242A1-7791-6C6D-79D9-6EB9F1EB1E5F</keyObject>
+<referredKeyID>862242A1-7791-6C6D-79D9-6EB9F1EB1E5F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>COD_PRODUTO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

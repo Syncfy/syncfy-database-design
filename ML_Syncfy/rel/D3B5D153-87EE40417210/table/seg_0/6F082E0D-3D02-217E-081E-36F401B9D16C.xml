@@ -1,0 +1,174 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6F082E0D-3D02-217E-081E-36F401B9D16C" name="PEDIDO">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>856B125B-8B8A-07FE-DC86-05A7E0F3CE89</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COD_PEDIDO" id="D84B3EFA-C326-9A72-2D2C-1ED654BC699A">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>35EA8A44-B3B7-2088-5716-C6F8E15470EE</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_CRIACAO" id="C823979C-829B-0BF9-96D9-3BF6336FDE70">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>DDE8BF29-E251-D20B-8E41-644B779B1B16</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_ATUALIZACAO" id="658BCD46-1EE3-B48B-DC20-B345277ED61A">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>CAA50F5E-1BF0-9D74-EA4E-CF8FC80422DE</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRECO_TOTAL" id="67535103-0419-1563-73E8-2370B7FD2723">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>480C7330-8994-D526-53A3-AE589092BFFA</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_ENTREGA" id="41C6EE71-C02A-E847-4AA0-5A6D19003841">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>0A4B40AC-BC03-2425-D7FC-7A035A42E777</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUMERO_PEDIDO" id="160F2045-6EDB-965A-978E-2952DD334561">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>E37AD668-6372-CEDC-588B-66F3608B432C</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRICAO" id="9EE85398-BC58-EB50-C8AD-3D2B8C6FE828">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>D05B8161-B2DB-9CFE-E8B0-76DC04FE8371</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FRETE_COD_FRETE" id="496CBF6E-73B2-CEA8-6B98-2D0F509A5E20">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>478624E9-1C4E-0DD1-819D-D809B08B8CBD</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4A0395DC-67AC-8678-B7D2-46867AF789BD" referredColumn="FA815780-F7D3-388F-D9D5-0FAE6918AFEC"/>
+</associations>
+</Column>
+<Column name="PESSOA_JURIDICA_CNPJ" id="1557FA18-61CE-9ED6-A598-4598CC7F275A">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>74D3298C-6997-B9B5-D0C0-C4B9F24A8616</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B0CEF2F9-FF21-02C2-E141-B32733F790C4" referredColumn="4EF65241-E26A-5805-7A07-DA6B5756DF11"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="74D45644-BFE1-1FF8-21FA-BB898B83489B" name="PEDIDO_PK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>1F66DF28-D12F-3204-0739-AD2061DA4E07</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D84B3EFA-C326-9A72-2D2C-1ED654BC699A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4437303B-76C0-74A2-7861-7A683A84F08A" name="PEDIDO__IDX">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:26 UTC</createdTime>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>18D4B5E2-F90D-1BFC-F4D4-0EEC9F75C34D</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="496CBF6E-73B2-CEA8-6B98-2D0F509A5E20"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BFBB9801-97A1-D007-04C3-A93E4029968B" name="PEDIDO_PESSOA_JURIDICA_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:26 UTC</createdTime>
+<generatorID>1BDEB192-42B6-D0DC-C62F-FDB75AE32B49</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1557FA18-61CE-9ED6-A598-4598CC7F275A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9A30D646-13A5-650C-52D7-3DE1D2771D8D" name="PEDIDO_FRETE_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:26 UTC</createdTime>
+<generatorID>18D4B5E2-F90D-1BFC-F4D4-0EEC9F75C34D</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="496CBF6E-73B2-CEA8-6B98-2D0F509A5E20"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

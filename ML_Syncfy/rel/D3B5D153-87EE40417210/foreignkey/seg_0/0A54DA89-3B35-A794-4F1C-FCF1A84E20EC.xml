@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0A54DA89-3B35-A794-4F1C-FCF1A84E20EC" containerWithKeyObject="2AA264DC-7346-F2AF-D7AE-E4014112E85F" localFKIndex="DF65AEFB-B519-2DE3-2A39-7956924A6763" name="TELEFONE_PESSOA_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>C392A1A7-66E2-CF66-9666-D123183E4B71</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<referredTableLongName>PESSOA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>15BB1383-F073-7B92-6154-BC51C19F46A3</referredTableID>
+<keyObject>9E6491ED-322F-1FAF-0281-CDE605D592B9</keyObject>
+<referredKeyID>9E6491ED-322F-1FAF-0281-CDE605D592B9</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>COD_PESSOA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

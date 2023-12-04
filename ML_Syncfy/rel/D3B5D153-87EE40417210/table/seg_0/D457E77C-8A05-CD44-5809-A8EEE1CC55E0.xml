@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D457E77C-8A05-CD44-5809-A8EEE1CC55E0" name="PEDIDO_PRODUTO">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>FDCA0ED2-A849-053D-1F0D-4E790A287C12</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="QUANTIDADE" id="C34EA606-4CF6-D036-F788-22259ECDF7DC">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>FABFC37D-7545-3580-4AB0-7AA7AFEB17ED</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COD_PEDIDO_PRODUTO" id="235392B9-EDB2-501F-E198-742B6C2662DC">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>AB534F7A-AF85-B5A0-9788-FAD711CB5022</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PEDIDO_COD_PEDIDO" id="0BB0FC4A-4BCA-8F5F-FBF5-3274A3EE633A">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>463EE71D-C725-8FFC-FE0E-51952BAFE0C4</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="13B97FFC-CFF1-CA4D-1EF1-887D24AE1A60" referredColumn="D84B3EFA-C326-9A72-2D2C-1ED654BC699A"/>
+</associations>
+</Column>
+<Column name="PRODUTO_COD_PRODUTO" id="3D396A6D-9B2D-DCA5-A59E-4D4EED9BD58A">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>BC2D585D-F725-78A2-4255-3F4407D5397B</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0666885B-D2DC-4064-3A2C-4881C72FE7CB" referredColumn="87018F38-6670-1661-10B5-C6A5BFB59074"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="85C0717A-40AB-66CE-CAB1-B0AEF5776E4A" name="PEDIDO_PRODUTO_PK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>F675B23B-939E-9522-9626-2C9ADA64260A</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="235392B9-EDB2-501F-E198-742B6C2662DC"/>
+<colUsage columnID="0BB0FC4A-4BCA-8F5F-FBF5-3274A3EE633A"/>
+<colUsage columnID="3D396A6D-9B2D-DCA5-A59E-4D4EED9BD58A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="01A41C4B-E8A2-CAC5-DF91-15150F0AFE7B" name="PEDIDO_PRODUTO_PEDIDO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>4993B911-9ED3-4901-62A9-19C1C226B0D9</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BB0FC4A-4BCA-8F5F-FBF5-3274A3EE633A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4AE6357-9847-B327-5EF3-5CD0114DEE9D" name="PEDIDO_PRODUTO_PRODUTO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2023-12-04 03:39:25 UTC</createdTime>
+<generatorID>BFF286E5-A832-F167-53FB-5DFEE5A1E49D</generatorID>
+<ownerDesignName>ML_Syncfy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3D396A6D-9B2D-DCA5-A59E-4D4EED9BD58A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
