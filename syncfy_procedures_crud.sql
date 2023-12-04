@@ -266,7 +266,7 @@ CREATE OR REPLACE PROCEDURE gerenciar_pedido (
     p_operacao IN VARCHAR2
 ) AS
 BEGIN
-    IF p_cod_pedido IS NULL THEN
+    IF p_operacao = 'INSERT' THEN
         INSERT INTO pedido (
             cod_pedido,
             data_criacao,
@@ -315,7 +315,6 @@ END;
 /
 
 EXEC gerenciar_pedido (1,'02/12/23','02/12/23',100,'02/12/23',1,'Quadro colorido',1,15948721569808,'INSERT');
-
 
 CREATE OR REPLACE PROCEDURE gerenciar_categoria (
     p_cod_categoria IN NUMBER,

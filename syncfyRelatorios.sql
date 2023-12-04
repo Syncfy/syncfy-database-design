@@ -79,20 +79,21 @@ END;
 /
 
 -- Criar uma procedure que imprima um relatï¿½rio com pelo menos uma regra de negï¿½cio, que contenha funï¿½ï¿½es, inner Join, order by, sum ou count --
+SET SERVEROUTPUT ON;
 
 CREATE OR REPLACE PROCEDURE gerar_relatorio IS
-  v_valor_minimo NUMBER := 1000;
+    v_valor_minimo NUMBER := 200;
 BEGIN
   FOR categoria_rec IN (
-    SELECT c."categoria", COUNT(p."cod_produto") AS num_produtos, SUM(p."valor_unitario") AS valor_total
+    SELECT c.categoria, COUNT(p.cod_produto) AS num_produtos, SUM(p.valor_unitario) AS valor_total
     FROM categoria c
-    INNER JOIN produto p ON c."cod_categoria" = p."categoria_cod_categoria"
-    WHERE p."valor_unitario" > v_valor_minimo
-    GROUP BY c."categoria"
-    ORDER BY c."categoria"
+    INNER JOIN produto p ON c.cod_categoria = p.categoria_cod_categoria
+    WHERE p.valor_unitario > v_valor_minimo
+    GROUP BY c.categoria
+    ORDER BY c.categoria
   ) LOOP
-    DBMS_OUTPUT.PUT_LINE('Categoria: ' || categoria_rec."categoria");
-    DBMS_OUTPUT.PUT_LINE('NÃºmero de Produtos: ' || categoria_rec.num_produtos);
+    DBMS_OUTPUT.PUT_LINE('Categoria: ' || categoria_rec.categoria);
+    DBMS_OUTPUT.PUT_LINE('Número de Produtos: ' || categoria_rec.num_produtos);
     DBMS_OUTPUT.PUT_LINE('Valor Total: ' || TO_CHAR(categoria_rec.valor_total, 'FM$999,999,999.99'));
     DBMS_OUTPUT.PUT_LINE('-------------------------------------');
   END LOOP;
@@ -100,6 +101,7 @@ END gerar_relatorio;
 /
 
 EXEC gerar_relatorio;
+
 
 
 -- Bloco anonimo com cursor para pelo uma consulta no banco de dados com um Join. O cursor c_pedido faz uma consulta que seleciona o cï¿½digo do pedido, a data de criaï¿½ï¿½o do pedido e o nome da pessoa vinculada a esse pedido --
@@ -123,12 +125,19 @@ BEGIN
 
       EXIT WHEN c_pedido%NOTFOUND;
 
-      DBMS_OUTPUT.PUT_LINE('Cï¿½digo do Pedido: ' || v_cod_pedido);
-      DBMS_OUTPUT.PUT_LINE('Data de Criaï¿½ï¿½o: ' || TO_CHAR(v_data_criacao, 'DD-MON-YYYY'));
-      DBMS_OUTPUT.PUT_LINE('CNPJ Pessoa Jurï¿½dica: ' || v_pessoa_juridica_cnpj);
+      DBMS_OUTPUT.PUT_LINE('Código do Pedido: ' || v_cod_pedido);
+      DBMS_OUTPUT.PUT_LINE('Data de Criação: ' || TO_CHAR(v_data_criacao, 'DD-MON-YYYY'));
+      DBMS_OUTPUT.PUT_LINE('CNPJ Pessoa Jurídica: ' || v_pessoa_juridica_cnpj);
+      DBMS_OUTPUT.PUT_LINE('-------------------------------------');
+
    END LOOP;
 
    CLOSE c_pedido;
+
+EXCEPTION
+   WHEN OTHERS THEN
+      DBMS_OUTPUT.PUT_LINE('Erro: ' || SQLERRM);
+      CLOSE c_pedido; 
 END;
 /
 
