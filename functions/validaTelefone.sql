@@ -12,6 +12,7 @@ BEGIN
     END IF;
 END;
 
+-- Exemplo de teste
 DECLARE
     v_ddd NUMBER := 11;  
     v_numero CHAR(9) := '123456789';  
