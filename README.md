@@ -4,11 +4,11 @@
 
 A equipe do Syncfy é composta por experientes no desenvolvimento de soluções B2B. Nossos membros incluem:
 
-- Matheus Ramos de Pierro - Arquiteto e Dev Backend - https://github.com/matheusPierro/
+- Matheus Ramos de Pierro - Arquiteto e Dev FullStack - https://github.com/matheusPierro/
 - Felipe de Lima Santiago - Scrum Master - https://github.com/fehstack
-- Gabriel Tricerri André Niacaris - DBA e UX/UI Designer - https://github.com/gabriel-tricerri
-- Victor Shimada - Desenvolvedor Frontend - https://github.com/shimarrudz
-- Thiago Gyorgy Teixeira de Castro - Dev Backend - https://github.com/ThiCastroo/
+- Gabriel Tricerri André Niacaris - Dev FullStack - https://github.com/gabriel-tricerri
+- Victor Shimada - Desenvolvedor Mobile - https://github.com/shimarrudz
+- Thiago Gyorgy Teixeira de Castro - Dev FullStack - https://github.com/ThiCastroo/
 
 # Sumário
 
@@ -19,8 +19,6 @@ A equipe do Syncfy é composta por experientes no desenvolvimento de soluções 
 [Diagrama de Entidades e Relacionamentos ](#_der_)
 
 [Modelo de Entidades e Relacionamentos ](#_mer_)
-
-[Diagrama de Classes ](#_Diagrama_de_Classes)
 
 [Pitch](#_pitch)
 
@@ -90,10 +88,6 @@ O projeto Syncfy ilustra como a inovação tecnológica pode simplificar process
 <img src="./documentacao/MR_Syncfy.png" title="Fluxograma da Arquitetura do Sistema">
 
 <a id="_Diagrama_de_Classes"></a>
-
-# Diagrama de Classes
-
-<img src="./documentacao/Diagrama_de_Classes.png" title="Diagrama de Classes">
 
 <a id="_pitch"></a>
 
