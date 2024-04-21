@@ -238,6 +238,13 @@ CREATE TABLE log_erros (
   usuario         VARCHAR2(100)
 );
 
+CREATE TABLE log_insercoes_pessoa (
+    cod_pessoa NUMBER,
+    nome VARCHAR2(100),
+    email VARCHAR2(100),
+    data_insercao DATE
+);
+
 CREATE TABLE monitoramento_atualizacao_pedido (
     cod_pedido NUMBER,
     data_atualizacao DATE,
